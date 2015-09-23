@@ -65,8 +65,8 @@ public class Access {
     }
     
     //reads a file with an order or orders
-    public HashMap<String, String> readOrder(String filename) {
-        HashMap<String, String> tree = new HashMap();
+    public ArrayList<String> readOrder(String filename) {
+        ArrayList<String> order = new ArrayList();
         try {
             Scanner file = new Scanner(new BufferedReader(new FileReader(filename)));
             String currentLine = "";
@@ -74,17 +74,27 @@ public class Access {
             
             while(file.hasNextLine()) {
                 currentLine = file.nextLine();
-                split = currentLine.split(",");
-                tree.add(split[0]);
-                tree.add(split[1]);
-                tree.add(split[2]);
+                split = currentLine.split("::");
+                order.add(split[0]);
+                order.add(split[1]);
+                order.add(split[2]);
+                order.add(split[3]);
+                order.add(split[4]);
+                order.add(split[5]);
+                order.add(split[6]);
+                order.add(split[7]);
+                order.add(split[8]);
+                order.add(split[9]);
+                order.add(split[10]);
+                order.add(split[11]);
+                order.add(split[12]);
             }
             file.close();
         }
         catch(FileNotFoundException e) {
             //either makes a populated or empty address book
         }
-        return tree;   
+        return order;   
     }
     
     public void writeOrder(String filename, ArrayList<Customer> orderBook) {
