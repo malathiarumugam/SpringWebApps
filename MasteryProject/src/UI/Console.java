@@ -133,6 +133,29 @@ public class Console {
         return ret;
     }
     
+    public double readDoubleMat(String p, double min, double max) {
+        boolean failed;
+        double ret = 0;
+        do {
+            failed = false;
+            System.out.println(p);
+            try {
+                ret = kb.nextDouble();
+                if(ret < min) {
+                    System.out.println("You have to at least order one square foot.");
+                } else  if (ret > max) {
+                    System.out.println("We do not have that much in stock. That is a ridiculous amount!");
+                }
+            } 
+            catch (InputMismatchException e) {
+               System.out.println("Input must be a number."); 
+               failed = true;
+            }
+        }while (failed || ret < min || ret > max);
+        
+        return ret;
+    }
+    
     public void write(String p) {
         System.out.print(p);
     }

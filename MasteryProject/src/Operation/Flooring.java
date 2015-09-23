@@ -3,10 +3,10 @@ package Operation;
 
 public abstract class Flooring {
     
-    private String productType;
-    private double costPerSqFt;
-    private double laborPerSqFt;
-    private double area;
+    protected String productType;
+    protected double costPerSqFt;
+    protected double laborPerSqFt;
+    protected double area;
     
     public Flooring(String productType, double costPerSqFt, double laborPerSqFt, double area) {
         this.productType = productType;
@@ -15,10 +15,10 @@ public abstract class Flooring {
         this.area = area;
     }
 
-    public abstract double getMaterialCost(double area);
-    public abstract double getLaborCost(double area);
-    public abstract double getTax(double CustomerTaxRate, double laborCost, double materialCost);
-    public abstract double getTotal(double materialCost, double laborCost, double tax);
+    public abstract double getMaterialCost();
+    public abstract double getLaborCost();
+    public abstract double getTax(double TaxRate);
+    public abstract double getTotal(double tax);
 
     /**
      * @return the productType
