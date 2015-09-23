@@ -13,9 +13,13 @@ import java.util.Set;
 
 public class OrderBook {
 
+    
+
+    public void run() {
+        
     Console console = new Console();
-    HashMap<String, Flooring> orderList;
-    Customer customer;
+    HashMap<String, Flooring> orderList = new HashMap();
+    Customer customer = new Customer();
     ArrayList<Customer> orderBook = new ArrayList();
 
     OrderBook book = new OrderBook();
@@ -39,8 +43,6 @@ public class OrderBook {
     double tileCost;
     double tileLabor;
 
-    public void run() {
-
         displayMenu();
         int input = console.readInteger("What would you like to do?", 1, 6);
 
@@ -55,30 +57,30 @@ public class OrderBook {
                 String firstName = console.readString("Please enter your first name.");
                 String lastName = console.readString("Please enter your last name.");
 
-                if (book.findCustomer(firstName, lastName) != null) {
+                if (book.findCustomer(firstName, lastName, orderBook) != null) {
                     int material = console.readInteger("What flooring material are you ordering? \n\t 1. Wood\n\t 2. Laminate\n\t 3. Carpet\n\t 4. Tile", 1, 4);
                     double area = console.readDoubleMat("Please enter the area to be floored.\n", 1, 30000);
                     if (material == 1) {
                         Wood wood = new Wood("Wood", woodCost, woodLabor, area);
-                        orderNumber = book.findCustomer(firstName, lastName).addOrder(book.findCustomer(firstName, lastName), wood);
+                        orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), wood);
                     }
                     if (material == 2) {
                         Laminate lamb = new Laminate("Laminate", laminateCost, laminateLabor, area);
-                        orderNumber = book.findCustomer(firstName, lastName).addOrder(book.findCustomer(firstName, lastName), lamb);
+                        orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), lamb);
                     }
                     if (material == 3) {
                         Carpet car = new Carpet("Carpet", carpetCost, carpetLabor, area);
-                        orderNumber = book.findCustomer(firstName, lastName).addOrder(book.findCustomer(firstName, lastName), car);
+                        orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), car);
                     }
                     if (material == 4) {
                         Tile tile = new Tile("Tile", tileCost, tileLabor, area);
-                        orderNumber = book.findCustomer(firstName, lastName).addOrder(book.findCustomer(firstName, lastName), tile);
+                        orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), tile);
                     }
                     System.out.println();
-                    book.findCustomer(firstName, lastName).displayOrder(book.findCustomer(firstName, lastName), orderList, orderNumber);
+                    book.findCustomer(firstName, lastName, orderBook).displayOrder(book.findCustomer(firstName, lastName, orderBook), orderList, orderNumber);
                     String decision = console.readString("Would you like place this order? (Y or N)");
                     if (decision.equalsIgnoreCase("n") || decision.equalsIgnoreCase("no")) {
-                        book.findCustomer(firstName, lastName).removeOrder(orderNumber);
+                        book.findCustomer(firstName, lastName, orderBook).removeOrder(orderNumber);
                     }
 
                 } else {
@@ -123,7 +125,17 @@ public class OrderBook {
 
                 break;
             case 3:
-                String orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
+                boolean playing = true;
+                do {
+                String datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
+                //call the read method 
+                orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
+                if (!(datIn.equals(orderNumber.substring(0,8)))) {
+                    System.out.println("That order was not on that date.");
+                } else {
+                    playing = false;
+                }
+                } while (playing);
                 Flooring order = customer.findOrder(orderNumber);
                 for (Customer cust : orderBook) {
                     Set<String> keys = orderList.keySet();
@@ -195,14 +207,25 @@ public class OrderBook {
                         }
                     }
                 }
-
                 break;
-
             case 4:
-
+                playing = true;
+                do {
+                String dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
+                orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
+                if (!(dateIn.equals(orderNumber.substring(0,8)))) {
+                    System.out.println("That order was not on that date.");
+                }else {
+                    playing = false;
+                }
+                } while (playing);
+                System.out.println(customer.displayOrder(orderNumber, orderBook));
+                String sure = console.readString("Please confirm that this is the order you would like to remove. (Y or N)");
+                if (sure.equalsIgnoreCase("y") || sure.equalsIgnoreCase("yes")) {
+                    customer.removeOrder(orderNumber);
+                }
                 break;
             case 5:
-
                 break;
             case 6:
                 return;
@@ -210,7 +233,7 @@ public class OrderBook {
 
     }
 
-    public Customer findCustomer(String first, String last) {
+    public Customer findCustomer(String first, String last, ArrayList<Customer> orderBook) {
         for (Customer cust : orderBook) {
             if (cust.getFirstName().equalsIgnoreCase(first) && cust.getLastName().equalsIgnoreCase(last)) {
                 return cust;

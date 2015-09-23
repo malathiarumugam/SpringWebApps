@@ -5,7 +5,9 @@ package Operation;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import static java.util.Collections.list;
 import java.util.HashMap;
 import java.util.Set;
 
@@ -18,6 +20,10 @@ public class Customer {
         private String state;
         private double taxRate;
         
+    public Customer() {
+        
+    }
+        
     public Customer(HashMap<String, Flooring> list) {
         orderList = list;
     }
@@ -29,13 +35,12 @@ public class Customer {
         taxRate = tax;
         orderList = list;
     }
-        
+
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         DateFormat dateFormat2 = new SimpleDateFormat("yyyyMMddHHmmss");
         Calendar cal = Calendar.getInstance();
         // System.out.println(dateFormat2.format(cal.getTime()));
         //System.out.println(dateFormat.format(cal.getTime())); //2014/08/06 16:00:22
-       
         
     public Flooring findOrdersByDate(String date) {
         Set<String> keys = orderList.keySet();
@@ -91,6 +96,28 @@ public class Customer {
             if (k == orderNum) {
             out = customer.getFirstName() + " " + customer.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
                     "\n   Flooring: "+list.get(k).getProductType() + "  area: "+ list.get(k).getArea() + "  total cost: " + list.get(k).getTotal(customer.getTaxRate())+"\n";
+            return out;
+            }
+        }
+        return out;
+    }
+    
+    public String displayOrder(String orderNum, ArrayList<Customer> orderBook) {
+        Customer cust = new Customer();
+        String out = "";
+        for (Customer c : orderBook) {
+            Set<String> keys = c.getOrderList().keySet();
+            for (String k : keys) {
+                if (k.equals(orderNum)) {
+                    cust = c;
+                }
+            }
+        }
+        Set<String> keys = cust.getOrderList().keySet();
+        for (String k : keys) {
+            if (k == orderNum) {
+            out = cust.getFirstName() + " " + cust.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
+                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "  area: "+ cust.getOrderList().get(k).getArea() + "  total cost: " + cust.getOrderList().get(k).getTotal(cust.getTaxRate())+"\n";
             return out;
             }
         }

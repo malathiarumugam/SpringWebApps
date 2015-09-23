@@ -5,6 +5,8 @@ package Operation;
 
 
 public class Laminate extends Flooring {
+    
+ 
 
     public Laminate(String productType, double costPerSqFt, double laborPerSqFt, double area) {
         super(productType, costPerSqFt, laborPerSqFt, area);

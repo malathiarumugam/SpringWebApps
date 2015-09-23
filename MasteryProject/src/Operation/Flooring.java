@@ -8,6 +8,11 @@ public abstract class Flooring {
     protected double laborPerSqFt;
     protected double area;
     
+    private double materialCost;
+    private double laborCost;
+    private double tax;
+    private double total;
+    
     public Flooring(String productType, double costPerSqFt, double laborPerSqFt, double area) {
         this.productType = productType;
         this.costPerSqFt = costPerSqFt;
@@ -74,6 +79,34 @@ public abstract class Flooring {
      */
     public void setArea(double area) {
         this.area = area;
+    }
+
+    /**
+     * @param materialCost the materialCost to set
+     */
+    public void setMaterialCost(double materialCost) {
+        this.materialCost = materialCost;
+    }
+
+    /**
+     * @param laborCost the laborCost to set
+     */
+    public void setLaborCost(double laborCost) {
+        this.laborCost = laborCost;
+    }
+
+    /**
+     * @param tax the tax to set
+     */
+    public void setTax(double tax) {
+        this.tax = tax;
+    }
+
+    /**
+     * @param total the total to set
+     */
+    public void setTotal(double total) {
+        this.total = total;
     }
 
 }
