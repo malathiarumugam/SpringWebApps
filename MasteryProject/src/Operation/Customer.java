@@ -4,15 +4,15 @@
 package Operation;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import static java.util.Collections.list;
 import java.util.HashMap;
 import java.util.Set;
 
 
-public class Customer {
+public class Customer implements Flippable {
     
         private HashMap<String, Flooring> orderList;
         private String firstName;
@@ -78,13 +78,13 @@ public class Customer {
             }
         }
     }
-    
+    DecimalFormat df = new DecimalFormat("#0.00");
     public String toString() {
         String out = "";
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
             out = firstName + " " + lastName + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + orderList.get(k).getTotal(taxRate)+"\n";
+                    "\n   Flooring: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + df.format(orderList.get(k).getTotal(taxRate))+"\n";
         }
         return out;
     }
@@ -95,7 +95,7 @@ public class Customer {
         for (String k : keys) {
             if (k.equals(orderNum)) {
             out = customer.getFirstName() + " " + customer.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+list.get(k).getProductType() + "  area: "+ list.get(k).getArea() + "  total cost: " + list.get(k).getTotal(customer.getTaxRate())+"\n";
+                    "\n   Flooring: "+list.get(k).getProductType() + "  area: "+ list.get(k).getArea() + "  total cost: " + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
             return out;
             }
         }
@@ -117,11 +117,15 @@ public class Customer {
         for (String k : keys) {
             if (k.equals(orderNum)) {
             out = cust.getFirstName() + " " + cust.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "  area: "+ cust.getOrderList().get(k).getArea() + "  total cost: " + cust.getOrderList().get(k).getTotal(cust.getTaxRate())+"\n";
+                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "  area: "+ cust.getOrderList().get(k).getArea() + "  total cost: " + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
             return out;
             }
         }
         return out;
+    }
+    
+    public void doAFlip(){
+        System.out.println("Holy shit, the customer just did a flip!");
     }
     
     public String iterate() {

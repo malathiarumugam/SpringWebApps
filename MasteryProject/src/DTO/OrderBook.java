@@ -16,10 +16,11 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class OrderBook {
+
     ArrayList<Customer> orderBook = new ArrayList();
-    
+
     public OrderBook(ArrayList<Customer> book) {
-       orderBook = book; 
+        orderBook = book;
     }
 
     public void run() {
@@ -62,13 +63,13 @@ public class OrderBook {
                 case 1:
                     String date = "";
                     boolean keepSearching = true;
-                    
+
                     do {
                         date = console.readString("What date did you complete your order? (YYYYMMDD)");
                         if (date.length() == 8) {
                             try {
-                                ArrayList<String> displayOrder = access.readOrder(date+".txt");
-                                HashMap<String, Flooring> orderListTemp; 
+                                ArrayList<String> displayOrder = access.readOrder(date + ".txt");
+                                HashMap<String, Flooring> orderListTemp;
                                 Customer customerTemp;
                                 Flooring floorTemp = null;
                                 String[] splitLine;
@@ -91,102 +92,75 @@ public class OrderBook {
                                     customerTemp = new Customer(splitLine[0], splitLine[1], splitLine[2], Double.parseDouble(splitLine[3]), orderListTemp);
                                     System.out.println(customerTemp.toString());
                                     keepSearching = false;
+
+                                }
+                                if (!keepSearching) {
+                                    break;
                                 }
                             } catch (ArrayIndexOutOfBoundsException e) {
                                 System.out.println("That date has no orders.");
                             }
+                        }
+                        String tryAgain = console.readString("Would you like to enter another date?");
+                        if (tryAgain.equalsIgnoreCase("no") || tryAgain.equalsIgnoreCase("n")) {
+                            keepSearching = false;
                         }
                     } while (keepSearching);
                     break;
                 case 2:
                     String firstName = console.readString("Please enter your first name.");
                     String lastName = console.readString("Please enter your last name.");
-
-                    if (book.findCustomer(firstName, lastName, orderBook) != null) {
-                        int material = console.readInteger("What flooring material are you ordering? \n\t 1. Wood\n\t 2. Laminate\n\t 3. Carpet\n\t 4. Tile", 1, 4);
-                        double area = console.readDoubleMat("Please enter the area to be floored.\n", 1, 30000);
-                        if (material == 1) {
-                            Wood wood = new Wood("Wood", woodCost, woodLabor, area);
-                            orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), wood);
-                        }
-                        if (material == 2) {
-                            Laminate lamb = new Laminate("Laminate", laminateCost, laminateLabor, area);
-                            orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), lamb);
-                        }
-                        if (material == 3) {
-                            Carpet car = new Carpet("Carpet", carpetCost, carpetLabor, area);
-                            orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), car);
-                        }
-                        if (material == 4) {
-                            Tile tile = new Tile("Tile", tileCost, tileLabor, area);
-                            orderNumber = book.findCustomer(firstName, lastName, orderBook).addOrder(book.findCustomer(firstName, lastName, orderBook), tile);
-                        }
-                        System.out.println();
-                        System.out.println(book.findCustomer(firstName, lastName, orderBook).displayOrder(book.findCustomer(firstName, lastName, orderBook), orderList, orderNumber));
-                        String decision = console.readString("Would you like place this order? (Y or N)");
-                        if (decision.equalsIgnoreCase("n") || decision.equalsIgnoreCase("no")) {
-                            
-                            book.findCustomer(firstName, lastName, orderBook).removeOrder(orderNumber, orderList);
-                            orderBook.remove(book.findCustomer(firstName, lastName, orderBook));
-                            
-                        }
-
-                    } else {
-
-                        orderList = new HashMap();
-                        String state = console.readString("Which state are you ordering in? (OH, PA, IN, MI)");
-                        if (state.equalsIgnoreCase("OH")) {
-                            tax = OH;
-                        } else if (state.equalsIgnoreCase("PA")) {
-                            tax = PA;
-                        } else if (state.equalsIgnoreCase("IN")) {
-                            tax = IN;
-                        } else if (state.equalsIgnoreCase("MI")) {
-                            tax = MI;
-                        }
-                        customer = new Customer(firstName, lastName, state, tax, orderList);
-                        int material = console.readInteger("What flooring material are you ordering? \n\t 1. Wood\n\t 2. Laminate\n\t 3. Carpet\n\t 4. Tile", 1, 4);
-                        double area = console.readDoubleMat("Please enter the area to be floored.\n", 1, 30000);
-                        if (material == 1) {
-                            Wood wood = new Wood("Wood", woodCost, woodLabor, area);
-                            orderNumber = customer.addOrder(customer, wood);
-                            orderBook.add(customer);
-                        }
-                        if (material == 2) {
-                            Laminate lamb = new Laminate("Laminate", laminateCost, laminateLabor, area);
-                            orderNumber = customer.addOrder(customer, lamb);
-                            orderBook.add(customer);
-                        }
-                        if (material == 3) {
-                            Carpet car = new Carpet("Carpet", carpetCost, carpetLabor, area);
-                            orderNumber = customer.addOrder(customer, car);
-                            orderBook.add(customer);
-                        }
-                        if (material == 4) {
-                            Tile tile = new Tile("Tile", tileCost, tileLabor, area);
-                            orderNumber = customer.addOrder(customer, tile);
-                            orderBook.add(customer);
-                        }
-                        System.out.println(customer.displayOrder(customer, orderList, orderNumber));
-                        String decision = console.readString("Would you like place this order? (Y or N)");
-                        if (decision.equalsIgnoreCase("n") || decision.equalsIgnoreCase("no")) {
-                            customer.removeOrder(orderNumber, orderList);
-                            orderBook.remove(customer);
-                        }
+                    orderList = new HashMap();
+                    String state = console.readString("Which state are you ordering in? (OH, PA, IN, MI)");
+                    if (state.equalsIgnoreCase("OH")) {
+                        tax = OH;
+                    } else if (state.equalsIgnoreCase("PA")) {
+                        tax = PA;
+                    } else if (state.equalsIgnoreCase("IN")) {
+                        tax = IN;
+                    } else if (state.equalsIgnoreCase("MI")) {
+                        tax = MI;
                     }
-                    DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
-                    Calendar cal = Calendar.getInstance();
-                    access.writeOrder(dateFormat.format(cal.getTime()) + ".txt", orderBook);
+                    customer = new Customer(firstName, lastName, state, tax, orderList);
+                    int material = console.readInteger("What flooring material are you ordering? \n\t 1. Wood\n\t 2. Laminate\n\t 3. Carpet\n\t 4. Tile", 1, 4);
+                    double area = console.readDoubleMat("Please enter the area to be floored.\n", 1, 30000);
+                    if (material == 1) {
+                        Wood wood = new Wood("Wood", woodCost, woodLabor, area);
+                        orderNumber = customer.addOrder(customer, wood);
+                        orderBook.add(customer);
+                    }
+                    if (material == 2) {
+                        Laminate lamb = new Laminate("Laminate", laminateCost, laminateLabor, area);
+                        orderNumber = customer.addOrder(customer, lamb);
+                        orderBook.add(customer);
+                    }
+                    if (material == 3) {
+                        Carpet car = new Carpet("Carpet", carpetCost, carpetLabor, area);
+                        orderNumber = customer.addOrder(customer, car);
+                        orderBook.add(customer);
+                    }
+                    if (material == 4) {
+                        Tile tile = new Tile("Tile", tileCost, tileLabor, area);
+                        orderNumber = customer.addOrder(customer, tile);
+                        orderBook.add(customer);
+                    }
+                    System.out.println(customer.displayOrder(customer, orderList, orderNumber));
+                    String decision = console.readString("Would you like place this order? (Y or N)");
+                    if (decision.equalsIgnoreCase("n") || decision.equalsIgnoreCase("no")) {
+                        customer.removeOrder(orderNumber, orderList);
+                        orderBook.remove(customer);
+                    }
+
                     break;
                 case 3:
                     boolean playing = true;
                     ArrayList<Customer> tempBook = new ArrayList();
                     ArrayList<String> displayOrder3 = new ArrayList();
                     HashMap<String, Flooring> orderListTemp2 = new HashMap();
-                     String datIn = "";
+                    String datIn = "";
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
-                        displayOrder3 = access.readOrder(datIn+".txt");
+                        displayOrder3 = access.readOrder(datIn + ".txt");
                         Customer customerTemp2;
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
@@ -209,7 +183,7 @@ public class OrderBook {
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
                         String dateEntered = orderNumber.substring(0, 8);
                         if (!(datIn.equals(dateEntered))) {
-                            System.out.println("That order was not on that date.");
+                            System.out.println("That order was not on that date. Did you save your files before trying to edit?");
                             String tryAgain = console.readString("Would you like to try again?");
                             if (tryAgain.equalsIgnoreCase("no") || tryAgain.equalsIgnoreCase("n")) {
                                 playing = false;
@@ -221,15 +195,14 @@ public class OrderBook {
                     Customer cust = new Customer();
                     if (!displayOrder3.isEmpty()) {
                         for (Customer g : tempBook) {
-                            //System.out.println(g);
                             Set<String> keys = orderListTemp2.keySet();
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
-                                   cust = g;
+                                    cust = g;
                                 }
                             }
                         }
-                            
+
                         String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):\n");
                         if (first.equals("")) {
                             cust.setFirstName(cust.getFirstName());
@@ -242,75 +215,74 @@ public class OrderBook {
                         } else {
                             cust.setLastName(last);
                         }
-                        String state = console.readString("Edit state (" + cust.getState() + "):\n\t"
+                        String state1 = console.readString("Edit state (" + cust.getState() + "):\n\t"
                                 + "State choices (OH, PA, MI, IN)");
-                        if (state.equals("")) {
+                        if (state1.equals("")) {
                             cust.setState(cust.getState());
                         } else {
-                            cust.setState(state);
-                            if (state.equalsIgnoreCase("OH")) {
+                            cust.setState(state1);
+                            if (state1.equalsIgnoreCase("OH")) {
                                 tax = OH;
-                            } else if (state.equalsIgnoreCase("PA")) {
+                            } else if (state1.equalsIgnoreCase("PA")) {
                                 tax = PA;
-                            } else if (state.equalsIgnoreCase("IN")) {
+                            } else if (state1.equalsIgnoreCase("IN")) {
                                 tax = IN;
-                            } else if (state.equalsIgnoreCase("MI")) {
+                            } else if (state1.equalsIgnoreCase("MI")) {
                                 tax = MI;
                             }
                         }
-                        String material = console.readString("Edit flooring material (" + orderListTemp2.get(orderNumber).getProductType() + "):\t"
+                        String material1 = console.readString("Edit flooring material (" + orderListTemp2.get(orderNumber).getProductType() + "):\t"
                                 + "Material choices (Wood, Laminate, Carpet, Tile)");
-                        double area = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
+                        double area1 = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
 
-                        if (material.equals("") && area == 0) {
+                        if (material1.equals("") && area1 == 0) {
                             break;
-                        } else if (!material.equals("") && area != 0) {
-                            if (material.equalsIgnoreCase("wood")) {
-                                Wood temp = new Wood("Wood", woodCost, woodLabor, area);
+                        } else if (!material1.equals("") && area1 != 0) {
+                            if (material1.equalsIgnoreCase("wood")) {
+                                Wood temp = new Wood("Wood", woodCost, woodLabor, area1);
                                 orderListTemp2.put(orderNumber, temp);
-                            } else if (material.equalsIgnoreCase("laminate")) {
-                                Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area);
+                            } else if (material1.equalsIgnoreCase("laminate")) {
+                                Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area1);
                                 orderListTemp2.put(orderNumber, temp);
-                            } else if (material.equalsIgnoreCase("carpet")) {
-                                Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area);
+                            } else if (material1.equalsIgnoreCase("carpet")) {
+                                Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area1);
                                 orderListTemp2.put(orderNumber, temp);
-                            } else if (material.equalsIgnoreCase("tile")) {
-                                Tile temp = new Tile("Tile", tileCost, tileLabor, area);
+                            } else if (material1.equalsIgnoreCase("tile")) {
+                                Tile temp = new Tile("Tile", tileCost, tileLabor, area1);
                                 orderListTemp2.put(orderNumber, temp);
                             }
-                        } else if (!material.equals("") && area == 0) {
-                            if (material.equalsIgnoreCase("wood")) {
+                        } else if (!material1.equals("") && area1 == 0) {
+                            if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, orderListTemp2.get(orderNumber).getArea());
                                 orderListTemp2.put(orderNumber, temp);
-                            } else if (material.equalsIgnoreCase("laminate")) {
+                            } else if (material1.equalsIgnoreCase("laminate")) {
                                 Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, orderListTemp2.get(orderNumber).getArea());
                                 orderListTemp2.put(orderNumber, temp);
-                            } else if (material.equalsIgnoreCase("carpet")) {
+                            } else if (material1.equalsIgnoreCase("carpet")) {
                                 Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, orderListTemp2.get(orderNumber).getArea());
                                 orderListTemp2.put(orderNumber, temp);
-                            } else if (material.equalsIgnoreCase("tile")) {
+                            } else if (material1.equalsIgnoreCase("tile")) {
                                 Tile temp = new Tile("Tile", tileCost, tileLabor, orderListTemp2.get(orderNumber).getArea());
                                 orderListTemp2.put(orderNumber, temp);
                             }
-                        } else if (material.equals("") && area != 0) {
-                            orderListTemp2.get(orderNumber).setArea(area);
+                        } else if (material1.equals("") && area1 != 0) {
+                            orderListTemp2.get(orderNumber).setArea(area1);
                         }
-                        access.writeOrder(datIn+".txt", tempBook);
+                        access.writeOrder(datIn + ".txt", tempBook);
                     }
                     break;
                 case 4:
                     playing = true;
-                    String dateIn  = "";
+                    String dateIn = "";
                     ArrayList<Customer> tempBook2 = new ArrayList();
                     ArrayList<String> displayOrderTwo = new ArrayList();
                     HashMap<String, Flooring> orderListTemp3 = new HashMap();
                     do {
                         dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
-                        
-                        displayOrderTwo = access.readOrder(dateIn+".txt");
-                        
-                         
+
+                        displayOrderTwo = access.readOrder(dateIn + ".txt");
+
                         Customer customerTemp2;
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
@@ -330,37 +302,69 @@ public class OrderBook {
                             customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
                             tempBook2.add(customerTemp2);
                         }
-                        
-                        
+
                         if (!(dateIn.equals(orderNumber.substring(0, 8)))) {
                             System.out.println("That order was not on that date.");
                             String tryAgain = console.readString("Would you like to try again?");
                             if (tryAgain.equalsIgnoreCase("no") || tryAgain.equalsIgnoreCase("n")) {
-                               playing = false;
+                                playing = false;
                             }
                         } else {
                             playing = false;
                         }
                     } while (playing);
+                    Customer custo = new Customer();
                     if (!displayOrderTwo.isEmpty()) {
                         System.out.println(customer.displayOrder(orderNumber, tempBook2));
                         String sure = console.readString("Please confirm that this is the order you would like to remove. (Y or N)");
                         if (sure.equalsIgnoreCase("y") || sure.equalsIgnoreCase("yes")) {
-                            for (String k : displayOrderTwo) {
-                                CharSequence cs1 = orderNumber;
-                                if (k.contains(cs1)) {
-                                    displayOrderTwo.remove(k);
+
+                            for (Customer g : tempBook2) {
+                                Set<String> keys = orderListTemp3.keySet();
+                                for (String k : keys) {
+                                    if (k.equals(orderNumber)) {
+                                        custo = g;
+                                    }
                                 }
                             }
+                            customer.removeOrder(orderNumber, orderListTemp3);
+                            tempBook2.remove(custo);
                         }
-                        access.writeOrder(dateIn+".txt", tempBook2);
+                        access.writeOrder(dateIn + ".txt", tempBook2);
                     }
-                    
+
                     break;
                 case 5:
-                    dateFormat = new SimpleDateFormat("yyyyMMdd");
+
+                    DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
                     Calendar cal2 = Calendar.getInstance();
+                    try {
+                        ArrayList<String> tempToday = access.readOrder(dateFormat.format(cal2.getTime()) + ".txt");
+                        Customer customerTemp2;
+                        Flooring floorTemp2 = null;
+                        String[] splitLine2;
+                        for (String k : tempToday) {
+                            splitLine2 = k.split("::");
+                            if (splitLine2[5].equalsIgnoreCase("wood")) {
+                                floorTemp2 = new Wood(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+                            } else if (splitLine2[5].equalsIgnoreCase("tile")) {
+                                floorTemp2 = new Tile(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+                            } else if (splitLine2[5].equalsIgnoreCase("carpet")) {
+                                floorTemp2 = new Carpet(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+                            } else if (splitLine2[5].equalsIgnoreCase("laminate")) {
+                                floorTemp2 = new Laminate(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+                            }
+                            orderListTemp3 = new HashMap();
+                            orderListTemp3.put(splitLine2[4], floorTemp2);
+                            customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
+                            orderBook.add(customerTemp2);
+                        }
+                    } catch (Exception e) {
+
+                    }
+
                     access.writeOrder(dateFormat.format(cal2.getTime()) + ".txt", orderBook);
+                    console.write("Your work has been saved!\n");
                     break;
                 case 6:
                     yesNo = false;
@@ -372,7 +376,7 @@ public class OrderBook {
 
     public void testRun() {
 
-                Console console = new Console();
+        Console console = new Console();
         HashMap<String, Flooring> orderList = new HashMap();
         Customer customer = new Customer();
         Access access = new Access();
@@ -409,8 +413,8 @@ public class OrderBook {
             switch (input) {
                 case 1:
                     String date = console.readString("What date did you complete your order? (YYYYMMDD)");
-                    ArrayList<String> displayOrder = access.readOrder(date+".txt");
-                    HashMap<String, Flooring> orderListTemp; 
+                    ArrayList<String> displayOrder = access.readOrder(date + ".txt");
+                    HashMap<String, Flooring> orderListTemp;
                     Customer customerTemp;
                     Flooring floorTemp = null;
                     String[] splitLine;
@@ -512,10 +516,10 @@ public class OrderBook {
                     ArrayList<Customer> tempBook = new ArrayList();
                     ArrayList<String> displayOrder3 = new ArrayList();
                     HashMap<String, Flooring> orderListTemp2 = new HashMap();
-                     String datIn = "";
+                    String datIn = "";
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
-                        displayOrder3 = access.readOrder(datIn+".txt");
+                        displayOrder3 = access.readOrder(datIn + ".txt");
                         Customer customerTemp2;
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
@@ -554,93 +558,92 @@ public class OrderBook {
                             Set<String> keys = orderListTemp2.keySet();
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
-                                   cust = g;
+                                    cust = g;
                                 }
                             }
                         }
-                            
-                                String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):\n");
-                                if (first.equals("")) {
-                                    cust.setFirstName(cust.getFirstName());
-                                } else {
-                                    cust.setFirstName(first);
-                                }
-                                String last = console.readString("Edit customer last name (" + cust.getLastName() + "):\n");
-                                if (last.equals("")) {
-                                    cust.setLastName(cust.getLastName());
-                                } else {
-                                    cust.setLastName(last);
-                                }
-                                String state = console.readString("Edit state (" + cust.getState() + "):\n\t"
-                                        + "State choices (OH, PA, MI, IN)");
-                                if (state.equals("")) {
-                                    cust.setState(cust.getState());
-                                } else {
-                                    cust.setState(state);
-                                    if (state.equalsIgnoreCase("OH")) {
-                                        tax = OH;
-                                    } else if (state.equalsIgnoreCase("PA")) {
-                                        tax = PA;
-                                    } else if (state.equalsIgnoreCase("IN")) {
-                                        tax = IN;
-                                    } else if (state.equalsIgnoreCase("MI")) {
-                                        tax = MI;
-                                    }
-                                }
-                                String material = console.readString("Edit flooring material (" + orderListTemp2.get(orderNumber).getProductType() + "):\t"
-                                        + "Material choices (Wood, Laminate, Carpet, Tile)");
-                                double area = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
 
-                                if (material.equals("") && area == 0) {
-                                    break;
-                                } else if (!material.equals("") && area != 0) {
-                                    if (material.equalsIgnoreCase("wood")) {
-                                        Wood temp = new Wood("Wood", woodCost, woodLabor, area);
-                                        orderListTemp2.put(orderNumber, temp);
-                                    } else if (material.equalsIgnoreCase("laminate")) {
-                                        Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area);
-                                        orderListTemp2.put(orderNumber, temp);
-                                    } else if (material.equalsIgnoreCase("carpet")) {
-                                        Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area);
-                                        orderListTemp2.put(orderNumber, temp);
-                                    } else if (material.equalsIgnoreCase("tile")) {
-                                        Tile temp = new Tile("Tile", tileCost, tileLabor, area);
-                                        orderListTemp2.put(orderNumber, temp);
-                                    }
-                                } else if (!material.equals("") && area == 0) {
-                                    if (material.equalsIgnoreCase("wood")) {
-                                        Wood temp = new Wood("Wood", woodCost, woodLabor, orderListTemp2.get(orderNumber).getArea());
-                                        orderListTemp2.put(orderNumber, temp);
-                                    } else if (material.equalsIgnoreCase("laminate")) {
-                                        Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, orderListTemp2.get(orderNumber).getArea());
-                                        orderListTemp2.put(orderNumber, temp);
-                                    } else if (material.equalsIgnoreCase("carpet")) {
-                                        Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, orderListTemp2.get(orderNumber).getArea());
-                                        orderListTemp2.put(orderNumber, temp);
-                                    } else if (material.equalsIgnoreCase("tile")) {
-                                        Tile temp = new Tile("Tile", tileCost, tileLabor, orderListTemp2.get(orderNumber).getArea());
-                                        orderListTemp2.put(orderNumber, temp);
-                                    }
-                                } else if (material.equals("") && area != 0) {
-                                    orderListTemp2.get(orderNumber).setArea(area);
-                                }
-                        
+                        String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):\n");
+                        if (first.equals("")) {
+                            cust.setFirstName(cust.getFirstName());
+                        } else {
+                            cust.setFirstName(first);
+                        }
+                        String last = console.readString("Edit customer last name (" + cust.getLastName() + "):\n");
+                        if (last.equals("")) {
+                            cust.setLastName(cust.getLastName());
+                        } else {
+                            cust.setLastName(last);
+                        }
+                        String state = console.readString("Edit state (" + cust.getState() + "):\n\t"
+                                + "State choices (OH, PA, MI, IN)");
+                        if (state.equals("")) {
+                            cust.setState(cust.getState());
+                        } else {
+                            cust.setState(state);
+                            if (state.equalsIgnoreCase("OH")) {
+                                tax = OH;
+                            } else if (state.equalsIgnoreCase("PA")) {
+                                tax = PA;
+                            } else if (state.equalsIgnoreCase("IN")) {
+                                tax = IN;
+                            } else if (state.equalsIgnoreCase("MI")) {
+                                tax = MI;
+                            }
+                        }
+                        String material = console.readString("Edit flooring material (" + orderListTemp2.get(orderNumber).getProductType() + "):\t"
+                                + "Material choices (Wood, Laminate, Carpet, Tile)");
+                        double area = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
+
+                        if (material.equals("") && area == 0) {
+                            break;
+                        } else if (!material.equals("") && area != 0) {
+                            if (material.equalsIgnoreCase("wood")) {
+                                Wood temp = new Wood("Wood", woodCost, woodLabor, area);
+                                orderListTemp2.put(orderNumber, temp);
+                            } else if (material.equalsIgnoreCase("laminate")) {
+                                Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area);
+                                orderListTemp2.put(orderNumber, temp);
+                            } else if (material.equalsIgnoreCase("carpet")) {
+                                Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area);
+                                orderListTemp2.put(orderNumber, temp);
+                            } else if (material.equalsIgnoreCase("tile")) {
+                                Tile temp = new Tile("Tile", tileCost, tileLabor, area);
+                                orderListTemp2.put(orderNumber, temp);
+                            }
+                        } else if (!material.equals("") && area == 0) {
+                            if (material.equalsIgnoreCase("wood")) {
+                                Wood temp = new Wood("Wood", woodCost, woodLabor, orderListTemp2.get(orderNumber).getArea());
+                                orderListTemp2.put(orderNumber, temp);
+                            } else if (material.equalsIgnoreCase("laminate")) {
+                                Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, orderListTemp2.get(orderNumber).getArea());
+                                orderListTemp2.put(orderNumber, temp);
+                            } else if (material.equalsIgnoreCase("carpet")) {
+                                Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, orderListTemp2.get(orderNumber).getArea());
+                                orderListTemp2.put(orderNumber, temp);
+                            } else if (material.equalsIgnoreCase("tile")) {
+                                Tile temp = new Tile("Tile", tileCost, tileLabor, orderListTemp2.get(orderNumber).getArea());
+                                orderListTemp2.put(orderNumber, temp);
+                            }
+                        } else if (material.equals("") && area != 0) {
+                            orderListTemp2.get(orderNumber).setArea(area);
+                        }
+
                         //access.writeOrder(datIn+".txt", tempBook);
                     }
                     break;
                 case 4:
                     playing = true;
-                    String dateIn  = "";
+                    String dateIn = "";
                     ArrayList<Customer> tempBook2 = new ArrayList();
                     ArrayList<String> displayOrderTwo = new ArrayList();
                     HashMap<String, Flooring> orderListTemp3 = new HashMap();
                     do {
                         dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
-                        
-                        displayOrderTwo = access.readOrder(dateIn+".txt");
-                        
-                         
+
+                        displayOrderTwo = access.readOrder(dateIn + ".txt");
+
                         Customer customerTemp2;
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
@@ -660,13 +663,12 @@ public class OrderBook {
                             customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
                             tempBook2.add(customerTemp2);
                         }
-                        
-                        
+
                         if (!(dateIn.equals(orderNumber.substring(0, 8)))) {
                             System.out.println("That order was not on that date.");
                             String tryAgain = console.readString("Would you like to try again?");
                             if (tryAgain.equalsIgnoreCase("no") || tryAgain.equalsIgnoreCase("n")) {
-                               playing = false;
+                                playing = false;
                             }
                         } else {
                             playing = false;
@@ -680,7 +682,7 @@ public class OrderBook {
                         }
                         //access.writeOrder(dateIn+".txt", tempBook2);
                     }
-                    
+
                     break;
                 case 5:
                     dateFormat = new SimpleDateFormat("yyyyMMdd");
@@ -693,10 +695,9 @@ public class OrderBook {
             }
         } while (yesNo);
 
-    
-}
+    }
 
-public Customer findCustomer(String first, String last, ArrayList<Customer> orderBook) {
+    public Customer findCustomer(String first, String last, ArrayList<Customer> orderBook) {
         for (Customer cust : orderBook) {
             if (cust.getFirstName().equalsIgnoreCase(first) && cust.getLastName().equalsIgnoreCase(last)) {
                 return cust;
