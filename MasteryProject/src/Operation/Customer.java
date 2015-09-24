@@ -45,7 +45,7 @@ public class Customer {
     public Flooring findOrdersByDate(String date) {
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
-            if (k.substring(0, 8) == date) {
+            if (k.substring(0, 8).equals(date)) {
                 return orderList.get(k);
             }
         }
@@ -56,7 +56,7 @@ public class Customer {
     public Flooring findOrder(String orderNum) {
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
-            if (k == orderNum) {
+            if (k.equals(orderNum)) {
                 return orderList.get(k);
             }
         }
@@ -70,10 +70,10 @@ public class Customer {
         return orderNumber;
     }
     
-    public void removeOrder(String orderNum) {
+    public void removeOrder(String orderNum, HashMap<String, Flooring> orderList) {
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
-            if (k == orderNum) {
+            if (k.equals(orderNum)) {
                 orderList.remove(k);
             }
         }
@@ -83,8 +83,8 @@ public class Customer {
         String out = "";
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
-            out = firstName + " " + lastName + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+orderList.get(k).getProductType() + "  area: "+ orderList.get(k).getArea() + "  total cost: " + orderList.get(k).getTotal(taxRate)+"\n";
+            out = firstName + " " + lastName + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
+                    "\n   Flooring: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + orderList.get(k).getTotal(taxRate)+"\n";
         }
         return out;
     }
@@ -93,7 +93,7 @@ public class Customer {
         String out = "";
         Set<String> keys = list.keySet();
         for (String k : keys) {
-            if (k == orderNum) {
+            if (k.equals(orderNum)) {
             out = customer.getFirstName() + " " + customer.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
                     "\n   Flooring: "+list.get(k).getProductType() + "  area: "+ list.get(k).getArea() + "  total cost: " + list.get(k).getTotal(customer.getTaxRate())+"\n";
             return out;
@@ -115,7 +115,7 @@ public class Customer {
         }
         Set<String> keys = cust.getOrderList().keySet();
         for (String k : keys) {
-            if (k == orderNum) {
+            if (k.equals(orderNum)) {
             out = cust.getFirstName() + " " + cust.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
                     "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "  area: "+ cust.getOrderList().get(k).getArea() + "  total cost: " + cust.getOrderList().get(k).getTotal(cust.getTaxRate())+"\n";
             return out;

@@ -19,6 +19,8 @@ public class Console {
             catch (InputMismatchException e) {
                System.out.println("Input must be an integer."); 
                failed = true;
+            }finally {
+                kb.nextLine();
             }
         }while (failed);
         return ret;
@@ -67,6 +69,8 @@ public class Console {
             catch (InputMismatchException e) {
                System.out.println("Input must be a number."); 
                failed = true;
+            }finally {
+                kb.nextLine();
             }
         }while (failed);
         return ret;
@@ -88,6 +92,8 @@ public class Console {
             catch (InputMismatchException e) {
                System.out.println("Input must be a number."); 
                failed = true;
+            }finally {
+                kb.nextLine();
             }
         }while (failed || ret < min || ret > max);
         
@@ -101,11 +107,19 @@ public class Console {
             failed = false;
             System.out.println(p);
             try {
-                ret = kb.nextDouble();
+                String entry = kb.nextLine();
+                if (entry.equals("")) {
+                    ret = 0;
+                } else {
+                ret = Double.parseDouble(entry);
+                }
+                
             } 
             catch (InputMismatchException e) {
                System.out.println("Input must be a number."); 
                failed = true;
+            }finally {
+                
             }
         }while (failed);
         return ret;
@@ -127,6 +141,8 @@ public class Console {
             catch (InputMismatchException e) {
                System.out.println("Input must be a number."); 
                failed = true;
+            }finally {
+                kb.nextLine();
             }
         }while (failed || ret < min || ret > max);
         
@@ -150,6 +166,8 @@ public class Console {
             catch (InputMismatchException e) {
                System.out.println("Input must be a number."); 
                failed = true;
+            } finally {
+                kb.nextLine();
             }
         }while (failed || ret < min || ret > max);
         

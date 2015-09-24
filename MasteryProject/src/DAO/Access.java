@@ -70,24 +70,9 @@ public class Access {
         try {
             Scanner file = new Scanner(new BufferedReader(new FileReader(filename)));
             String currentLine = "";
-            String[] split;
-            
             while(file.hasNextLine()) {
                 currentLine = file.nextLine();
-                split = currentLine.split("::");
-                order.add(split[0]);
-                order.add(split[1]);
-                order.add(split[2]);
-                order.add(split[3]);
-                order.add(split[4]);
-                order.add(split[5]);
-                order.add(split[6]);
-                order.add(split[7]);
-                order.add(split[8]);
-                order.add(split[9]);
-                order.add(split[10]);
-                order.add(split[11]);
-                order.add(split[12]);
+                order.add(currentLine);
             }
             file.close();
         }
@@ -102,11 +87,12 @@ public class Access {
             PrintWriter output = new PrintWriter(new FileWriter(filename));
             String outString;
             
-            Customer element;
-            HashMap<String, Flooring> orderList = new HashMap();
+            Customer element = new Customer();
+            
             Iterator<Customer> iter = orderBook.iterator();
             while (iter.hasNext()) {
                 element = iter.next();
+                HashMap<String, Flooring> orderList = element.getOrderList();
                 outString = element.getFirstName() + "::"
                         + element.getLastName() + "::"
                         + element.getState() + "::"
