@@ -158,10 +158,11 @@ public class OrderBook {
                     ArrayList<String> displayOrder3 = new ArrayList();
                     HashMap<String, Flooring> orderListTemp2 = new HashMap();
                     String datIn = "";
+                    Customer customerTemp2 = new Customer();
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         displayOrder3 = access.readOrder(datIn + ".txt");
-                        Customer customerTemp2;
+                        
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrder3) {
@@ -180,6 +181,7 @@ public class OrderBook {
                             customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp2);
                             tempBook.add(customerTemp2);
                         }
+                        //add error checking for order number entry
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
                         String dateEntered = orderNumber.substring(0, 8);
                         if (!(datIn.equals(dateEntered))) {
@@ -192,35 +194,36 @@ public class OrderBook {
                             playing = false;
                         }
                     } while (playing);
-                    Customer cust = new Customer();
+                    //Customer cust = new Customer();
                     if (!displayOrder3.isEmpty()) {
                         for (Customer g : tempBook) {
                             Set<String> keys = orderListTemp2.keySet();
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
-                                    cust = g;
+                                    //customerTemp2 = g;
                                 }
                             }
                         }
 
-                        String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):\n");
-                        if (first.equals("")) {
-                            cust.setFirstName(cust.getFirstName());
+                        String first = console.readString("Edit customer first name (" + customerTemp2.getFirstName() + "):");
+                        if (first.isEmpty()) {
+                            first = customerTemp2.getFirstName();
+                            
                         } else {
-                            cust.setFirstName(first);
+                            //customerTemp2.setFirstName(first);
                         }
-                        String last = console.readString("Edit customer last name (" + cust.getLastName() + "):\n");
-                        if (last.equals("")) {
-                            cust.setLastName(cust.getLastName());
+                        String last = console.readString("Edit customer last name (" + customerTemp2.getLastName() + "):");
+                        if (last.isEmpty()) {
+                            last = customerTemp2.getLastName();
                         } else {
-                            cust.setLastName(last);
+                            //customerTemp2.setLastName(last);
                         }
-                        String state1 = console.readString("Edit state (" + cust.getState() + "):\n\t"
+                        String state1 = console.readString("Edit state (" + customerTemp2.getState() + "):\t"
                                 + "State choices (OH, PA, MI, IN)");
-                        if (state1.equals("")) {
-                            cust.setState(cust.getState());
+                        if (state1.isEmpty()) {
+                            state1 = customerTemp2.getState();
                         } else {
-                            cust.setState(state1);
+                            //customerTemp2.setState(state1);
                             if (state1.equalsIgnoreCase("OH")) {
                                 tax = OH;
                             } else if (state1.equalsIgnoreCase("PA")) {
@@ -235,9 +238,9 @@ public class OrderBook {
                                 + "Material choices (Wood, Laminate, Carpet, Tile)");
                         double area1 = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
 
-                        if (material1.equals("") && area1 == 0) {
+                        if (material1.isEmpty() && area1 == 0) {
                             break;
-                        } else if (!material1.equals("") && area1 != 0) {
+                        } else if (!material1.isEmpty() && area1 != 0) {
                             if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, area1);
                                 temp.getTax(tax);
@@ -259,7 +262,7 @@ public class OrderBook {
                                 temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             }
-                        } else if (!material1.equals("") && area1 == 0) {
+                        } else if (!material1.isEmpty() && area1 == 0) {
                             if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, orderListTemp2.get(orderNumber).getArea());
                                 temp.getTax(tax);
@@ -281,13 +284,15 @@ public class OrderBook {
                                 temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             }
-                        } else if (material1.equals("") && area1 != 0) {
+                        } else if (material1.isEmpty() && area1 != 0) {
                             orderListTemp2.get(orderNumber).setArea(area1);
-                            HashMap<String, Flooring> update = cust.getOrderList();
+                            HashMap<String, Flooring> update = customerTemp2.getOrderList();
                             update.get(orderNumber).getTax(tax);
                             update.get(orderNumber).getTotal(tax);
                         }
-                        access.writeOrder(datIn + ".txt", tempBook);
+                        Customer customerT = new Customer(first, last, state1, tax, orderListTemp2);
+                        ArrayList<Customer> tempBook2 = new ArrayList();
+                        access.writeOrder(datIn + ".txt", tempBook2);
                     }
                     break;
                 case 4:
@@ -302,7 +307,7 @@ public class OrderBook {
 
                         displayOrderTwo = access.readOrder(dateIn + ".txt");
 
-                        Customer customerTemp2;
+                        Customer customerTemp3;
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrderTwo) {
@@ -318,8 +323,8 @@ public class OrderBook {
                             }
                             orderListTemp3 = new HashMap();
                             orderListTemp3.put(splitLine2[4], floorTemp2);
-                            customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
-                            tempBook2.add(customerTemp2);
+                            customerTemp3 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
+                            tempBook2.add(customerTemp3);
                         }
 
                         if (!(dateIn.equals(orderNumber.substring(0, 8)))) {
@@ -359,7 +364,7 @@ public class OrderBook {
                     Calendar cal2 = Calendar.getInstance();
                     try {
                         ArrayList<String> tempToday = access.readOrder(dateFormat.format(cal2.getTime()) + ".txt");
-                        Customer customerTemp2;
+                        Customer customerTemp4;
                         Flooring floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : tempToday) {
@@ -375,8 +380,8 @@ public class OrderBook {
                             }
                             orderListTemp3 = new HashMap();
                             orderListTemp3.put(splitLine2[4], floorTemp2);
-                            customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
-                            orderBook.add(customerTemp2);
+                            customerTemp4 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
+                            orderBook.add(customerTemp4);
                         }
                     } catch (NullPointerException e) {
 

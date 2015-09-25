@@ -53,8 +53,8 @@ public class Console {
     
     public String readString(String p) {
         System.out.println(p);
-        //String z = kb.nextLine();
-        return kb.nextLine();
+        String z = kb.nextLine();
+        return z;
     }
     
     public float readFloat(String p) {
