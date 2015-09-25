@@ -115,7 +115,18 @@ public class Access {
         }
     }
     
-    
+    public void writeOrderString(String filename, ArrayList<String> orderBook) {
+        try {
+            PrintWriter output = new PrintWriter(new FileWriter(filename));
+            for (String k : orderBook) {
+                output.println(k);
+            }
+        output.flush();
+        output.close();
+        } catch (IOException e) {
+            System.out.println("File Write failed: " + e.getMessage());
+        }
+    }
     
     
 }

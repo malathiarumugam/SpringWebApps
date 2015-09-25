@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Set;
 
 public class OrderBook {
@@ -200,7 +201,7 @@ public class OrderBook {
                             Set<String> keys = orderListTemp2.keySet();
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
-                                    //customerTemp2 = g;
+                                    customerTemp2 = g;
                                 }
                             }
                         }
@@ -239,7 +240,7 @@ public class OrderBook {
                         double area1 = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
 
                         if (material1.isEmpty() && area1 == 0) {
-                            break;
+                            
                         } else if (!material1.isEmpty() && area1 != 0) {
                             if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, area1);
@@ -292,7 +293,8 @@ public class OrderBook {
                         }
                         Customer customerT = new Customer(first, last, state1, tax, orderListTemp2);
                         ArrayList<Customer> tempBook2 = new ArrayList();
-                        access.writeOrder(datIn + ".txt", tempBook2);
+                        tempBook2.add(customerT);
+                        access.writeOrderString(datIn + ".txt", book.makeObjectString(tempBook2));
                     }
                     break;
                 case 4:
@@ -362,10 +364,12 @@ public class OrderBook {
 
                     DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
                     Calendar cal2 = Calendar.getInstance();
+                    Customer customerTemp4 = null;
+                    Flooring floorTemp2 = null;
+                    HashMap<String, Flooring> saveHashMap = new HashMap(); 
                     try {
                         ArrayList<String> tempToday = access.readOrder(dateFormat.format(cal2.getTime()) + ".txt");
-                        Customer customerTemp4;
-                        Flooring floorTemp2 = null;
+                        
                         String[] splitLine2;
                         for (String k : tempToday) {
                             splitLine2 = k.split("::");
@@ -378,16 +382,15 @@ public class OrderBook {
                             } else if (splitLine2[5].equalsIgnoreCase("laminate")) {
                                 floorTemp2 = new Laminate(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
                             }
-                            orderListTemp3 = new HashMap();
-                            orderListTemp3.put(splitLine2[4], floorTemp2);
-                            customerTemp4 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
+                            
+                            saveHashMap.put(splitLine2[4], floorTemp2);
+                            customerTemp4 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), saveHashMap);
                             orderBook.add(customerTemp4);
                         }
                     } catch (NullPointerException e) {
 
                     }
-
-                    access.writeOrder(dateFormat.format(cal2.getTime()) + ".txt", orderBook);
+                    access.writeOrderString(dateFormat.format(cal2.getTime()) + ".txt", book.makeObjectString(orderBook));
                     console.write("Your work has been saved!\n");
                     break;
                 case 6:
@@ -620,7 +623,6 @@ public class OrderBook {
                         double area = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
 
                         if (material.equals("") && area == 0) {
-                            break;
                         } else if (!material.equals("") && area != 0) {
                             if (material.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, area);
@@ -719,6 +721,30 @@ public class OrderBook {
             }
         } while (yesNo);
 
+    }
+    
+    public ArrayList<String> makeObjectString(ArrayList<Customer> tempBook2) {
+        Customer customerT;
+        Iterator<Customer> iter = tempBook2.iterator();
+        String outString = "";
+        ArrayList<String> stringList = new ArrayList();
+            while (iter.hasNext()) {
+                customerT = iter.next();
+                outString = customerT.getFirstName() + "::"
+                        + customerT.getLastName() + "::"
+                        + customerT.getState() + "::"
+                        + customerT.getTaxRate() + "::";
+                Set<String> keys = customerT.getOrderList().keySet();
+                    for (String k : keys) {
+                        outString += k+"::"+customerT.getOrderList().get(k).getProductType()+"::"+customerT.getOrderList().get(k).getArea()+"::"
+                                +customerT.getOrderList().get(k).getCostPerSqFt()+"::"+customerT.getOrderList().get(k).getLaborPerSqFt()+"::"
+                                +customerT.getOrderList().get(k).getMaterialCost()+"::"+customerT.getOrderList().get(k).getLaborCost()+"::"
+                                +customerT.getOrderList().get(k).getTax(customerT.getTaxRate())+"::"
+                                +customerT.getOrderList().get(k).getTotal(customerT.getTaxRate());
+                    }
+                stringList.add(outString);
+            }
+        return stringList;
     }
 
     public Customer findCustomer(String first, String last, ArrayList<Customer> orderBook) {
