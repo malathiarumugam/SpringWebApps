@@ -6,6 +6,8 @@
 package DAO;
 
 import Operation.Customer;
+import Operation.Flooring;
+import Operation.Wood;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.junit.After;
@@ -87,33 +89,39 @@ public class AccessTest {
     }
 
     /**
+     * Test of writeOrder method, of class Access.
+     */
+    //We are testing writing a file and then reading that file in the next test.
+    @Test
+    public void testWriteOrder() {
+        System.out.println("writeOrder");
+        String filename = "TestWriteOrder";
+        Wood test = new Wood("Wood", 2.0, 2.0, 100);
+        HashMap<String, Flooring> r = new HashMap();
+        r.put("123", test);
+        Customer charlie = new Customer("Charlie", "Brown", "PA", 5.5, r);
+        ArrayList<Customer> orderBook = new ArrayList();
+        orderBook.add(charlie);
+        Access instance = new Access();
+        instance.writeOrder(filename, orderBook);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    /**
      * Test of readOrder method, of class Access.
      */
     @Test
     public void testReadOrder() {
         System.out.println("readOrder");
-        String filename = "TestFileOrder";
+        String filename = "TestWriteOrder";
         Access instance = new Access();
         ArrayList<String> expResult = new ArrayList();
-        expResult.add("John::Smith::OH::6.25::20150924151207::Tile::250.0::3.5::4.15::875.0::1037.5::54.6875::1967.1875");
+        expResult.add("Charlie::Brown::PA::5.5::123::Wood::100.0::2.0::2.0::200.0::200.0::11.0::411.0");
         ArrayList<String> result = instance.readOrder(filename);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of writeOrder method, of class Access.
-     */
-    @Test
-    public void testWriteOrder() {
-        System.out.println("writeOrder");
-        String filename = "TestWriteOrder";
-        ArrayList<Customer> orderBook = null;
-        Access instance = new Access();
-        instance.writeOrder(filename, orderBook);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
     
 }

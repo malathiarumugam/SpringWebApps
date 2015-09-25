@@ -42,29 +42,7 @@ public class Customer implements Flippable {
         // System.out.println(dateFormat2.format(cal.getTime()));
         //System.out.println(dateFormat.format(cal.getTime())); //2014/08/06 16:00:22
         
-    public Flooring findOrdersByDate(String date) {
-        Set<String> keys = orderList.keySet();
-        for (String k : keys) {
-            if (k.substring(0, 8).equals(date)) {
-                return orderList.get(k);
-            }
-        }
-        System.out.println("Error: orders not found for specified date.");
-        return null;
-    }
-    
-    public Flooring findOrder(String orderNum) {
-        Set<String> keys = orderList.keySet();
-        for (String k : keys) {
-            if (k.equals(orderNum)) {
-                return orderList.get(k);
-            }
-        }
-        System.out.println("Error: orders not found for specified date.");
-        return null;
-    }
-    
-    public String addOrder(Customer customer, Flooring flooring) {
+     public String addOrder(Customer customer, Flooring flooring) {
         String orderNumber = dateFormat2.format(cal.getTime());
         customer.orderList.put(orderNumber, flooring);
         return orderNumber;
@@ -94,8 +72,8 @@ public class Customer implements Flippable {
         Set<String> keys = list.keySet();
         for (String k : keys) {
             if (k.equals(orderNum)) {
-            out = customer.getFirstName() + " " + customer.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+list.get(k).getProductType() + "  area: "+ list.get(k).getArea() + "  total cost: " + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
+            out = customer.getFirstName() + " " + customer.getLastName() + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
+                    "\n   Flooring: "+list.get(k).getProductType() + "   Area: "+ list.get(k).getArea() + "   Total Cost: $" + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
             return out;
             }
         }
@@ -116,8 +94,8 @@ public class Customer implements Flippable {
         Set<String> keys = cust.getOrderList().keySet();
         for (String k : keys) {
             if (k.equals(orderNum)) {
-            out = cust.getFirstName() + " " + cust.getLastName() + " Order Number: " + k + " Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "  area: "+ cust.getOrderList().get(k).getArea() + "  total cost: " + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
+            out = cust.getFirstName() + " " + cust.getLastName() + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
+                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "   Area: "+ cust.getOrderList().get(k).getArea() + "   Total Cost: $" + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
             return out;
             }
         }
@@ -128,14 +106,6 @@ public class Customer implements Flippable {
         System.out.println("Holy shit, the customer just did a flip!");
     }
     
-    public String iterate() {
-        String out = "";
-        Set<String> keys = orderList.keySet();
-        for (String k : keys) {
-            out = k+"::"+firstName+"::"+lastName+"::"+state+"::"+orderList.get(k).getArea()+"::"+orderList.get(k).getProductType();
-        }
-        return out;
-    }
 
     public HashMap<String, Flooring> getOrderList() {
         return orderList;

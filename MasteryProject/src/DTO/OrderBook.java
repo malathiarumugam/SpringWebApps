@@ -240,33 +240,52 @@ public class OrderBook {
                         } else if (!material1.equals("") && area1 != 0) {
                             if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, area1);
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("laminate")) {
                                 Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area1);
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("carpet")) {
                                 Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area1);
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("tile")) {
                                 Tile temp = new Tile("Tile", tileCost, tileLabor, area1);
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             }
                         } else if (!material1.equals("") && area1 == 0) {
                             if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, orderListTemp2.get(orderNumber).getArea());
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("laminate")) {
                                 Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, orderListTemp2.get(orderNumber).getArea());
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("carpet")) {
                                 Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, orderListTemp2.get(orderNumber).getArea());
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("tile")) {
                                 Tile temp = new Tile("Tile", tileCost, tileLabor, orderListTemp2.get(orderNumber).getArea());
+                                temp.getTax(tax);
+                                temp.getTotal(tax);
                                 orderListTemp2.put(orderNumber, temp);
                             }
                         } else if (material1.equals("") && area1 != 0) {
                             orderListTemp2.get(orderNumber).setArea(area1);
+                            HashMap<String, Flooring> update = cust.getOrderList();
+                            update.get(orderNumber).getTax(tax);
+                            update.get(orderNumber).getTotal(tax);
                         }
                         access.writeOrder(datIn + ".txt", tempBook);
                     }
@@ -359,7 +378,7 @@ public class OrderBook {
                             customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
                             orderBook.add(customerTemp2);
                         }
-                    } catch (Exception e) {
+                    } catch (NullPointerException e) {
 
                     }
 
