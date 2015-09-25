@@ -183,7 +183,12 @@ public class OrderBook {
                             tempBook.add(customerTemp2);
                         }
                         //add error checking for order number entry
+                        do {
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
+                        if (orderNumber.length() != 14) {
+                            System.out.println("That is not a valid order number.");
+                        }
+                        } while (orderNumber.length() != 14);
                         String dateEntered = orderNumber.substring(0, 8);
                         if (!(datIn.equals(dateEntered))) {
                             System.out.println("That order was not on that date. Did you save your files before trying to edit?");
@@ -195,34 +200,35 @@ public class OrderBook {
                             playing = false;
                         }
                     } while (playing);
-                    //Customer cust = new Customer();
+                    Customer cust = new Customer();
                     if (!displayOrder3.isEmpty()) {
                         for (Customer g : tempBook) {
-                            Set<String> keys = orderListTemp2.keySet();
+                            Set<String> keys = g.getOrderList().keySet();
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
-                                    customerTemp2 = g;
+                                    cust = g;
+                                    tempBook.remove(cust);
                                 }
                             }
-                        }
+                        } 
 
-                        String first = console.readString("Edit customer first name (" + customerTemp2.getFirstName() + "):");
+                        String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):");
                         if (first.isEmpty()) {
-                            first = customerTemp2.getFirstName();
+                            first = cust.getFirstName();
                             
                         } else {
                             //customerTemp2.setFirstName(first);
                         }
-                        String last = console.readString("Edit customer last name (" + customerTemp2.getLastName() + "):");
+                        String last = console.readString("Edit customer last name (" + cust.getLastName() + "):");
                         if (last.isEmpty()) {
-                            last = customerTemp2.getLastName();
+                            last = cust.getLastName();
                         } else {
                             //customerTemp2.setLastName(last);
                         }
-                        String state1 = console.readString("Edit state (" + customerTemp2.getState() + "):\t"
+                        String state1 = console.readString("Edit state (" + cust.getState() + "):\t"
                                 + "State choices (OH, PA, MI, IN)");
                         if (state1.isEmpty()) {
-                            state1 = customerTemp2.getState();
+                            state1 = cust.getState();
                         } else {
                             //customerTemp2.setState(state1);
                             if (state1.equalsIgnoreCase("OH")) {
@@ -235,9 +241,9 @@ public class OrderBook {
                                 tax = MI;
                             }
                         }
-                        String material1 = console.readString("Edit flooring material (" + orderListTemp2.get(orderNumber).getProductType() + "):\t"
+                        String material1 = console.readString("Edit flooring material (" + cust.getOrderList().get(orderNumber).getProductType() + "):\t"
                                 + "Material choices (Wood, Laminate, Carpet, Tile)");
-                        double area1 = console.readDouble("Edit area (" + orderListTemp2.get(orderNumber).getArea() + "):");
+                        double area1 = console.readDouble("Edit area (" + cust.getOrderList().get(orderNumber).getArea() + "):");
 
                         if (material1.isEmpty() && area1 == 0) {
                             
@@ -246,55 +252,56 @@ public class OrderBook {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, area1);
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("laminate")) {
                                 Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area1);
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                               cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("carpet")) {
                                 Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area1);
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("tile")) {
                                 Tile temp = new Tile("Tile", tileCost, tileLabor, area1);
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             }
                         } else if (!material1.isEmpty() && area1 == 0) {
                             if (material1.equalsIgnoreCase("wood")) {
-                                Wood temp = new Wood("Wood", woodCost, woodLabor, orderListTemp2.get(orderNumber).getArea());
+                                Wood temp = new Wood("Wood", woodCost, woodLabor, cust.getOrderList().get(orderNumber).getArea());
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("laminate")) {
-                                Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, orderListTemp2.get(orderNumber).getArea());
+                                Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, cust.getOrderList().get(orderNumber).getArea());
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("carpet")) {
-                                Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, orderListTemp2.get(orderNumber).getArea());
+                                Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, cust.getOrderList().get(orderNumber).getArea());
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("tile")) {
-                                Tile temp = new Tile("Tile", tileCost, tileLabor, orderListTemp2.get(orderNumber).getArea());
+                                Tile temp = new Tile("Tile", tileCost, tileLabor, cust.getOrderList().get(orderNumber).getArea());
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                                orderListTemp2.put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             }
                         } else if (material1.isEmpty() && area1 != 0) {
-                            orderListTemp2.get(orderNumber).setArea(area1);
-                            HashMap<String, Flooring> update = customerTemp2.getOrderList();
+                            cust.getOrderList().get(orderNumber).setArea(area1);
+                            HashMap<String, Flooring> update = cust.getOrderList();
                             update.get(orderNumber).getTax(tax);
                             update.get(orderNumber).getTotal(tax);
                         }
-                        Customer customerT = new Customer(first, last, state1, tax, orderListTemp2);
-                        ArrayList<Customer> tempBook2 = new ArrayList();
-                        tempBook2.add(customerT);
-                        access.writeOrderString(datIn + ".txt", book.makeObjectString(tempBook2));
+                        Customer customerT = new Customer(first, last, state1, tax, cust.getOrderList());
+                        tempBook.add(customerT);
+                        access.writeOrderString(datIn + ".txt", book.makeObjectString(tempBook));
+                    } else {
+                        System.out.println("No file was found.");
                     }
                     break;
                 case 4:
