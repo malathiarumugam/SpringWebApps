@@ -6,7 +6,7 @@
 package DAO;
 
 import Operation.Customer;
-import Operation.Flooring;
+import Operation.Florable;
 import Operation.Wood;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -97,7 +97,7 @@ public class AccessTest {
         System.out.println("writeOrder");
         String filename = "TestWriteOrder";
         Wood test = new Wood("Wood", 2.0, 2.0, 100);
-        HashMap<String, Flooring> r = new HashMap();
+        HashMap<String, Florable> r = new HashMap();
         r.put("123", test);
         Customer charlie = new Customer("Charlie", "Brown", "PA", 5.5, r);
         ArrayList<Customer> orderBook = new ArrayList();

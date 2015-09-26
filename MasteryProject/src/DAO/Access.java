@@ -4,7 +4,7 @@
 package DAO;
 
 import Operation.Customer;
-import Operation.Flooring;
+import Operation.Florable;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -92,7 +92,7 @@ public class Access {
             Iterator<Customer> iter = orderBook.iterator();
             while (iter.hasNext()) {
                 element = iter.next();
-                HashMap<String, Flooring> orderList = element.getOrderList();
+                HashMap<String, Florable> orderList = element.getOrderList();
                 outString = element.getFirstName() + "::"
                         + element.getLastName() + "::"
                         + element.getState() + "::"

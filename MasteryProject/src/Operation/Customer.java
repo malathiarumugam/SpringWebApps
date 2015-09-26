@@ -12,9 +12,9 @@ import java.util.HashMap;
 import java.util.Set;
 
 
-public class Customer implements Flippable {
+public class Customer {
     
-        private HashMap<String, Flooring> orderList;
+        private HashMap<String, Florable> orderList;
         private String firstName;
         private String lastName;
         private String state;
@@ -24,11 +24,11 @@ public class Customer implements Flippable {
         
     }
         
-    public Customer(HashMap<String, Flooring> list) {
+    public Customer(HashMap<String, Florable> list) {
         orderList = list;
     }
         
-    public Customer(String first, String last, String stat, double tax, HashMap<String, Flooring> list) {
+    public Customer(String first, String last, String stat, double tax, HashMap<String, Florable> list) {
         firstName = first;
         lastName = last;
         state = stat;
@@ -42,13 +42,13 @@ public class Customer implements Flippable {
         // System.out.println(dateFormat2.format(cal.getTime()));
         //System.out.println(dateFormat.format(cal.getTime())); //2014/08/06 16:00:22
         
-     public String addOrder(Customer customer, Flooring flooring) {
+     public String addOrder(Customer customer, Florable flooring) {
         String orderNumber = dateFormat2.format(cal.getTime());
         customer.orderList.put(orderNumber, flooring);
         return orderNumber;
     }
     
-    public void removeOrder(String orderNum, HashMap<String, Flooring> orderList) {
+    public void removeOrder(String orderNum, HashMap<String, Florable> orderList) {
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
             if (k.equals(orderNum)) {
@@ -62,18 +62,18 @@ public class Customer implements Flippable {
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
             out = firstName + " " + lastName + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + df.format(orderList.get(k).getTotal(taxRate))+"\n";
+                    "\n   Florable: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + df.format(orderList.get(k).getTotal(taxRate))+"\n";
         }
         return out;
     }
     
-    public String displayOrder(Customer customer, HashMap<String, Flooring> list, String orderNum) {
+    public String displayOrder(Customer customer, HashMap<String, Florable> list, String orderNum) {
         String out = "";
         Set<String> keys = list.keySet();
         for (String k : keys) {
             if (k.equals(orderNum)) {
             out = customer.getFirstName() + " " + customer.getLastName() + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+list.get(k).getProductType() + "   Area: "+ list.get(k).getArea() + "   Total Cost: $" + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
+                    "\n   Florable: "+list.get(k).getProductType() + "   Area: "+ list.get(k).getArea() + "   Total Cost: $" + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
             return out;
             }
         }
@@ -95,23 +95,21 @@ public class Customer implements Flippable {
         for (String k : keys) {
             if (k.equals(orderNum)) {
             out = cust.getFirstName() + " " + cust.getLastName() + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "   Area: "+ cust.getOrderList().get(k).getArea() + "   Total Cost: $" + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
+                    "\n   Florable: "+cust.getOrderList().get(k).getProductType() + "   Area: "+ cust.getOrderList().get(k).getArea() + "   Total Cost: $" + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
             return out;
             }
         }
         return out;
     }
     
-    public void doAFlip(){
-        System.out.println("Holy shit, the customer just did a flip!");
-    }
-    
+       
 
-    public HashMap<String, Flooring> getOrderList() {
+    public HashMap<String, Florable> getOrderList() {
         return orderList;
     }
 
-    public void setOrderList(HashMap<String, Flooring> orderList) {
+    public void setOrderList(HashMap<String, Florable
+              > orderList) {
         this.orderList = orderList;
     }
 

@@ -3,7 +3,8 @@ package DTO;
 import DAO.Access;
 import Operation.Carpet;
 import Operation.Customer;
-import Operation.Flooring;
+//using Flooring's methods through Florable interface
+import Operation.Florable;
 import Operation.Laminate;
 import Operation.Tile;
 import Operation.Wood;
@@ -27,7 +28,7 @@ public class OrderBook {
     public void run() {
 
         Console console = new Console();
-        HashMap<String, Flooring> orderList = new HashMap();
+        HashMap<String, Florable> orderList = new HashMap();
         Customer customer = new Customer();
         Access access = new Access();
         String states = "states";
@@ -70,9 +71,9 @@ public class OrderBook {
                         if (date.length() == 8) {
                             try {
                                 ArrayList<String> displayOrder = access.readOrder(date + ".txt");
-                                HashMap<String, Flooring> orderListTemp;
+                                HashMap<String, Florable> orderListTemp;
                                 Customer customerTemp;
-                                Flooring floorTemp = null;
+                                Florable floorTemp = null;
                                 String[] splitLine;
                                 if (displayOrder.isEmpty()) {
                                     System.out.println("That date has no orders.");
@@ -157,14 +158,14 @@ public class OrderBook {
                     boolean playing = true;
                     ArrayList<Customer> tempBook = new ArrayList();
                     ArrayList<String> displayOrder3 = new ArrayList();
-                    HashMap<String, Flooring> orderListTemp2 = new HashMap();
+                    HashMap<String, Florable> orderListTemp2 = new HashMap();
                     String datIn = "";
                     Customer customerTemp2 = new Customer();
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         displayOrder3 = access.readOrder(datIn + ".txt");
                         
-                        Flooring floorTemp2 = null;
+                        Florable floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrder3) {
                             splitLine2 = k.split("::");
@@ -207,11 +208,10 @@ public class OrderBook {
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
                                     cust = g;
-                                    tempBook.remove(cust);
                                 }
                             }
                         } 
-
+                        tempBook.remove(cust);
                         String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):");
                         if (first.isEmpty()) {
                             first = cust.getFirstName();
@@ -293,7 +293,7 @@ public class OrderBook {
                             }
                         } else if (material1.isEmpty() && area1 != 0) {
                             cust.getOrderList().get(orderNumber).setArea(area1);
-                            HashMap<String, Flooring> update = cust.getOrderList();
+                            HashMap<String, Florable> update = cust.getOrderList();
                             update.get(orderNumber).getTax(tax);
                             update.get(orderNumber).getTotal(tax);
                         }
@@ -309,7 +309,7 @@ public class OrderBook {
                     String dateIn = "";
                     ArrayList<Customer> tempBook2 = new ArrayList();
                     ArrayList<String> displayOrderTwo = new ArrayList();
-                    HashMap<String, Flooring> orderListTemp3 = new HashMap();
+                    HashMap<String, Florable> orderListTemp3 = new HashMap();
                     do {
                         dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
@@ -317,7 +317,7 @@ public class OrderBook {
                         displayOrderTwo = access.readOrder(dateIn + ".txt");
 
                         Customer customerTemp3;
-                        Flooring floorTemp2 = null;
+                        Florable floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrderTwo) {
                             splitLine2 = k.split("::");
@@ -372,8 +372,8 @@ public class OrderBook {
                     DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
                     Calendar cal2 = Calendar.getInstance();
                     Customer customerTemp4 = null;
-                    Flooring floorTemp2 = null;
-                    HashMap<String, Flooring> saveHashMap = new HashMap(); 
+                    Florable floorTemp2 = null;
+                    HashMap<String, Florable> saveHashMap = new HashMap(); 
                     try {
                         ArrayList<String> tempToday = access.readOrder(dateFormat.format(cal2.getTime()) + ".txt");
                         
@@ -411,7 +411,7 @@ public class OrderBook {
     public void testRun() {
 
         Console console = new Console();
-        HashMap<String, Flooring> orderList = new HashMap();
+        HashMap<String, Florable> orderList = new HashMap();
         Customer customer = new Customer();
         Access access = new Access();
         String states = "states";
@@ -448,9 +448,9 @@ public class OrderBook {
                 case 1:
                     String date = console.readString("What date did you complete your order? (YYYYMMDD)");
                     ArrayList<String> displayOrder = access.readOrder(date + ".txt");
-                    HashMap<String, Flooring> orderListTemp;
+                    HashMap<String, Florable> orderListTemp;
                     Customer customerTemp;
-                    Flooring floorTemp = null;
+                    Florable floorTemp = null;
                     String[] splitLine;
                     for (String k : displayOrder) {
                         splitLine = k.split("::");
@@ -549,13 +549,13 @@ public class OrderBook {
                     boolean playing = true;
                     ArrayList<Customer> tempBook = new ArrayList();
                     ArrayList<String> displayOrder3 = new ArrayList();
-                    HashMap<String, Flooring> orderListTemp2 = new HashMap();
+                    HashMap<String, Florable> orderListTemp2 = new HashMap();
                     String datIn = "";
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         displayOrder3 = access.readOrder(datIn + ".txt");
                         Customer customerTemp2;
-                        Flooring floorTemp2 = null;
+                        Florable floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrder3) {
                             splitLine2 = k.split("::");
@@ -670,7 +670,7 @@ public class OrderBook {
                     String dateIn = "";
                     ArrayList<Customer> tempBook2 = new ArrayList();
                     ArrayList<String> displayOrderTwo = new ArrayList();
-                    HashMap<String, Flooring> orderListTemp3 = new HashMap();
+                    HashMap<String, Florable> orderListTemp3 = new HashMap();
                     do {
                         dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
@@ -678,7 +678,7 @@ public class OrderBook {
                         displayOrderTwo = access.readOrder(dateIn + ".txt");
 
                         Customer customerTemp2;
-                        Flooring floorTemp2 = null;
+                        Florable floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrderTwo) {
                             splitLine2 = k.split("::");

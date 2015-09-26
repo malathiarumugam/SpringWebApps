@@ -51,7 +51,7 @@ public class CustomerTest {
         DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
         Calendar cal = Calendar.getInstance();
         Wood test = new Wood("Wood", 2.0, 2.0, 100);
-        HashMap<String, Flooring> r = new HashMap();
+        HashMap<String, Florable> r = new HashMap();
         Customer charlie = new Customer("Charlie", "Brown", "PA", 5.5, r);
         Customer instance = new Customer();
         String expResult = dateFormat.format(cal.getTime());
@@ -68,11 +68,11 @@ public class CustomerTest {
     public void testRemoveOrder() {
         System.out.println("removeOrder");
         Wood test = new Wood("Wood", 2.0, 2.0, 100);
-        HashMap<String, Flooring> r = new HashMap();
+        HashMap<String, Florable> r = new HashMap();
         r.put("123", test);
         Customer charlie = new Customer("Charlie", "Brown", "PA", 5.5, r);
         String orderNum = "123";
-        HashMap<String, Flooring> orderList = r;
+        HashMap<String, Florable> orderList = r;
         Customer instance = charlie;
         instance.removeOrder(orderNum, orderList);
         // TODO review the generated test code and remove the default call to fail.
@@ -86,7 +86,7 @@ public class CustomerTest {
     public void testToString() {
         System.out.println("toString");
         Wood test = new Wood("Tile", 3.4, 4.15, 250);
-        HashMap<String, Flooring> r = new HashMap();
+        HashMap<String, Florable> r = new HashMap();
         r.put("20150924151207", test);
         Customer charlie = new Customer("John", "Smith", "OH", 6.25, r);
         String orderNum = "20150924151207";
@@ -106,12 +106,12 @@ public class CustomerTest {
     public void testDisplayOrder_3args() {
         System.out.println("displayOrder");
         Wood test = new Wood("Tile", 3.4, 4.15, 250);
-        HashMap<String, Flooring> r = new HashMap();
+        HashMap<String, Florable> r = new HashMap();
         r.put("20150924151207", test);
         Customer charlie = new Customer("John", "Smith", "OH", 6.25, r);
         String orderNum = "20150924151207";
         Customer customer = charlie;
-        HashMap<String, Flooring> list = r;
+        HashMap<String, Florable> list = r;
         Customer instance = new Customer();
         String expResult = "John Smith  Order Number: 20150924151207  Date: 2015/09/24\n"
                 + "   Flooring: Tile   Area: 250.0   Total Cost: $1940.62\n";
@@ -128,7 +128,7 @@ public class CustomerTest {
     public void testDisplayOrder_String_ArrayList() {
         System.out.println("displayOrder");
         Wood test = new Wood("Tile", 3.4, 4.15, 250);
-        HashMap<String, Flooring> r = new HashMap();
+        HashMap<String, Florable> r = new HashMap();
         r.put("20150924151207", test);
         Customer charlie = new Customer("John", "Smith", "OH", 6.25, r);
         String orderNum = "20150924151207";

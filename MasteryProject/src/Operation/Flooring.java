@@ -1,7 +1,7 @@
 
 package Operation;
 
-public abstract class Flooring {
+public abstract class Flooring implements Florable{
     
     protected String productType;
     protected double costPerSqFt;
@@ -107,6 +107,8 @@ public abstract class Flooring {
      */
     public void setTotal(double total) {
         this.total = total;
-    }
+    } 
+   
+    
 
 }
