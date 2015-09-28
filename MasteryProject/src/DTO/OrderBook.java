@@ -40,13 +40,13 @@ public class OrderBook {
         double tax = 0.0;
 
         //load file into another array of doubles for taxes for each state
-        HashMap<String, Double> stateTaxes = access.readTaxes(states);
+        HashMap<String, Double> stateTaxes = access.readTaxes("Data/" + states);
         double OH = stateTaxes.get("OH");
         double PA = stateTaxes.get("PA");
         double MI = stateTaxes.get("MI");
         double IN = stateTaxes.get("IN");
 
-        ArrayList<String> productCosts = access.readCost(products);
+        ArrayList<String> productCosts = access.readCost("Data/" + products);
         //load in the file, return an array of doubles
         double woodCost = Double.parseDouble(productCosts.get(10));
         double woodLabor = Double.parseDouble(productCosts.get(11));
@@ -70,7 +70,7 @@ public class OrderBook {
                         date = console.readString("What date did you complete your order? (YYYYMMDD)");
                         if (date.length() == 8) {
                             try {
-                                ArrayList<String> displayOrder = access.readOrder(date + ".txt");
+                                ArrayList<String> displayOrder = access.readOrder("Data/" + date + ".txt");
                                 HashMap<String, Florable> orderListTemp;
                                 Customer customerTemp;
                                 Florable floorTemp = null;
@@ -163,7 +163,7 @@ public class OrderBook {
                     Customer customerTemp2 = new Customer();
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
-                        displayOrder3 = access.readOrder(datIn + ".txt");
+                        displayOrder3 = access.readOrder("Data/" + datIn + ".txt");
                         
                         Florable floorTemp2 = null;
                         String[] splitLine2;
@@ -299,7 +299,7 @@ public class OrderBook {
                         }
                         Customer customerT = new Customer(first, last, state1, tax, cust.getOrderList());
                         tempBook.add(customerT);
-                        access.writeOrderString(datIn + ".txt", book.makeObjectString(tempBook));
+                        access.writeOrderString("Data/" + datIn + ".txt", book.makeObjectString(tempBook));
                     } else {
                         System.out.println("No file was found.");
                     }
@@ -314,7 +314,7 @@ public class OrderBook {
                         dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
 
-                        displayOrderTwo = access.readOrder(dateIn + ".txt");
+                        displayOrderTwo = access.readOrder("Data/" + dateIn + ".txt");
 
                         Customer customerTemp3;
                         Florable floorTemp2 = null;
@@ -363,7 +363,7 @@ public class OrderBook {
                             customer.removeOrder(orderNumber, orderListTemp3);
                             tempBook2.remove(custo);
                         }
-                        access.writeOrder(dateIn + ".txt", tempBook2);
+                        access.writeOrder("Data/" + dateIn + ".txt", tempBook2);
                     }
 
                     break;
@@ -375,7 +375,7 @@ public class OrderBook {
                     Florable floorTemp2 = null;
                     HashMap<String, Florable> saveHashMap = new HashMap(); 
                     try {
-                        ArrayList<String> tempToday = access.readOrder(dateFormat.format(cal2.getTime()) + ".txt");
+                        ArrayList<String> tempToday = access.readOrder("Data/" + dateFormat.format(cal2.getTime()) + ".txt");
                         
                         String[] splitLine2;
                         for (String k : tempToday) {
@@ -397,7 +397,7 @@ public class OrderBook {
                     } catch (NullPointerException e) {
 
                     }
-                    access.writeOrderString(dateFormat.format(cal2.getTime()) + ".txt", book.makeObjectString(orderBook));
+                    access.writeOrderString("Data/" + dateFormat.format(cal2.getTime()) + ".txt", book.makeObjectString(orderBook));
                     console.write("Your work has been saved!\n");
                     break;
                 case 6:
