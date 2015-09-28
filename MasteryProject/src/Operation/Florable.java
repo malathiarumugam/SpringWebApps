@@ -76,6 +76,6 @@ public interface Florable {
     
     public double getMaterialCost();
     
-    public abstract double getLaborCost();
+    public double getLaborCost();
     
 }

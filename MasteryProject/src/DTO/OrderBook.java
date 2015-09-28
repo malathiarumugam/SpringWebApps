@@ -3,6 +3,7 @@ package DTO;
 import DAO.Access;
 import Operation.Carpet;
 import Operation.Customer;
+import Operation.Customizable;
 //using Flooring's methods through Florable interface
 import Operation.Florable;
 import Operation.Laminate;
@@ -72,7 +73,7 @@ public class OrderBook {
                             try {
                                 ArrayList<String> displayOrder = access.readOrder("Data/" + date + ".txt");
                                 HashMap<String, Florable> orderListTemp;
-                                Customer customerTemp;
+                                Customizable customerTemp;
                                 Florable floorTemp = null;
                                 String[] splitLine;
                                 if (displayOrder.isEmpty()) {
@@ -80,15 +81,7 @@ public class OrderBook {
                                 }
                                 for (String k : displayOrder) {
                                     splitLine = k.split("::");
-                                    if (splitLine[5].equalsIgnoreCase("wood")) {
-                                        floorTemp = new Wood(splitLine[5], Double.parseDouble(splitLine[7]), Double.parseDouble(splitLine[8]), Double.parseDouble(splitLine[6]));
-                                    } else if (splitLine[5].equalsIgnoreCase("tile")) {
-                                        floorTemp = new Tile(splitLine[5], Double.parseDouble(splitLine[7]), Double.parseDouble(splitLine[8]), Double.parseDouble(splitLine[6]));
-                                    } else if (splitLine[5].equalsIgnoreCase("carpet")) {
-                                        floorTemp = new Carpet(splitLine[5], Double.parseDouble(splitLine[7]), Double.parseDouble(splitLine[8]), Double.parseDouble(splitLine[6]));
-                                    } else if (splitLine[5].equalsIgnoreCase("laminate")) {
-                                        floorTemp = new Laminate(splitLine[5], Double.parseDouble(splitLine[7]), Double.parseDouble(splitLine[8]), Double.parseDouble(splitLine[6]));
-                                    }
+                                    floorTemp = book.findFlooring(splitLine);
                                     orderListTemp = new HashMap();
                                     orderListTemp.put(splitLine[4], floorTemp);
                                     customerTemp = new Customer(splitLine[0], splitLine[1], splitLine[2], Double.parseDouble(splitLine[3]), orderListTemp);
@@ -164,20 +157,12 @@ public class OrderBook {
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         displayOrder3 = access.readOrder("Data/" + datIn + ".txt");
-                        
+
                         Florable floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrder3) {
                             splitLine2 = k.split("::");
-                            if (splitLine2[5].equalsIgnoreCase("wood")) {
-                                floorTemp2 = new Wood(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("tile")) {
-                                floorTemp2 = new Tile(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("carpet")) {
-                                floorTemp2 = new Carpet(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("laminate")) {
-                                floorTemp2 = new Laminate(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            }
+                            floorTemp2 = book.findFlooring(splitLine2);
                             orderListTemp2 = new HashMap();
                             orderListTemp2.put(splitLine2[4], floorTemp2);
                             customerTemp2 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp2);
@@ -185,10 +170,10 @@ public class OrderBook {
                         }
                         //add error checking for order number entry
                         do {
-                        orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
-                        if (orderNumber.length() != 14) {
-                            System.out.println("That is not a valid order number.");
-                        }
+                            orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
+                            if (orderNumber.length() != 14) {
+                                System.out.println("That is not a valid order number.");
+                            }
                         } while (orderNumber.length() != 14);
                         String dateEntered = orderNumber.substring(0, 8);
                         if (!(datIn.equals(dateEntered))) {
@@ -201,21 +186,21 @@ public class OrderBook {
                             playing = false;
                         }
                     } while (playing);
-                    Customer cust = new Customer();
+                    Customizable cust = new Customer();
                     if (!displayOrder3.isEmpty()) {
-                        for (Customer g : tempBook) {
+                        for (Customizable g : tempBook) {
                             Set<String> keys = g.getOrderList().keySet();
                             for (String k : keys) {
                                 if (k.equals(orderNumber)) {
                                     cust = g;
                                 }
                             }
-                        } 
+                        }
                         tempBook.remove(cust);
                         String first = console.readString("Edit customer first name (" + cust.getFirstName() + "):");
                         if (first.isEmpty()) {
                             first = cust.getFirstName();
-                            
+
                         } else {
                             //customerTemp2.setFirstName(first);
                         }
@@ -246,7 +231,7 @@ public class OrderBook {
                         double area1 = console.readDouble("Edit area (" + cust.getOrderList().get(orderNumber).getArea() + "):");
 
                         if (material1.isEmpty() && area1 == 0) {
-                            
+
                         } else if (!material1.isEmpty() && area1 != 0) {
                             if (material1.equalsIgnoreCase("wood")) {
                                 Wood temp = new Wood("Wood", woodCost, woodLabor, area1);
@@ -257,7 +242,7 @@ public class OrderBook {
                                 Laminate temp = new Laminate("Laminate", laminateCost, laminateLabor, area1);
                                 temp.getTax(tax);
                                 temp.getTotal(tax);
-                               cust.getOrderList().put(orderNumber, temp);
+                                cust.getOrderList().put(orderNumber, temp);
                             } else if (material1.equalsIgnoreCase("carpet")) {
                                 Carpet temp = new Carpet("Carpet", carpetCost, carpetLabor, area1);
                                 temp.getTax(tax);
@@ -321,15 +306,7 @@ public class OrderBook {
                         String[] splitLine2;
                         for (String k : displayOrderTwo) {
                             splitLine2 = k.split("::");
-                            if (splitLine2[5].equalsIgnoreCase("wood")) {
-                                floorTemp2 = new Wood(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("tile")) {
-                                floorTemp2 = new Tile(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("carpet")) {
-                                floorTemp2 = new Carpet(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("laminate")) {
-                                floorTemp2 = new Laminate(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            }
+                            floorTemp2 = book.findFlooring(splitLine2);
                             orderListTemp3 = new HashMap();
                             orderListTemp3.put(splitLine2[4], floorTemp2);
                             customerTemp3 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), orderListTemp3);
@@ -360,13 +337,10 @@ public class OrderBook {
                                     }
                                 }
                             }
-                            //if removing an order on the day it is placed, that order must be removed from orderBook (temp memory) as well.
-                            //customer.removeOrder(orderNumber, book);
-                            //orderBook
                             customer.removeOrder(orderNumber, orderListTemp3);
                             tempBook2.remove(custo);
                         }
-                        access.writeOrder("Data/" + dateIn + ".txt", tempBook2);
+                        access.writeOrderString("Data/" + dateIn + ".txt", book.makeObjectString(tempBook2));
                     }
 
                     break;
@@ -376,23 +350,15 @@ public class OrderBook {
                     Calendar cal2 = Calendar.getInstance();
                     Customer customerTemp4 = null;
                     Florable floorTemp2 = null;
-                    HashMap<String, Florable> saveHashMap = new HashMap(); 
+                    HashMap<String, Florable> saveHashMap = new HashMap();
                     try {
                         ArrayList<String> tempToday = access.readOrder("Data/" + dateFormat.format(cal2.getTime()) + ".txt");
-                        
+
                         String[] splitLine2;
                         for (String k : tempToday) {
                             splitLine2 = k.split("::");
-                            if (splitLine2[5].equalsIgnoreCase("wood")) {
-                                floorTemp2 = new Wood(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("tile")) {
-                                floorTemp2 = new Tile(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("carpet")) {
-                                floorTemp2 = new Carpet(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            } else if (splitLine2[5].equalsIgnoreCase("laminate")) {
-                                floorTemp2 = new Laminate(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
-                            }
-                            
+                            floorTemp2 = book.findFlooring(splitLine2);
+
                             saveHashMap.put(splitLine2[4], floorTemp2);
                             customerTemp4 = new Customer(splitLine2[0], splitLine2[1], splitLine2[2], Double.parseDouble(splitLine2[3]), saveHashMap);
                             orderBook.add(customerTemp4);
@@ -402,6 +368,7 @@ public class OrderBook {
                     }
                     access.writeOrderString("Data/" + dateFormat.format(cal2.getTime()) + ".txt", book.makeObjectString(orderBook));
                     console.write("Your work has been saved!\n");
+
                     break;
                 case 6:
                     yesNo = false;
@@ -452,7 +419,7 @@ public class OrderBook {
                     String date = console.readString("What date did you complete your order? (YYYYMMDD)");
                     ArrayList<String> displayOrder = access.readOrder(date + ".txt");
                     HashMap<String, Florable> orderListTemp;
-                    Customer customerTemp;
+                    Customizable customerTemp;
                     Florable floorTemp = null;
                     String[] splitLine;
                     for (String k : displayOrder) {
@@ -550,14 +517,14 @@ public class OrderBook {
                     break;
                 case 3:
                     boolean playing = true;
-                    ArrayList<Customer> tempBook = new ArrayList();
+                    ArrayList<Customizable> tempBook = new ArrayList();
                     ArrayList<String> displayOrder3 = new ArrayList();
                     HashMap<String, Florable> orderListTemp2 = new HashMap();
                     String datIn = "";
                     do {
                         datIn = console.readString("What date did you complete your order? (YYYYMMDD)");
                         displayOrder3 = access.readOrder(datIn + ".txt");
-                        Customer customerTemp2;
+                        Customizable customerTemp2;
                         Florable floorTemp2 = null;
                         String[] splitLine2;
                         for (String k : displayOrder3) {
@@ -588,9 +555,9 @@ public class OrderBook {
                             playing = false;
                         }
                     } while (playing);
-                    Customer cust = new Customer();
+                    Customizable cust = new Customer();
                     if (!displayOrder3.isEmpty()) {
-                        for (Customer g : tempBook) {
+                        for (Customizable g : tempBook) {
                             //System.out.println(g);
                             Set<String> keys = orderListTemp2.keySet();
                             for (String k : keys) {
@@ -732,28 +699,28 @@ public class OrderBook {
         } while (yesNo);
 
     }
-    
+
     public ArrayList<String> makeObjectString(ArrayList<Customer> tempBook2) {
-        Customer customerT;
+        Customizable customerT;
         Iterator<Customer> iter = tempBook2.iterator();
         String outString = "";
         ArrayList<String> stringList = new ArrayList();
-            while (iter.hasNext()) {
-                customerT = iter.next();
-                outString = customerT.getFirstName() + "::"
-                        + customerT.getLastName() + "::"
-                        + customerT.getState() + "::"
-                        + customerT.getTaxRate() + "::";
-                Set<String> keys = customerT.getOrderList().keySet();
-                    for (String k : keys) {
-                        outString += k+"::"+customerT.getOrderList().get(k).getProductType()+"::"+customerT.getOrderList().get(k).getArea()+"::"
-                                +customerT.getOrderList().get(k).getCostPerSqFt()+"::"+customerT.getOrderList().get(k).getLaborPerSqFt()+"::"
-                                +customerT.getOrderList().get(k).getMaterialCost()+"::"+customerT.getOrderList().get(k).getLaborCost()+"::"
-                                +customerT.getOrderList().get(k).getTax(customerT.getTaxRate())+"::"
-                                +customerT.getOrderList().get(k).getTotal(customerT.getTaxRate());
-                    }
-                stringList.add(outString);
+        while (iter.hasNext()) {
+            customerT = iter.next();
+            outString = customerT.getFirstName() + "::"
+                    + customerT.getLastName() + "::"
+                    + customerT.getState() + "::"
+                    + customerT.getTaxRate() + "::";
+            Set<String> keys = customerT.getOrderList().keySet();
+            for (String k : keys) {
+                outString += k + "::" + customerT.getOrderList().get(k).getProductType() + "::" + customerT.getOrderList().get(k).getArea() + "::"
+                        + customerT.getOrderList().get(k).getCostPerSqFt() + "::" + customerT.getOrderList().get(k).getLaborPerSqFt() + "::"
+                        + customerT.getOrderList().get(k).getMaterialCost() + "::" + customerT.getOrderList().get(k).getLaborCost() + "::"
+                        + customerT.getOrderList().get(k).getTax(customerT.getTaxRate()) + "::"
+                        + customerT.getOrderList().get(k).getTotal(customerT.getTaxRate());
             }
+            stringList.add(outString);
+        }
         return stringList;
     }
 
@@ -764,6 +731,21 @@ public class OrderBook {
             }
         }
         return null;
+    }
+
+    public Florable findFlooring(String[] splitLine2) {
+        Florable floorTemp2 = null;
+        if (splitLine2[5].equalsIgnoreCase("wood")) {
+            floorTemp2 = new Wood(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+        } else if (splitLine2[5].equalsIgnoreCase("tile")) {
+            floorTemp2 = new Tile(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+        } else if (splitLine2[5].equalsIgnoreCase("carpet")) {
+            floorTemp2 = new Carpet(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+        } else if (splitLine2[5].equalsIgnoreCase("laminate")) {
+            floorTemp2 = new Laminate(splitLine2[5], Double.parseDouble(splitLine2[7]), Double.parseDouble(splitLine2[8]), Double.parseDouble(splitLine2[6]));
+        }
+
+        return floorTemp2;
     }
 
     public static void displayMenu() {

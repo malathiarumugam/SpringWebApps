@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 
-public class Customer {
+public class Customer implements Customizable {
     
         private HashMap<String, Florable> orderList;
         private String firstName;
@@ -39,8 +39,6 @@ public class Customer {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         DateFormat dateFormat2 = new SimpleDateFormat("yyyyMMddHHmmss");
         Calendar cal = Calendar.getInstance();
-        // System.out.println(dateFormat2.format(cal.getTime()));
-        //System.out.println(dateFormat.format(cal.getTime())); //2014/08/06 16:00:22
         
      public String addOrder(Customer customer, Florable flooring) {
         String orderNumber = dateFormat2.format(cal.getTime());
@@ -57,12 +55,14 @@ public class Customer {
         }
     }
     DecimalFormat df = new DecimalFormat("#0.00");
+    
+    @Override
     public String toString() {
         String out = "";
         Set<String> keys = orderList.keySet();
         for (String k : keys) {
             out = firstName + " " + lastName + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Florable: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + df.format(orderList.get(k).getTotal(taxRate))+"\n";
+                    "\n   Flooring: "+orderList.get(k).getProductType() + "   Area: "+ orderList.get(k).getArea() + "   Total Cost: $" + df.format(orderList.get(k).getTotal(taxRate))+"\n";
         }
         return out;
     }
@@ -73,7 +73,7 @@ public class Customer {
         for (String k : keys) {
             if (k.equals(orderNum)) {
             out = customer.getFirstName() + " " + customer.getLastName() + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Florable: "+list.get(k).getProductType() + "   Area: "+ list.get(k).getArea() + "   Total Cost: $" + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
+                    "\n   Flooring: "+list.get(k).getProductType() + "   Area: "+ list.get(k).getArea() + "   Total Cost: $" + df.format(list.get(k).getTotal(customer.getTaxRate()))+"\n";
             return out;
             }
         }
@@ -95,7 +95,7 @@ public class Customer {
         for (String k : keys) {
             if (k.equals(orderNum)) {
             out = cust.getFirstName() + " " + cust.getLastName() + "  Order Number: " + k + "  Date: " + k.substring(0, 4)+"/"+k.substring(4,6)+"/"+k.substring(6, 8) + 
-                    "\n   Florable: "+cust.getOrderList().get(k).getProductType() + "   Area: "+ cust.getOrderList().get(k).getArea() + "   Total Cost: $" + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
+                    "\n   Flooring: "+cust.getOrderList().get(k).getProductType() + "   Area: "+ cust.getOrderList().get(k).getArea() + "   Total Cost: $" + df.format(cust.getOrderList().get(k).getTotal(cust.getTaxRate()))+"\n";
             return out;
             }
         }
