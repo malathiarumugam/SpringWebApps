@@ -312,7 +312,7 @@ public class OrderBook {
                     HashMap<String, Florable> orderListTemp3 = new HashMap();
                     do {
                         dateIn = console.readString("What date did you complete your order? (YYYYMMDD)");
-                        orderNumber = console.readString("Please enter the order number of the order you would like to edit? ");
+                        orderNumber = console.readString("Please enter the order number of the order you would like to remove? ");
 
                         displayOrderTwo = access.readOrder("Data/" + dateIn + ".txt");
 
@@ -360,6 +360,9 @@ public class OrderBook {
                                     }
                                 }
                             }
+                            //if removing an order on the day it is placed, that order must be removed from orderBook (temp memory) as well.
+                            //customer.removeOrder(orderNumber, book);
+                            //orderBook
                             customer.removeOrder(orderNumber, orderListTemp3);
                             tempBook2.remove(custo);
                         }
