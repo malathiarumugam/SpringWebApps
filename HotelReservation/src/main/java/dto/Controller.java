@@ -5,10 +5,15 @@
  */
 package dto;
 
+import operations.Hotel;
+
 /**
  *
  * @author apprentice
  */
 public class Controller {
     
+    public Controller(Hotel hotel){
+        
+    }
 }

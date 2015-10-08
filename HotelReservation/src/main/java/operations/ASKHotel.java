@@ -11,7 +11,7 @@ import java.time.LocalDate;
  *
  * @author apprentice
  */
-public class Hotel {
+public class ASKHotel {
     
     private String hotelName = "ASK Hotel";
     
@@ -22,7 +22,7 @@ public class Hotel {
     //this is the parallel array associated with each second dimensional array
 
     
-    public Hotel (Guest [][] rooms, Room[] info ){
+    public ASKHotel (Guest [][] rooms, Room[] info ){
        calRooms = rooms;
        roomInfo = info;
     }
