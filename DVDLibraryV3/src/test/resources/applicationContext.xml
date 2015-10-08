@@ -4,15 +4,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
 ">
     <bean id="library1" class="com.mycompany.Operations.DVDCollection"/>
-    <bean id="library2" class="com.mycompany.Operations.DVDLibraryEmmaDessa"/>
+    <!--  <bean id="library2" class="com.mycompany.Operations.DVDLibraryEmmaDessa"/>
     <bean id="library3" class="com.mycompany.Operations.DVDLibraryThree"/>
-    <bean id="library4" class="com.mycompany.Operations.DVDLibraryTwo"/> 
+    <bean id="library4" class="com.mycompany.Operations.DVDLibraryTwo"/> -->
     <bean id="library" class="com.mycompany.Operations.DVDLibrary"/>
     
     <bean id="dvdcontroller1" class="com.mycompany.dto.Controller">
         <constructor-arg ref="library1"/>
     </bean>
-    <bean id="dvdcontroller2" class="com.mycompany.dto.Controller">
+   <!-- <bean id="dvdcontroller2" class="com.mycompany.dto.Controller">
         <constructor-arg ref="library2"/>
     </bean>
     <bean id="dvdcontroller3" class="com.mycompany.dto.Controller">
@@ -20,7 +20,7 @@
     </bean>
     <bean id="dvdcontroller4" class="com.mycompany.dto.Controller">
         <constructor-arg ref="library4"/>
-    </bean>
+    </bean>-->
     <bean id="dvdcontroller" class="com.mycompany.dto.Controller">
         <constructor-arg ref="library"/>
     </bean>

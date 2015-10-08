@@ -29,9 +29,9 @@ public interface DvdLibraryDao {
 
     public List<DVD> getByStudio(String studio);
 
-    //public ArrayList getAllDVD();
+    public ArrayList getAllDVD();
 
-    //public DVD findDVD(String name);
+    public DVD findDVD(String name);
 
-    //public int findDVDCount(String name);
+    public int findDVDCount(String name);
 }
