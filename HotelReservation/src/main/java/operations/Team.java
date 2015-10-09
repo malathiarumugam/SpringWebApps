@@ -26,6 +26,6 @@ public class Team extends NewGuest{
         double cost = split.length;
         return cost;
     }
-    
+  
     
 }

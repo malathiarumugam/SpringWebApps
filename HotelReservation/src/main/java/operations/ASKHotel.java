@@ -5,53 +5,114 @@
  */
 package operations;
 
+import ui.UI;
 import java.time.LocalDate;
 
 /**
  *
  * @author apprentice
  */
-public class ASKHotel {
-    
+public class ASKHotel implements Hotel {
+    UI console = new UI();
+
     private String hotelName = "ASK Hotel";
-    
-    private Guest [][] calRooms = new Guest [365][20];
+
+    private Guest[][] calRooms = new Guest[365][20];
     //365 days for the year, 20 rooms available each day. 
     //calRooms[1][0] = new Family(parameters);
     private Room[] roomInfo = new Room[20];
     //this is the parallel array associated with each second dimensional array
 
-    
-    public ASKHotel (Guest [][] rooms, Room[] info ){
-       calRooms = rooms;
-       roomInfo = info;
+    public ASKHotel(Guest[][] rooms, Room[] info) {
+        calRooms = rooms;
+        roomInfo = info;
     }
-    
-    public void fillRooms() {
-        for (int i = 0; i < roomInfo.length; i++) {
-            if (i < 10) {
-                roomInfo[i] = new Room(false, true);
-            } else {
-                roomInfo[i] = new Room(true, false);
-            }
-        }
 
-    }
-    
-    private void bookReservation(double length, Guest fred, boolean smoke, boolean aircond, String dateIn){
+    @Override
+    public String checkOut(String dateIn, double length, String name) {
         String[] date = dateIn.split(",");
         int one = Integer.parseInt(date[0]);
         int two = Integer.parseInt(date[1]);
         int three = Integer.parseInt(date[2]);
         LocalDate a = LocalDate.of(one, two, three);
-        int roomNum = 0, count = 0; 
-       
+        double roomCost = 0;
+        int roomNum = -1; 
+        double theftCost = 0;
+        
+        Guest fred = null;
+
+        for (int j = 0; j < calRooms[0].length; j++) {
+            if (calRooms[a.getDayOfYear()][j].getName().equals(name)) {
+                fred = calRooms[a.getDayOfYear()][j];
+                roomNum = j;
+                break;
+            }
+        }
+        if (roomNum >= 0 && roomNum < 10) {
+            roomCost = roomInfo[roomNum].getCost();
+        } else if (roomNum >= 10) {
+            roomCost = roomInfo[roomNum].getCost();
+        } else {
+            console.write("Room not found");
+            return null;
+        }
+        theftCost = fred.steal("Lamp, Chair, Bible, sheets, towels, tinyLiquorBottle");
+        String bill = "Thank you for staying with us!\n"
+                + "Invoice:"
+                + "\n\tItem 1: Room Cost: $"+roomCost
+                + "\n\tItem 2: Additional Cost: $"+theftCost
+                + "\nTotal: $"+(roomCost+theftCost);
+        return bill;
+    }
+
+    @Override
+    public void cancelReservation(String dateIn, double length, String name) {
+        String[] date = dateIn.split(", ");
+        int one = Integer.parseInt(date[0]);
+        int two = Integer.parseInt(date[1]);
+        int three = Integer.parseInt(date[2]);
+        LocalDate a = LocalDate.of(one, two, three);
+
+        for (int j = 0; j < calRooms[0].length; j++) {
+            if (calRooms[a.getDayOfYear()][j] != null) {
+                if (calRooms[a.getDayOfYear()][j].getName().equalsIgnoreCase(name)) {
+                    for (int i = 0; i < length; i++) {
+                       calRooms[a.getDayOfYear() + i][j] = null;
+                       console.write("Your room has been cancelled. :(");
+                       return;
+                    }
+                }
+            }
+        }
+    }
+
+    public void fillRooms() {
+        for (int i = 0; i < roomInfo.length; i++) {
+            if (i < 10) {
+                roomInfo[i] = new Room(false, true);
+                roomInfo[i].setCost(70);
+            } else {
+                roomInfo[i] = new Room(true, false);
+                roomInfo[i].setCost(80);
+            }
+        }
+
+    }
+
+    public void bookReservation(double length, Guest fred, boolean smoke, boolean aircond, String dateIn) {
+        String[] date = dateIn.split(", ");
+        int one = Integer.parseInt(date[0]);
+        int two = Integer.parseInt(date[1]);
+        int three = Integer.parseInt(date[2]);
+        LocalDate a = LocalDate.of(one, two, three);
+        int roomNum = -1, count = 0;
 
         if (smoke && !aircond) {
-            OUTER: for (int i = 10; i < 20; i++) {
+            OUTER:
+            for (int i = 10; i < 20; i++) {
                 if (calRooms[a.getDayOfYear()][i] == null) {
-                    for (int j = a.getDayOfYear(); j <= length; j++) {
-                        if (calRooms[j][i] == null) {
+                    for (int j = 0; j <= length; j++) {
+                        if (calRooms[a.getDayOfYear() +j][i] == null) {
                             count++;
                         }
                         if (count == length) {
@@ -61,15 +122,17 @@ public class ASKHotel {
                     }
                 }
             }
-            if (roomNum == 0) {
+            if (roomNum == -1) {
                 System.out.println("No rooms are available for that date. :(");
             }
-        } else if(!smoke && aircond) {
-            OUTER: for (int i = 0; i < 10; i++) {
+        } else if (!smoke && aircond) {
+            OUTER:
+            for (int i = 0; i < 10; i++) {
                 if (calRooms[a.getDayOfYear()][i] == null) {
-                    for (int j = a.getDayOfYear(); j <= length; j++) {
-                        if (calRooms[j][i] == null) {
+                    for (int j = 0; j <= length; j++) {
+                        if (calRooms[a.getDayOfYear()+j][i] == null) {
                             count++;
+                            
                         }
                         if (count == length) {
                             roomNum = i;
@@ -78,20 +141,20 @@ public class ASKHotel {
                     }
                 }
             }
-            if (roomNum == 0) {
+            if (roomNum == -1) {
                 System.out.println("No rooms are available for that date. :(");
             }
         } else {
             System.out.println("We dont offer that combination of smoking and air conditioning. :)");
         }
-        if (roomNum != 0) {
-            for (int i = a.getDayOfYear(); i <= length; i++) {
-                calRooms[i][roomNum] = fred;
+        if (roomNum != -1) {
+            for (int i = 0; i < length; i++) {
+                calRooms[a.getDayOfYear()][roomNum] = fred;
+                System.out.println("added");
+                System.out.println(a.getDayOfYear()+" "+ roomNum);
             }
-            System.out.println("You have been booked for "+length+" days at the "+hotelName);
+            System.out.println("You have been booked for " + length + " days at the " + hotelName);
         }
     }
-    
-    
+
 }
- 

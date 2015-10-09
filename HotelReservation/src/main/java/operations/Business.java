@@ -27,4 +27,6 @@ public class Business extends NewGuest {
         return cost;
     }
     
+  
+    
 }

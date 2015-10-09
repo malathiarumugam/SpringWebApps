@@ -1,3 +1,5 @@
+package operations;
+
 
 import operations.Guest;
 
@@ -15,7 +17,7 @@ public interface Hotel {
     
     public void fillRooms();
     public void bookReservation(double length, Guest fred, boolean smoke, boolean aircond, String dateIn);
-    public void checkOut();
-    public void 
+    public String checkOut(String dateIn, double length, String name);
+    public void cancelReservation(String dateIn, double length,String name);
     
 }

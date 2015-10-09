@@ -13,8 +13,7 @@ public interface Guest {
     
     public String complain();
     public double steal(String list);
-    
-    
-    
+       public String getName();
+        
     
 }

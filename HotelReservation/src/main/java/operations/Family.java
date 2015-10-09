@@ -27,5 +27,6 @@ public class Family extends NewGuest{
         double cost = split.length;
         return cost;
     }
+  
     
 }

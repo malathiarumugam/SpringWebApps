@@ -21,4 +21,8 @@ public abstract class NewGuest implements Guest {
         this.lengthStay = lengthStay;
     }
 
+    public String getName() {
+        return name;
+    }
+
 }
