@@ -21,7 +21,8 @@ public class UI {
         int ret = 0;
         do {
             failed = false;
-            System.out.print(p);
+            System.out.println(p);
+            System.out.print(": ");
             try {
                 ret = kb.nextInt();
                 kb.nextLine();
@@ -39,7 +40,8 @@ public class UI {
         int ret = 0;
         do {
             failed = false;
-            System.out.print(p);
+            System.out.println(p);
+            System.out.print(": ");
             try {
                 ret = kb.nextInt();
                 kb.nextLine();
@@ -58,7 +60,8 @@ public class UI {
     }
 
     public String readString(String p) {
-        System.out.print(p);
+        System.out.println(p);
+        System.out.print(": ");
         return kb.nextLine();
     }
 
@@ -67,7 +70,8 @@ public class UI {
         float ret = 0;
         do {
             failed = false;
-            System.out.print(p);
+            System.out.println(p);
+            System.out.print(": ");
             try {
                 ret = kb.nextFloat();
                 kb.nextLine();
@@ -85,7 +89,8 @@ public class UI {
         float ret = 0;
         do {
             failed = false;
-            System.out.print(p);
+            System.out.println(p);
+            System.out.print(": ");
             try {
                 ret = kb.nextFloat();
                 kb.nextLine();
@@ -108,7 +113,8 @@ public class UI {
         double ret = 0;
         do {
             failed = false;
-            System.out.print(p);
+            System.out.println(p);
+            System.out.print(": ");
             try {
                 ret = kb.nextDouble();
                 kb.nextLine();
@@ -126,13 +132,16 @@ public class UI {
         double ret = 0;
         do {
             failed = false;
-            System.out.print(p);
+            System.out.println(p);
+            System.out.print(": ");
             try {
                 ret = kb.nextDouble();
                 kb.nextLine();
-                if (ret < min || ret > max) {
+                if (ret < min) {
                     System.out.println("Value must be between " + min
                             + " and " + max + ".");
+                } else if (ret > 14) {
+                    System.out.println("We only allow you stay a maximum of 14 days.");
                 }
             } catch (InputMismatchException e) {
                 System.out.print("Input must be a number.");
@@ -145,7 +154,7 @@ public class UI {
     }
 
     public void write(String p) {
-        System.out.print(p);
+        System.out.println(p);
     }
 
     public void writeln(String p) {
@@ -153,7 +162,7 @@ public class UI {
     }
 
     public boolean readBoolean(String p) {
-        System.out.print(p);
+        System.out.println(p);
         String boo = kb.nextLine();
         if(boo.equalsIgnoreCase("true" )|| boo.equalsIgnoreCase("Yes") || boo.equalsIgnoreCase("y")) {
             return true;

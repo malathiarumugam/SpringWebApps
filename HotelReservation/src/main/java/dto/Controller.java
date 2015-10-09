@@ -5,7 +5,6 @@
  */
 package dto;
 
-import operations.ASKHotel;
 import operations.Business;
 import operations.Family;
 import operations.Hotel;
@@ -28,12 +27,12 @@ public class Controller {
 
     public int displayMenu() {
 
-        console.writeln("Welcome to ASK Hotel");
-        console.writeln("Would you like to ");
-        console.writeln("1) Book reservation ");
-        console.writeln("2) Cancel reservation ");
-        console.writeln("3) Checkout ");
-        console.writeln("4) Exit ");
+        console.writeln("\nWelcome to ASK Hotel"
+        +"Would you like to "
+        +"\n\t1) Book reservation "
+        +"\n\t2) Cancel reservation "
+        +"\n\t3) Checkout "
+        +"\n\t4) Exit \n");
         return console.readInteger("Please make a choice", 1, 4);
     }
 
@@ -43,9 +42,9 @@ public class Controller {
         boolean smoke;
         boolean air;
 
-        name = console.readString("What is your name: ");
-        number = console.readString("What is your phone number: ");
-        length = console.readDouble("How long will you be staying with us: ", 1, 14);
+        name = console.readString("What is your name? ");
+        number = console.readString("What is your phone number? ");
+        length = console.readDouble("How long will you be staying with us? ", 1, 14);
         date = console.readString("What day will you be checking in: YYYY, MM, DD");
         smoke = console.readBoolean("Would you like a smoking room? ");
         if (smoke) {
@@ -53,7 +52,7 @@ public class Controller {
         } else {
             air = true;
         }
-        group = console.readString("Are you here for business, family, or as a team: ");
+        group = console.readString("Are you here for business, family, or as a team? ");
         if (group.equalsIgnoreCase("business")) {
             hotel.bookReservation(length, new Business(name, number, length), smoke, air, date);
         } else if (group.equalsIgnoreCase("family")) {
@@ -70,9 +69,9 @@ public class Controller {
         String name, date;
         double length;
 
-        name = console.readString("What is your name: ");
-        length = console.readDouble("How long will you be staying with us: ", 1, 14);
-        date = console.readString("What day will you be checking in: YYYY, MM, DD");
+        name = console.readString("What is your name? ");
+        length = console.readDouble("How long was your scheduled stay with us? ", 1, 14);
+        date = console.readString("What day did you check in?  (YYYY, MM, DD)");
 
         hotel.cancelReservation(date, length, name);
 
@@ -82,9 +81,9 @@ public class Controller {
         String name, date;
         double length;
 
-        name = console.readString("What is your name: ");
-        length = console.readDouble("How long will you be staying with us: ", 1, 14);
-        date = console.readString("What day will you be checking in: YYYY, MM, DD");
+        name = console.readString("What is your name? ");
+        length = console.readDouble("How long was your stay with us? ", 1, 14);
+        date = console.readString("What day did you check in? (YYYY, MM, DD)");
         
         console.writeln(hotel.checkOut(date, length, name));
         

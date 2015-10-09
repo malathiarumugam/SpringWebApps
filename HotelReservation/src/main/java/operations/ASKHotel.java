@@ -30,7 +30,7 @@ public class ASKHotel implements Hotel {
 
     @Override
     public String checkOut(String dateIn, double length, String name) {
-        String[] date = dateIn.split(",");
+        String[] date = dateIn.split(", ");
         int one = Integer.parseInt(date[0]);
         int two = Integer.parseInt(date[1]);
         int three = Integer.parseInt(date[2]);
@@ -61,7 +61,7 @@ public class ASKHotel implements Hotel {
                 + "Invoice:"
                 + "\n\tItem 1: Room Cost: $"+roomCost
                 + "\n\tItem 2: Additional Cost: $"+theftCost
-                + "\nTotal: $"+(roomCost+theftCost);
+                + "\nTotal: $"+(roomCost+theftCost)+"\n";
         return bill;
     }
 
@@ -78,7 +78,7 @@ public class ASKHotel implements Hotel {
                 if (calRooms[a.getDayOfYear()][j].getName().equalsIgnoreCase(name)) {
                     for (int i = 0; i < length; i++) {
                        calRooms[a.getDayOfYear() + i][j] = null;
-                       console.write("Your room has been cancelled. :(");
+                       console.write("Your room has been cancelled. :("+"\n");
                        return;
                     }
                 }
@@ -123,7 +123,7 @@ public class ASKHotel implements Hotel {
                 }
             }
             if (roomNum == -1) {
-                System.out.println("No rooms are available for that date. :(");
+                System.out.println("No rooms are available for that date. :("+"\n");
             }
         } else if (!smoke && aircond) {
             OUTER:
@@ -142,18 +142,16 @@ public class ASKHotel implements Hotel {
                 }
             }
             if (roomNum == -1) {
-                System.out.println("No rooms are available for that date. :(");
+                System.out.println("No rooms are available for that date. :("+"\n");
             }
         } else {
-            System.out.println("We dont offer that combination of smoking and air conditioning. :)");
+            System.out.println("We dont offer that combination of smoking and air conditioning. :)"+"\n");
         }
         if (roomNum != -1) {
             for (int i = 0; i < length; i++) {
                 calRooms[a.getDayOfYear()][roomNum] = fred;
-                System.out.println("added");
-                System.out.println(a.getDayOfYear()+" "+ roomNum);
             }
-            System.out.println("You have been booked for " + length + " days at the " + hotelName);
+            System.out.println("You have been booked for " + length + " days at the " + hotelName+"");
         }
     }
 
