@@ -5,10 +5,22 @@
  */
 package operations;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
 /**
  *
  * @author apprentice
+ * 
  */
+@Configuration
+@EnableAspectJAutoProxy
 public class Maid {
+    public void placeMint(){
+        System.out.println("Mint placed!!");
+    }
+    public void cleanRoom(){
+        System.out.println("Room cleaned!!");
+    }
     
 }

@@ -13,15 +13,22 @@ import java.time.LocalDate;
  * @author apprentice
  */
 public class ASKHotel implements Hotel {
+
     UI console = new UI();
 
     private String hotelName = "ASK Hotel";
 
-    private Guest[][] calRooms = new Guest[365][20];
+    private Guest[][] calRooms;
     //365 days for the year, 20 rooms available each day. 
     //calRooms[1][0] = new Family(parameters);
-    private Room[] roomInfo = new Room[20];
+    private Room[] roomInfo;
+
     //this is the parallel array associated with each second dimensional array
+
+    public ASKHotel() {
+        calRooms = new Guest[365][20];
+        roomInfo = new Room[20];
+    }
 
     public ASKHotel(Guest[][] rooms, Room[] info) {
         calRooms = rooms;
@@ -36,9 +43,9 @@ public class ASKHotel implements Hotel {
         int three = Integer.parseInt(date[2]);
         LocalDate a = LocalDate.of(one, two, three);
         double roomCost = 0;
-        int roomNum = -1; 
+        int roomNum = -1;
         double theftCost = 0;
-        
+
         Guest fred = null;
 
         for (int j = 0; j < calRooms[0].length; j++) {
@@ -59,9 +66,9 @@ public class ASKHotel implements Hotel {
         theftCost = fred.steal("Lamp, Chair, Bible, sheets, towels, tinyLiquorBottle");
         String bill = "Thank you for staying with us!\n"
                 + "Invoice:"
-                + "\n\tItem 1: Room Cost: $"+roomCost
-                + "\n\tItem 2: Additional Cost: $"+theftCost
-                + "\nTotal: $"+(roomCost+theftCost)+"\n";
+                + "\n\tItem 1: Room Cost: $" + roomCost
+                + "\n\tItem 2: Additional Cost: $" + theftCost
+                + "\nTotal: $" + (roomCost + theftCost) + "\n";
         return bill;
     }
 
@@ -77,9 +84,9 @@ public class ASKHotel implements Hotel {
             if (calRooms[a.getDayOfYear()][j] != null) {
                 if (calRooms[a.getDayOfYear()][j].getName().equalsIgnoreCase(name)) {
                     for (int i = 0; i < length; i++) {
-                       calRooms[a.getDayOfYear() + i][j] = null;
-                       console.write("Your room has been cancelled. :("+"\n");
-                       return;
+                        calRooms[a.getDayOfYear() + i][j] = null;
+                        console.write("Your room has been cancelled. :(" + "\n");
+                        return;
                     }
                 }
             }
@@ -99,6 +106,7 @@ public class ASKHotel implements Hotel {
 
     }
 
+    @Override
     public void bookReservation(double length, Guest fred, boolean smoke, boolean aircond, String dateIn) {
         String[] date = dateIn.split(", ");
         int one = Integer.parseInt(date[0]);
@@ -112,7 +120,7 @@ public class ASKHotel implements Hotel {
             for (int i = 10; i < 20; i++) {
                 if (calRooms[a.getDayOfYear()][i] == null) {
                     for (int j = 0; j <= length; j++) {
-                        if (calRooms[a.getDayOfYear() +j][i] == null) {
+                        if (calRooms[a.getDayOfYear() + j][i] == null) {
                             count++;
                         }
                         if (count == length) {
@@ -123,16 +131,16 @@ public class ASKHotel implements Hotel {
                 }
             }
             if (roomNum == -1) {
-                System.out.println("No rooms are available for that date. :("+"\n");
+                System.out.println("No rooms are available for that date. :(" + "\n");
             }
         } else if (!smoke && aircond) {
             OUTER:
             for (int i = 0; i < 10; i++) {
                 if (calRooms[a.getDayOfYear()][i] == null) {
                     for (int j = 0; j <= length; j++) {
-                        if (calRooms[a.getDayOfYear()+j][i] == null) {
+                        if (calRooms[a.getDayOfYear() + j][i] == null) {
                             count++;
-                            
+
                         }
                         if (count == length) {
                             roomNum = i;
@@ -142,16 +150,16 @@ public class ASKHotel implements Hotel {
                 }
             }
             if (roomNum == -1) {
-                System.out.println("No rooms are available for that date. :("+"\n");
+                System.out.println("No rooms are available for that date. :(" + "\n");
             }
         } else {
-            System.out.println("We dont offer that combination of smoking and air conditioning. :)"+"\n");
+            System.out.println("We dont offer that combination of smoking and air conditioning. :)" + "\n");
         }
         if (roomNum != -1) {
             for (int i = 0; i < length; i++) {
                 calRooms[a.getDayOfYear()][roomNum] = fred;
             }
-            System.out.println("You have been booked for " + length + " days at the " + hotelName+"");
+            System.out.println("You have been booked for " + length + " days at the " + hotelName + "");
         }
     }
 

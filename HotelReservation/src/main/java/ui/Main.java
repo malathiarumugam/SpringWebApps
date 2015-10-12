@@ -6,6 +6,8 @@ import operations.ASKHotel;
 import operations.Guest;
 import operations.Hotel;
 import operations.Room;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,13 +21,8 @@ import operations.Room;
  */
 public class Main {
     public static void main(String[] args) {
-        Guest [][] calRooms = new Guest [365][20];
-        Room[] roomInfo = new Room[20];
-        Hotel hotel = new ASKHotel(calRooms, roomInfo);
-        hotel.fillRooms();
-        
-        Controller cont = new Controller(hotel);
-        
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Controller cont = (Controller)ctx.getBean("controller");
         cont.runMenu();
 
         
