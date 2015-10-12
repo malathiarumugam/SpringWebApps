@@ -26,9 +26,8 @@ public class Controller {
     }
 
     public int displayMenu() {
-        hotel.fillRooms();
         console.writeln("\nWelcome to ASK Hotel"
-        +"Would you like to "
+        +"\nWould you like to "
         +"\n\t1) Book reservation "
         +"\n\t2) Cancel reservation "
         +"\n\t3) Checkout "

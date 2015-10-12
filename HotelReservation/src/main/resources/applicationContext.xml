@@ -19,13 +19,14 @@ http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
         <constructor-arg ref="hotel"/>
     </bean>
     <bean id="maid" class="operations.Maid"/>
-<aop:config>
+    <aop:config>
+        
         <aop:aspect ref="maid">
             <aop:before method="placeMint"
-                            pointcut="execution(* operations.ASKHotel.bookReservation(..))"/>
+                            pointcut="execution(* operations.Hotel.bookReservation(..))"/>
         
-            <aop:after method="cleanRoom"
-                           pointcut="execution(* operations.ASKHotel.checkOut(..))"/>
+     <aop:after method="cleanRoom"
+                           pointcut="execution(* operations.Hotel.checkOut(..))"/>
         </aop:aspect>
     </aop:config>
     
