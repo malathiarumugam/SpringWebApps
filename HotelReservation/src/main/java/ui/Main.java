@@ -2,10 +2,6 @@ package ui;
 
 
 import dto.Controller;
-import operations.ASKHotel;
-import operations.Guest;
-import operations.Hotel;
-import operations.Room;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

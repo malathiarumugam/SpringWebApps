@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <style>
+            #titlebar {
+                width: 100%;
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 24px;
+                padding-bottom: 15px;
+            }
+            
+            .toplabels {
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 18px;
+                padding-bottom: 5px;
+            }
+            .smaller {
+                width: 98%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="titlebar">Software Craftsmanship Guild</div>
+        <div class="container smaller">
+            <div class="row">
+                <div class="col-lg-1 col-md-1 toplabels"> </div>
+                <div class="col-lg-5 col-md-5 toplabels">Existing Users Log In Here</div>
+                <div class="col-lg-5 col-md-5 toplabels">New User? Register now!</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-1 col-md-1 toplabels"> </div>
+                <div class="col-lg-5 col-md-5 toplabels">
+                     <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                        </div>
+                        <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <div class="checkbox" style="text-align: left">
+                                <label><input type="checkbox">Remember me?</label>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10" style="text-align: left">
+                                <button type="submit" class="btn btn-primary" id="login">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-5 col-md-5 toplabels">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-sm-2" for="email">First Name:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter First Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-sm-2" for="email">Last Name:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10" style="text-align: left">
+                                <button type="submit" class="btn btn-primary" id="login">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="navbar-fixed-bottom" ><p>&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2014 - Software Craftsmanship Guild</p></div>
+    </body>
+</html>

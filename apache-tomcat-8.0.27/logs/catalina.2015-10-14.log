@@ -1,0 +1,303 @@
+14-Oct-2015 08:31:52.676 INFO [http-nio-8080-exec-131] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 08:31:52.713 INFO [http-nio-8080-exec-131] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 08:37:54.579 INFO [http-nio-8080-exec-140] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 08:37:54.601 INFO [http-nio-8080-exec-140] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 08:50:16.568 INFO [http-nio-8080-exec-150] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 08:50:16.607 INFO [http-nio-8080-exec-150] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 08:57:29.210 INFO [http-nio-8080-exec-159] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 08:57:29.229 INFO [http-nio-8080-exec-159] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 09:01:31.523 INFO [http-nio-8080-exec-173] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 09:01:31.539 INFO [http-nio-8080-exec-173] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 09:10:01.566 INFO [http-nio-8080-exec-183] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/WebApplication1.xml
+14-Oct-2015 09:10:01.572 WARNING [http-nio-8080-exec-183] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-Oct-2015 09:10:01.598 INFO [http-nio-8080-exec-183] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/WebApplication1.xml has finished in 31 ms
+14-Oct-2015 09:10:01.605 INFO [http-nio-8080-exec-175] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1]] after start() had already been called. The second call will be ignored.
+14-Oct-2015 09:11:27.454 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+14-Oct-2015 09:11:27.454 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+14-Oct-2015 09:11:27.506 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+14-Oct-2015 09:11:27.557 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+14-Oct-2015 09:11:27.612 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+14-Oct-2015 09:11:32.614 WARNING [main] org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor The executor associated with thread pool [http-nio-8080] has not fully shutdown. Some application threads may still be running.
+14-Oct-2015 09:11:32.614 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+14-Oct-2015 09:11:32.708 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+14-Oct-2015 09:11:32.708 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+14-Oct-2015 09:27:09.050 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.27
+14-Oct-2015 09:27:09.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2015 08:17:25 UTC
+14-Oct-2015 09:27:09.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.27.0
+14-Oct-2015 09:27:09.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+14-Oct-2015 09:27:09.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            3.19.0-30-generic
+14-Oct-2015 09:27:09.052 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+14-Oct-2015 09:27:09.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+14-Oct-2015 09:27:09.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_60-b27
+14-Oct-2015 09:27:09.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+14-Oct-2015 09:27:09.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+14-Oct-2015 09:27:09.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+14-Oct-2015 09:27:09.053 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/logging.properties
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apprentice
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/endorsed
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/temp
+14-Oct-2015 09:27:09.054 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-8-oracle/jre/lib/amd64:/usr/lib/jvm/java-8-oracle/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+14-Oct-2015 09:27:09.344 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+14-Oct-2015 09:27:09.364 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-Oct-2015 09:27:09.367 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+14-Oct-2015 09:27:09.369 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+14-Oct-2015 09:27:09.369 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 910 ms
+14-Oct-2015 09:27:09.404 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+14-Oct-2015 09:27:09.404 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.27
+14-Oct-2015 09:27:09.416 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/Lucky7s.xml
+14-Oct-2015 09:27:09.471 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-Oct-2015 09:27:09.798 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/Lucky7s.xml has finished in 381 ms
+14-Oct-2015 09:27:09.798 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/WebApplication1.xml
+14-Oct-2015 09:27:09.801 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-Oct-2015 09:27:09.824 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/WebApplication1.xml has finished in 26 ms
+14-Oct-2015 09:27:09.824 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/DemoJSP.xml
+14-Oct-2015 09:27:09.828 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-Oct-2015 09:27:09.863 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/DemoJSP.xml has finished in 38 ms
+14-Oct-2015 09:27:09.863 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPpractice
+14-Oct-2015 09:27:09.897 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPpractice has finished in 34 ms
+14-Oct-2015 09:27:09.897 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager
+14-Oct-2015 09:27:09.962 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager has finished in 65 ms
+14-Oct-2015 09:27:09.962 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT
+14-Oct-2015 09:27:10.021 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT has finished in 59 ms
+14-Oct-2015 09:27:10.022 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs
+14-Oct-2015 09:27:10.081 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs has finished in 59 ms
+14-Oct-2015 09:27:10.082 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager
+14-Oct-2015 09:27:10.119 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager has finished in 37 ms
+14-Oct-2015 09:27:10.119 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1
+14-Oct-2015 09:27:10.159 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1 has finished in 40 ms
+14-Oct-2015 09:27:10.162 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPTutorials
+14-Oct-2015 09:27:10.196 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPTutorials has finished in 34 ms
+14-Oct-2015 09:27:10.197 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples
+14-Oct-2015 09:27:10.554 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples has finished in 357 ms
+14-Oct-2015 09:27:10.560 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+14-Oct-2015 09:27:10.574 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+14-Oct-2015 09:27:10.602 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1232 ms
+14-Oct-2015 09:35:37.435 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 09:35:37.494 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 09:38:26.999 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 09:38:27.031 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 09:40:57.893 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 09:40:57.914 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 09:44:41.168 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 09:44:41.182 INFO [http-nio-8080-exec-6] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 09:47:22.434 INFO [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 09:47:22.458 INFO [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:19:04.230 INFO [http-nio-8080-exec-39] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:19:04.257 INFO [http-nio-8080-exec-39] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:22:06.812 INFO [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:22:06.837 INFO [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:22:18.113 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:22:18.134 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:31:13.325 INFO [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:31:13.343 INFO [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:36:13.776 INFO [http-nio-8080-exec-63] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:36:13.794 INFO [http-nio-8080-exec-63] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:36:18.198 INFO [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:36:18.208 INFO [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:59:51.013 INFO [http-nio-8080-exec-73] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/WebApplication2.xml
+14-Oct-2015 11:59:51.023 WARNING [http-nio-8080-exec-73] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+14-Oct-2015 11:59:51.043 INFO [http-nio-8080-exec-73] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/WebApplication2.xml has finished in 31 ms
+14-Oct-2015 11:59:51.059 INFO [http-nio-8080-exec-79] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 11:59:51.090 INFO [http-nio-8080-exec-79] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 11:59:51.106 INFO [http-nio-8080-exec-75] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication2]] after start() had already been called. The second call will be ignored.
+14-Oct-2015 12:05:46.755 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+14-Oct-2015 12:05:46.769 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+14-Oct-2015 12:09:20.796 INFO [http-nio-8080-exec-97] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+14-Oct-2015 12:09:20.807 INFO [http-nio-8080-exec-97] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+14-Oct-2015 12:09:21.533 INFO [http-nio-8080-exec-84] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+14-Oct-2015 12:09:21.545 INFO [http-nio-8080-exec-84] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+14-Oct-2015 12:10:22.832 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+14-Oct-2015 12:10:22.847 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+14-Oct-2015 12:10:24.405 INFO [http-nio-8080-exec-101] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+14-Oct-2015 12:10:24.415 INFO [http-nio-8080-exec-101] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+14-Oct-2015 12:22:59.424 INFO [http-nio-8080-exec-103] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+14-Oct-2015 12:22:59.433 INFO [http-nio-8080-exec-103] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+14-Oct-2015 13:03:38.141 INFO [http-nio-8080-exec-120] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 13:03:38.155 INFO [http-nio-8080-exec-120] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 13:03:41.868 INFO [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 13:03:41.878 INFO [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 13:04:36.967 INFO [http-nio-8080-exec-125] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 13:04:36.978 INFO [http-nio-8080-exec-125] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 13:04:40.693 INFO [http-nio-8080-exec-119] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 13:04:40.712 INFO [http-nio-8080-exec-119] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 13:06:34.936 WARNING [http-nio-8080-exec-134] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [WebApplication2] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:
+ java.io.FileInputStream.readBytes(Native Method)
+ java.io.FileInputStream.read(FileInputStream.java:255)
+ java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+ java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+ sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+ sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+ sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+ java.io.InputStreamReader.read(InputStreamReader.java:184)
+ java.io.Reader.read(Reader.java:100)
+ java.util.Scanner.readInput(Scanner.java:804)
+ java.util.Scanner.next(Scanner.java:1483)
+ java.util.Scanner.nextInt(Scanner.java:2117)
+ java.util.Scanner.nextInt(Scanner.java:2076)
+ gamesbot.LuckySevens.run(LuckySevens.java:51)
+ org.apache.jsp.Lsresponse_jsp._jspService(Lsresponse_jsp.java:129)
+ org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+ org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+ org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+ org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:745)
+14-Oct-2015 13:06:34.937 WARNING [http-nio-8080-exec-134] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [WebApplication2] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:
+ java.io.BufferedInputStream.read(BufferedInputStream.java:336)
+ sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+ sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+ sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+ java.io.InputStreamReader.read(InputStreamReader.java:184)
+ java.io.Reader.read(Reader.java:100)
+ java.util.Scanner.readInput(Scanner.java:804)
+ java.util.Scanner.next(Scanner.java:1483)
+ java.util.Scanner.nextInt(Scanner.java:2117)
+ java.util.Scanner.nextInt(Scanner.java:2076)
+ gamesbot.LuckySevens.run(LuckySevens.java:51)
+ org.apache.jsp.Lsresponse_jsp._jspService(Lsresponse_jsp.java:129)
+ org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+ org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+ org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+ org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:745)
+14-Oct-2015 13:06:35.440 INFO [http-nio-8080-exec-134] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication2]
+14-Oct-2015 13:09:01.604 INFO [http-nio-8080-exec-139] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 13:09:01.618 INFO [http-nio-8080-exec-139] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 13:19:03.382 INFO [http-nio-8080-exec-146] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 13:19:03.396 INFO [http-nio-8080-exec-146] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 14:36:49.054 INFO [http-nio-8080-exec-156] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 14:36:49.068 INFO [http-nio-8080-exec-156] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 14:37:56.317 INFO [http-nio-8080-exec-161] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 14:37:56.330 INFO [http-nio-8080-exec-161] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 14:46:54.736 INFO [http-nio-8080-exec-168] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 14:46:54.753 INFO [http-nio-8080-exec-168] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 14:47:06.216 INFO [http-nio-8080-exec-172] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 14:47:06.228 INFO [http-nio-8080-exec-172] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 14:47:12.363 INFO [http-nio-8080-exec-173] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 14:47:12.374 INFO [http-nio-8080-exec-173] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:03:44.376 INFO [http-nio-8080-exec-182] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:03:44.395 INFO [http-nio-8080-exec-182] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:18:20.976 INFO [http-nio-8080-exec-189] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:18:20.986 INFO [http-nio-8080-exec-189] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:18:57.234 INFO [http-nio-8080-exec-185] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:18:57.247 INFO [http-nio-8080-exec-185] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:35:09.764 INFO [http-nio-8080-exec-201] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:35:09.783 INFO [http-nio-8080-exec-201] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:39:58.519 INFO [http-nio-8080-exec-202] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:39:58.531 INFO [http-nio-8080-exec-202] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:45:24.168 INFO [http-nio-8080-exec-211] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:45:24.181 INFO [http-nio-8080-exec-211] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:50:49.428 INFO [http-nio-8080-exec-221] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:50:49.441 INFO [http-nio-8080-exec-221] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 15:54:19.973 INFO [http-nio-8080-exec-228] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 15:54:19.986 INFO [http-nio-8080-exec-228] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:00:22.376 INFO [http-nio-8080-exec-232] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:00:24.488 WARNING [http-nio-8080-exec-232] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Lucky7s] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:
+ java.io.FileOutputStream.writeBytes(Native Method)
+ java.io.FileOutputStream.write(FileOutputStream.java:326)
+ java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+ java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+ java.io.PrintStream.write(PrintStream.java:482)
+ sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+ sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:291)
+ sun.nio.cs.StreamEncoder.flushBuffer(StreamEncoder.java:104)
+ java.io.OutputStreamWriter.flushBuffer(OutputStreamWriter.java:185)
+ java.io.PrintStream.write(PrintStream.java:527)
+ java.io.PrintStream.print(PrintStream.java:669)
+ java.io.PrintStream.println(PrintStream.java:806)
+ org.apache.tomcat.util.log.SystemLogHandler.println(SystemLogHandler.java:262)
+ gamecode.LuckySevens.rollDice(LuckySevens.java:67)
+ gamecode.LuckySevens.run(LuckySevens.java:46)
+ org.apache.jsp.Isresponse_jsp._jspService(Isresponse_jsp.java:141)
+ org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:438)
+ org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:396)
+ org.apache.jasper.servlet.JspServlet.service(JspServlet.java:340)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+ org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+ org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:745)
+14-Oct-2015 16:00:24.496 INFO [http-nio-8080-exec-232] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:01:39.633 INFO [http-nio-8080-exec-239] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:01:39.646 INFO [http-nio-8080-exec-239] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:02:58.752 INFO [http-nio-8080-exec-246] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:02:58.775 INFO [http-nio-8080-exec-246] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:06:43.795 INFO [http-nio-8080-exec-253] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:06:43.808 INFO [http-nio-8080-exec-253] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:08:46.203 INFO [http-nio-8080-exec-255] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:08:46.213 INFO [http-nio-8080-exec-255] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:08:49.852 INFO [http-nio-8080-exec-262] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:08:49.866 INFO [http-nio-8080-exec-262] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:09:51.360 INFO [http-nio-8080-exec-263] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:09:51.373 INFO [http-nio-8080-exec-263] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:09:56.625 INFO [http-nio-8080-exec-269] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:09:56.645 INFO [http-nio-8080-exec-269] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:10:54.694 INFO [http-nio-8080-exec-271] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:10:54.710 INFO [http-nio-8080-exec-271] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+14-Oct-2015 16:11:00.090 INFO [http-nio-8080-exec-267] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+14-Oct-2015 16:11:00.106 INFO [http-nio-8080-exec-267] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed

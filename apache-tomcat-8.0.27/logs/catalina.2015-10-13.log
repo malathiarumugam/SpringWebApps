@@ -1,0 +1,255 @@
+13-Oct-2015 13:16:16.541 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.27
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2015 08:17:25 UTC
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.27.0
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            3.19.0-30-generic
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_60-b27
+13-Oct-2015 13:16:16.543 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Oct-2015 13:16:16.544 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:16:16.544 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:16:16.544 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/logging.properties
+13-Oct-2015 13:16:16.544 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Oct-2015 13:16:16.544 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apprentice
+13-Oct-2015 13:16:16.544 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/endorsed
+13-Oct-2015 13:16:16.545 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:16:16.545 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:16:16.545 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/temp
+13-Oct-2015 13:16:16.545 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-8-oracle/jre/lib/amd64:/usr/lib/jvm/java-8-oracle/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Oct-2015 13:16:16.747 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:16:16.765 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Oct-2015 13:16:16.768 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:16:16.769 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Oct-2015 13:16:16.770 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 687 ms
+13-Oct-2015 13:16:16.800 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+13-Oct-2015 13:16:16.800 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.27
+13-Oct-2015 13:16:16.808 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager
+13-Oct-2015 13:16:17.138 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager has finished in 329 ms
+13-Oct-2015 13:16:17.138 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT
+13-Oct-2015 13:16:17.158 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT has finished in 20 ms
+13-Oct-2015 13:16:17.158 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs
+13-Oct-2015 13:16:17.180 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs has finished in 21 ms
+13-Oct-2015 13:16:17.180 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager
+13-Oct-2015 13:16:17.211 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager has finished in 31 ms
+13-Oct-2015 13:16:17.211 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples
+13-Oct-2015 13:16:17.582 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples has finished in 371 ms
+13-Oct-2015 13:16:17.585 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:16:17.594 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:16:17.599 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 829 ms
+13-Oct-2015 13:34:37.690 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1
+13-Oct-2015 13:34:37.721 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1 has finished in 31 ms
+13-Oct-2015 13:47:28.377 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Oct-2015 13:47:28.378 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:47:28.430 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:47:28.480 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+13-Oct-2015 13:47:28.524 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:47:28.526 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:47:28.615 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:47:28.615 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:47:34.877 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.27
+13-Oct-2015 13:47:34.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2015 08:17:25 UTC
+13-Oct-2015 13:47:34.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.27.0
+13-Oct-2015 13:47:34.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Oct-2015 13:47:34.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            3.19.0-30-generic
+13-Oct-2015 13:47:34.879 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Oct-2015 13:47:34.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+13-Oct-2015 13:47:34.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_60-b27
+13-Oct-2015 13:47:34.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Oct-2015 13:47:34.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:47:34.880 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/logging.properties
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apprentice
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/endorsed
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 13:47:34.881 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/temp
+13-Oct-2015 13:47:34.882 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-8-oracle/jre/lib/amd64:/usr/lib/jvm/java-8-oracle/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Oct-2015 13:47:35.050 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:47:35.066 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Oct-2015 13:47:35.068 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:47:35.070 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Oct-2015 13:47:35.070 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 607 ms
+13-Oct-2015 13:47:35.095 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+13-Oct-2015 13:47:35.096 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.27
+13-Oct-2015 13:47:35.104 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager
+13-Oct-2015 13:47:35.429 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager has finished in 325 ms
+13-Oct-2015 13:47:35.429 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT
+13-Oct-2015 13:47:35.453 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT has finished in 24 ms
+13-Oct-2015 13:47:35.453 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs
+13-Oct-2015 13:47:35.474 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs has finished in 20 ms
+13-Oct-2015 13:47:35.474 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager
+13-Oct-2015 13:47:35.518 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager has finished in 44 ms
+13-Oct-2015 13:47:35.518 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1
+13-Oct-2015 13:47:35.546 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1 has finished in 28 ms
+13-Oct-2015 13:47:35.546 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples
+13-Oct-2015 13:47:35.827 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples has finished in 281 ms
+13-Oct-2015 13:47:35.831 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 13:47:35.841 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 13:47:35.848 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 777 ms
+13-Oct-2015 14:03:45.952 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPTutorials
+13-Oct-2015 14:03:45.969 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPTutorials has finished in 17 ms
+13-Oct-2015 14:12:36.041 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPtutorials
+13-Oct-2015 14:12:36.062 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPtutorials has finished in 21 ms
+13-Oct-2015 14:13:52.900 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/JSPtutorials]
+13-Oct-2015 14:15:06.080 INFO [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPpractice
+13-Oct-2015 14:15:06.100 INFO [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPpractice has finished in 20 ms
+13-Oct-2015 18:27:39.666 INFO [localhost-startStop-5] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/LoginApp
+13-Oct-2015 18:27:39.681 INFO [localhost-startStop-5] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/LoginApp has finished in 15 ms
+13-Oct-2015 19:11:26.500 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Oct-2015 19:11:26.500 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 19:11:26.552 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 19:11:26.603 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+13-Oct-2015 19:11:26.643 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 19:11:26.644 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 19:11:26.645 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 19:11:26.645 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 19:11:29.977 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.27
+13-Oct-2015 19:11:29.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 28 2015 08:17:25 UTC
+13-Oct-2015 19:11:29.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.27.0
+13-Oct-2015 19:11:29.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+13-Oct-2015 19:11:29.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            3.19.0-30-generic
+13-Oct-2015 19:11:29.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Oct-2015 19:11:29.979 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-oracle/jre
+13-Oct-2015 19:11:29.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_60-b27
+13-Oct-2015 19:11:29.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+13-Oct-2015 19:11:29.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 19:11:29.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 19:11:29.980 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/logging.properties
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|apprentice
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/endorsed
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/apprentice/FlooringMastery/apache-tomcat-8.0.27/temp
+13-Oct-2015 19:11:29.981 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/lib/jvm/java-8-oracle/jre/lib/amd64:/usr/lib/jvm/java-8-oracle/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+13-Oct-2015 19:11:30.135 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 19:11:30.148 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Oct-2015 19:11:30.150 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 19:11:30.152 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+13-Oct-2015 19:11:30.152 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 587 ms
+13-Oct-2015 19:11:30.177 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+13-Oct-2015 19:11:30.177 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.27
+13-Oct-2015 19:11:30.189 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPpractice
+13-Oct-2015 19:11:30.476 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPpractice has finished in 286 ms
+13-Oct-2015 19:11:30.476 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager
+13-Oct-2015 19:11:30.515 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/host-manager has finished in 38 ms
+13-Oct-2015 19:11:30.515 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT
+13-Oct-2015 19:11:30.535 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/ROOT has finished in 20 ms
+13-Oct-2015 19:11:30.535 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs
+13-Oct-2015 19:11:30.555 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/docs has finished in 20 ms
+13-Oct-2015 19:11:30.555 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/LoginApp
+13-Oct-2015 19:11:30.584 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/LoginApp has finished in 29 ms
+13-Oct-2015 19:11:30.585 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager
+13-Oct-2015 19:11:30.614 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/manager has finished in 29 ms
+13-Oct-2015 19:11:30.615 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1
+13-Oct-2015 19:11:30.635 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/Lab1 has finished in 19 ms
+13-Oct-2015 19:11:30.635 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPTutorials
+13-Oct-2015 19:11:30.672 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/JSPTutorials has finished in 37 ms
+13-Oct-2015 19:11:30.672 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples
+13-Oct-2015 19:11:30.920 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/examples has finished in 248 ms
+13-Oct-2015 19:11:30.923 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Oct-2015 19:11:30.931 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+13-Oct-2015 19:11:30.936 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 783 ms
+13-Oct-2015 19:19:31.011 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/DemoJSP
+13-Oct-2015 19:19:31.042 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/DemoJSP has finished in 31 ms
+13-Oct-2015 19:20:20.487 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/DemoJSP]
+13-Oct-2015 19:23:01.077 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/DemoJSP
+13-Oct-2015 19:23:01.114 INFO [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/webapps/DemoJSP has finished in 38 ms
+13-Oct-2015 19:47:46.041 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/DemoJSP]
+13-Oct-2015 19:48:57.791 INFO [http-nio-8080-exec-22] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/DemoJSP.xml
+13-Oct-2015 19:48:57.797 WARNING [http-nio-8080-exec-22] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+13-Oct-2015 19:48:57.839 INFO [http-nio-8080-exec-22] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/DemoJSP.xml has finished in 48 ms
+13-Oct-2015 19:48:57.845 INFO [http-nio-8080-exec-19] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/DemoJSP]] after start() had already been called. The second call will be ignored.
+13-Oct-2015 19:51:39.737 INFO [http-nio-8080-exec-29] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] has started
+13-Oct-2015 19:51:39.770 INFO [http-nio-8080-exec-29] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] is completed
+13-Oct-2015 19:51:40.615 INFO [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] has started
+13-Oct-2015 19:51:40.643 INFO [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] is completed
+13-Oct-2015 19:53:18.051 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/LoginApp]
+13-Oct-2015 20:03:44.609 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] has started
+13-Oct-2015 20:03:44.631 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] is completed
+13-Oct-2015 20:03:50.586 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] has started
+13-Oct-2015 20:03:50.610 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] is completed
+13-Oct-2015 20:04:09.406 INFO [http-nio-8080-exec-51] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] has started
+13-Oct-2015 20:04:09.427 INFO [http-nio-8080-exec-51] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] is completed
+13-Oct-2015 20:05:23.052 INFO [http-nio-8080-exec-51] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] has started
+13-Oct-2015 20:05:23.065 INFO [http-nio-8080-exec-51] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/DemoJSP] is completed
+13-Oct-2015 20:25:08.989 INFO [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/Lucky7s.xml
+13-Oct-2015 20:25:08.992 WARNING [http-nio-8080-exec-60] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+13-Oct-2015 20:25:09.004 INFO [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/Lucky7s.xml has finished in 15 ms
+13-Oct-2015 20:25:09.012 INFO [http-nio-8080-exec-61] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Lucky7s]] after start() had already been called. The second call will be ignored.
+13-Oct-2015 20:30:58.534 INFO [http-nio-8080-exec-64] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:30:58.551 INFO [http-nio-8080-exec-64] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:31:05.978 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:31:05.993 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:31:24.327 INFO [http-nio-8080-exec-69] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:31:24.343 INFO [http-nio-8080-exec-69] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:37:51.592 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:37:51.613 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:38:06.778 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:38:06.806 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:40:03.972 INFO [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:40:03.988 INFO [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:45:46.054 INFO [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:45:46.070 INFO [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:47:46.539 INFO [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:47:46.551 INFO [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:47:55.404 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:47:55.421 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:50:48.397 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:50:48.398 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardWrapper.unload Waiting for 1 instance(s) to be deallocated for Servlet [LuckySevens]
+13-Oct-2015 20:50:49.399 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardWrapper.unload Waiting for 1 instance(s) to be deallocated for Servlet [LuckySevens]
+13-Oct-2015 20:50:50.404 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardWrapper.unload Waiting for 1 instance(s) to be deallocated for Servlet [LuckySevens]
+13-Oct-2015 20:50:50.507 WARNING [http-nio-8080-exec-89] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Lucky7s] is still processing a request that has yet to finish. This is very likely to create a memory leak. You can control the time allowed for requests to finish by using the unloadDelay attribute of the standard Context implementation. Stack trace of request processing thread:
+ java.io.FileOutputStream.writeBytes(Native Method)
+ java.io.FileOutputStream.write(FileOutputStream.java:326)
+ java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+ java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+ java.io.PrintStream.write(PrintStream.java:482)
+ sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:221)
+ sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:291)
+ sun.nio.cs.StreamEncoder.flushBuffer(StreamEncoder.java:104)
+ java.io.OutputStreamWriter.flushBuffer(OutputStreamWriter.java:185)
+ java.io.PrintStream.write(PrintStream.java:527)
+ java.io.PrintStream.print(PrintStream.java:669)
+ java.io.PrintStream.println(PrintStream.java:806)
+ org.apache.tomcat.util.log.SystemLogHandler.println(SystemLogHandler.java:262)
+ game.Lucky.run(Lucky.java:35)
+ servlets.LuckySevens.doPost(LuckySevens.java:87)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+ javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+ org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+ org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+ org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+ org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+ org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+ org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+ org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+ org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+ org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+ org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+ org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+ org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+ org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.lang.Thread.run(Thread.java:745)
+13-Oct-2015 20:50:50.524 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:51:07.155 INFO [http-nio-8080-exec-104] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:51:07.184 INFO [http-nio-8080-exec-104] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:51:37.555 INFO [http-nio-8080-exec-109] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:51:37.575 INFO [http-nio-8080-exec-109] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:52:54.518 INFO [http-nio-8080-exec-102] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:52:54.537 INFO [http-nio-8080-exec-102] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:52:58.179 INFO [http-nio-8080-exec-99] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:52:58.193 INFO [http-nio-8080-exec-99] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 20:53:49.521 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 20:53:49.549 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+13-Oct-2015 21:06:22.981 INFO [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
+13-Oct-2015 21:06:22.994 INFO [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
