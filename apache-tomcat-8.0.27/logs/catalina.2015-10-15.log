@@ -435,3 +435,135 @@
 15-Oct-2015 11:22:57.622 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
 15-Oct-2015 11:23:16.186 INFO [http-nio-8080-exec-31] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] has started
 15-Oct-2015 11:23:16.224 INFO [http-nio-8080-exec-31] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Lucky7s] is completed
+15-Oct-2015 15:30:34.258 INFO [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml
+15-Oct-2015 15:30:34.262 WARNING [http-nio-8080-exec-43] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+15-Oct-2015 15:30:35.221 INFO [http-nio-8080-exec-43] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+15-Oct-2015 15:30:35.314 INFO [http-nio-8080-exec-43] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Oct 15 15:30:35 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:30:35.354 INFO [http-nio-8080-exec-43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:30:35.617 INFO [http-nio-8080-exec-43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring-persistence.xml]
+15-Oct-2015 15:30:35.748 INFO [http-nio-8080-exec-43] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:30:36.111 INFO [http-nio-8080-exec-43] org.hibernate.validator.internal.util.Version.<clinit> HV000001: Hibernate Validator 5.1.0.Final
+15-Oct-2015 15:30:36.761 INFO [http-nio-8080-exec-43] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 1539 ms
+15-Oct-2015 15:30:36.783 INFO [http-nio-8080-exec-43] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml has finished in 2,520 ms
+15-Oct-2015 15:30:36.788 INFO [http-nio-8080-exec-49] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ContactListMVC]] after start() had already been called. The second call will be ignored.
+15-Oct-2015 15:30:43.407 INFO [http-nio-8080-exec-43] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization started
+15-Oct-2015 15:30:43.410 INFO [http-nio-8080-exec-43] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:30:43 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:30:43.411 INFO [http-nio-8080-exec-43] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:30:43.454 INFO [http-nio-8080-exec-43] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:30:43.592 INFO [http-nio-8080-exec-43] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization completed in 185 ms
+15-Oct-2015 15:30:43.606 WARNING [http-nio-8080-exec-43] org.springframework.web.servlet.PageNotFound.noHandlerFound No mapping found for HTTP request with URI [/ContactListMVC/hello/sayhi] in DispatcherServlet with name 'spring-dispatcher'
+15-Oct-2015 15:31:06.460 WARNING [http-nio-8080-exec-45] org.springframework.web.servlet.PageNotFound.noHandlerFound No mapping found for HTTP request with URI [/ContactListMVC/hello/sayhi] in DispatcherServlet with name 'spring-dispatcher'
+15-Oct-2015 15:32:41.139 INFO [http-nio-8080-exec-42] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:30:43 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:32:41.147 INFO [http-nio-8080-exec-42] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Oct 15 15:30:35 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:32:41.698 INFO [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/ContactListMVC]
+15-Oct-2015 15:32:41.706 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml
+15-Oct-2015 15:32:41.709 WARNING [http-nio-8080-exec-49] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+15-Oct-2015 15:32:42.456 INFO [http-nio-8080-exec-49] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+15-Oct-2015 15:32:42.545 INFO [http-nio-8080-exec-49] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Oct 15 15:32:42 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:32:42.588 INFO [http-nio-8080-exec-49] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:32:42.721 INFO [http-nio-8080-exec-49] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring-persistence.xml]
+15-Oct-2015 15:32:42.838 INFO [http-nio-8080-exec-49] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:32:43.023 INFO [http-nio-8080-exec-49] org.hibernate.validator.internal.util.Version.<clinit> HV000001: Hibernate Validator 5.1.0.Final
+15-Oct-2015 15:32:43.551 INFO [http-nio-8080-exec-49] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 1095 ms
+15-Oct-2015 15:32:43.566 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml has finished in 1,860 ms
+15-Oct-2015 15:32:43.571 INFO [http-nio-8080-exec-43] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ContactListMVC]] after start() had already been called. The second call will be ignored.
+15-Oct-2015 15:32:45.913 INFO [http-nio-8080-exec-53] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization started
+15-Oct-2015 15:32:45.917 INFO [http-nio-8080-exec-53] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:32:45 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:32:45.919 INFO [http-nio-8080-exec-53] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:32:45.942 INFO [http-nio-8080-exec-53] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:32:46.100 INFO [http-nio-8080-exec-53] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization completed in 186 ms
+15-Oct-2015 15:32:46.126 WARNING [http-nio-8080-exec-53] org.springframework.web.servlet.PageNotFound.noHandlerFound No mapping found for HTTP request with URI [/ContactListMVC/hello/sayhi] in DispatcherServlet with name 'spring-dispatcher'
+15-Oct-2015 15:33:12.650 INFO [http-nio-8080-exec-48] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:32:45 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:33:12.664 INFO [http-nio-8080-exec-48] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Oct 15 15:32:42 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:33:13.184 INFO [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/ContactListMVC]
+15-Oct-2015 15:33:13.192 INFO [http-nio-8080-exec-50] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml
+15-Oct-2015 15:33:13.195 WARNING [http-nio-8080-exec-50] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+15-Oct-2015 15:33:13.871 INFO [http-nio-8080-exec-50] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+15-Oct-2015 15:33:13.959 INFO [http-nio-8080-exec-50] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Oct 15 15:33:13 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:33:14.000 INFO [http-nio-8080-exec-50] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:33:14.123 INFO [http-nio-8080-exec-50] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring-persistence.xml]
+15-Oct-2015 15:33:14.246 INFO [http-nio-8080-exec-50] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:33:14.446 INFO [http-nio-8080-exec-50] org.hibernate.validator.internal.util.Version.<clinit> HV000001: Hibernate Validator 5.1.0.Final
+15-Oct-2015 15:33:14.957 INFO [http-nio-8080-exec-50] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 1086 ms
+15-Oct-2015 15:33:14.967 INFO [http-nio-8080-exec-50] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml has finished in 1,775 ms
+15-Oct-2015 15:33:14.983 INFO [http-nio-8080-exec-52] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ContactListMVC]] after start() had already been called. The second call will be ignored.
+15-Oct-2015 15:33:19.291 INFO [http-nio-8080-exec-56] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization started
+15-Oct-2015 15:33:19.303 INFO [http-nio-8080-exec-56] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:33:19 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:33:19.306 INFO [http-nio-8080-exec-56] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:33:19.340 INFO [http-nio-8080-exec-56] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:33:19.460 INFO [http-nio-8080-exec-56] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization completed in 169 ms
+15-Oct-2015 15:33:19.480 WARNING [http-nio-8080-exec-56] org.springframework.web.servlet.PageNotFound.noHandlerFound No mapping found for HTTP request with URI [/ContactListMVC/hello/sayhi] in DispatcherServlet with name 'spring-dispatcher'
+15-Oct-2015 15:36:18.419 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/ContactListMVC]
+15-Oct-2015 15:36:18.422 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:33:19 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:36:18.428 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Oct 15 15:33:13 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:36:18.439 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml
+15-Oct-2015 15:36:18.442 WARNING [localhost-startStop-2] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+15-Oct-2015 15:36:18.444 SEVERE [localhost-startStop-2] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ContactListMVC]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1780)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@5dbde112]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:154)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4854)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4984)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [/home/apprentice/FlooringMastery/ContactListMVC/target/spring-mvc-webapp] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:723)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:684)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+15-Oct-2015 15:36:18.444 SEVERE [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/ContactListMVC]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:729)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1780)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+15-Oct-2015 15:36:18.445 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ContactListMVC.xml has finished in 6 ms
+15-Oct-2015 15:37:38.451 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/ContactListMVC]
+15-Oct-2015 15:37:39.003 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+15-Oct-2015 15:37:39.081 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Oct 15 15:37:39 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:37:39.132 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:37:39.246 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring-persistence.xml]
+15-Oct-2015 15:37:39.356 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:37:39.547 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod Mapped "{[/hello/sayhi],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.mycompany.contactlistmvc.HelloController.sayHi(java.util.Map<java.lang.String, java.lang.Object>)
+15-Oct-2015 15:37:39.595 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.hibernate.validator.internal.util.Version.<clinit> HV000001: Hibernate Validator 5.1.0.Final
+15-Oct-2015 15:37:40.064 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 1061 ms
+15-Oct-2015 15:37:47.587 INFO [http-nio-8080-exec-64] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Oct 15 15:37:39 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:37:48.110 INFO [http-nio-8080-exec-64] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/ContactListMVC]
+15-Oct-2015 15:37:48.618 INFO [http-nio-8080-exec-59] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+15-Oct-2015 15:37:48.623 INFO [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ROOT.xml
+15-Oct-2015 15:37:48.627 WARNING [http-nio-8080-exec-48] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+15-Oct-2015 15:37:49.236 INFO [http-nio-8080-exec-48] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+15-Oct-2015 15:37:49.309 INFO [http-nio-8080-exec-48] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Oct 15 15:37:49 CDT 2015]; root of context hierarchy
+15-Oct-2015 15:37:49.338 INFO [http-nio-8080-exec-48] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:37:49.447 INFO [http-nio-8080-exec-48] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from class path resource [spring-persistence.xml]
+15-Oct-2015 15:37:49.545 INFO [http-nio-8080-exec-48] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:37:49.743 INFO [http-nio-8080-exec-48] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod Mapped "{[/hello/sayhi],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.mycompany.contactlistmvc.HelloController.sayHi(java.util.Map<java.lang.String, java.lang.Object>)
+15-Oct-2015 15:37:49.776 INFO [http-nio-8080-exec-48] org.hibernate.validator.internal.util.Version.<clinit> HV000001: Hibernate Validator 5.1.0.Final
+15-Oct-2015 15:37:50.072 INFO [http-nio-8080-exec-48] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 836 ms
+15-Oct-2015 15:37:50.076 INFO [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor /home/apprentice/FlooringMastery/apache-tomcat-8.0.27/conf/Catalina/localhost/ROOT.xml has finished in 1,453 ms
+15-Oct-2015 15:37:50.080 INFO [http-nio-8080-exec-56] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]] after start() had already been called. The second call will be ignored.
+15-Oct-2015 15:37:53.872 INFO [http-nio-8080-exec-66] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization started
+15-Oct-2015 15:37:53.876 INFO [http-nio-8080-exec-66] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Thu Oct 15 15:37:53 CDT 2015]; parent: Root WebApplicationContext
+15-Oct-2015 15:37:53.877 INFO [http-nio-8080-exec-66] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-dispatcher-servlet.xml]
+15-Oct-2015 15:37:53.902 INFO [http-nio-8080-exec-66] org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init> JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+15-Oct-2015 15:37:53.938 INFO [http-nio-8080-exec-66] org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod Mapped "{[/hello/sayhi],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.mycompany.contactlistmvc.HelloController.sayHi(java.util.Map<java.lang.String, java.lang.Object>)
+15-Oct-2015 15:37:54.025 INFO [http-nio-8080-exec-66] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'spring-dispatcher': initialization completed in 153 ms

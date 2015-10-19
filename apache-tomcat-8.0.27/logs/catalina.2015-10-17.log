@@ -1,0 +1,12 @@
+17-Oct-2015 13:47:07.264 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+17-Oct-2015 13:47:07.345 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+17-Oct-2015 13:47:07.398 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+17-Oct-2015 13:47:07.462 INFO [localhost-startStop-3] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'spring-dispatcher-servlet': startup date [Fri Oct 16 13:03:31 CDT 2015]; parent: Root WebApplicationContext
+17-Oct-2015 13:47:07.475 INFO [localhost-startStop-3] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Fri Oct 16 11:31:43 CDT 2015]; root of context hierarchy
+17-Oct-2015 13:47:07.498 INFO [localhost-startStop-3] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Fri Oct 16 14:22:42 CDT 2015]; root of context hierarchy
+17-Oct-2015 13:47:07.536 INFO [localhost-startStop-3] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Fri Oct 16 14:24:40 CDT 2015]; root of context hierarchy
+17-Oct-2015 13:47:07.577 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+17-Oct-2015 13:47:12.578 WARNING [Thread-5] org.apache.tomcat.util.net.AbstractEndpoint.shutdownExecutor The executor associated with thread pool [http-nio-8080] has not fully shutdown. Some application threads may still be running.
+17-Oct-2015 13:47:12.579 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+17-Oct-2015 13:47:12.679 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+17-Oct-2015 13:47:12.680 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
