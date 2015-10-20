@@ -29,16 +29,34 @@
                     <li role="presentation">
                         <a href="${pageContext.request.contextPath}/Add">Add</a>
                     </li>
-                    <li role="presentation">
-                        <a href="${pageContext.request.contextPath}/ListAll">List All</a>
-                    </li>
                     <li role="presentation" class="active">
                         <a href="${pageContext.request.contextPath}/Display">Display</a>
                     </li>
                 </ul>
             </div>
+            <div class="row">  
+                <div class="col-md-offset-1 col-md-10">
+                <h3>Search by title</h3>
+                </div>
+                <div class="col-md-10">
+                    <hr>
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="add-title" class="col-md-2 control-label">
+                                Title:
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-title"
+                                        placeholder="A catchy title"/>
+                            </div>
+                        </div>
+                    </form>    
+                </div>
+            </div>
         </div>
-                    
+                  
         <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>            
     </body>

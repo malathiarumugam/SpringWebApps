@@ -57,6 +57,15 @@ public class JavaApplication8 {
         steve.climb();
         short x = 5;
         steve.print(x);
+        
+        String kevin = "This is a long string";
+        StringBuilder sb = new StringBuilder(kevin);
+        String nivek = sb.reverse().toString();
+        
+        System.out.println(nivek);
+        
+        String cheese = nivek.replaceAll("\\s", "");
+        System.out.println(cheese);
     }
 
     public static int howMany(boolean b, boolean... b2) {

@@ -1,0 +1,277 @@
+20-Oct-2015 09:10:11.917 INFO [http-nio-8080-exec-346] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:10:11.920 INFO [http-nio-8080-exec-346] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 09:10:12.368 INFO [http-nio-8080-exec-346] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 09:10:12.388 INFO [http-nio-8080-exec-346] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 09:10:12.977 INFO [http-nio-8080-exec-343] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:12:00.291 INFO [http-nio-8080-exec-349] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:12:00.294 INFO [http-nio-8080-exec-349] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 09:12:00.873 INFO [http-nio-8080-exec-349] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 09:12:00.890 INFO [http-nio-8080-exec-349] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 09:12:01.741 INFO [http-nio-8080-exec-339] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:12:05.020 INFO [http-nio-8080-exec-352] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:12:05.022 INFO [http-nio-8080-exec-352] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 09:12:05.652 INFO [http-nio-8080-exec-352] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 09:12:05.678 INFO [http-nio-8080-exec-352] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 09:12:06.268 INFO [http-nio-8080-exec-339] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:13:10.010 INFO [http-nio-8080-exec-356] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:13:10.012 INFO [http-nio-8080-exec-356] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 09:13:10.426 INFO [http-nio-8080-exec-356] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 09:13:10.450 INFO [http-nio-8080-exec-356] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 09:13:11.153 INFO [http-nio-8080-exec-351] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:19:47.306 INFO [http-nio-8080-exec-366] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 09:19:47.310 INFO [http-nio-8080-exec-366] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 09:19:47.778 INFO [http-nio-8080-exec-366] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 09:19:47.793 INFO [http-nio-8080-exec-366] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 09:19:48.356 INFO [http-nio-8080-exec-360] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 10:08:11.887 INFO [http-nio-8080-exec-376] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 10:08:11.889 INFO [http-nio-8080-exec-376] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 10:08:12.537 INFO [http-nio-8080-exec-377] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 10:08:12.562 INFO [http-nio-8080-exec-377] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 10:08:13.637 INFO [http-nio-8080-exec-373] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 10:09:57.562 INFO [http-nio-8080-exec-382] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 10:09:57.564 INFO [http-nio-8080-exec-382] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 10:09:58.099 INFO [http-nio-8080-exec-382] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 10:09:58.114 INFO [http-nio-8080-exec-382] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 10:09:58.703 INFO [http-nio-8080-exec-381] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:09:27.066 INFO [http-nio-8080-exec-392] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:09:27.069 INFO [http-nio-8080-exec-392] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:09:27.686 INFO [http-nio-8080-exec-392] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:09:27.702 INFO [http-nio-8080-exec-392] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:09:28.258 INFO [http-nio-8080-exec-394] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:12:31.148 INFO [http-nio-8080-exec-390] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:12:31.150 INFO [http-nio-8080-exec-390] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:12:31.679 INFO [http-nio-8080-exec-390] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:12:31.694 INFO [http-nio-8080-exec-390] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:12:32.313 SEVERE [http-nio-8080-exec-390] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [/home/apprentice/FlooringMastery/ContactListMVC/target/spring-mvc-webapp/WEB-INF/classes/com/mycompany/contactlistmvc/controller/HomeController.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.mycompany.contactlistmvc.dao.ContactListDao]: : No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:747)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4738)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5181)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3755)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:963)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:811)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:739)
+	... 47 more
+
+20-Oct-2015 11:12:32.315 INFO [http-nio-8080-exec-390] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:19:58.593 INFO [http-nio-8080-exec-404] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:19:58.608 INFO [http-nio-8080-exec-404] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:19:59.204 SEVERE [http-nio-8080-exec-404] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [/home/apprentice/FlooringMastery/ContactListMVC/target/spring-mvc-webapp/WEB-INF/classes/com/mycompany/contactlistmvc/controller/HomeController.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.mycompany.contactlistmvc.dao.ContactListDao]: : No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:747)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4738)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5181)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:460)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1586)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1460)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:906)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:344)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:963)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:811)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:739)
+	... 59 more
+
+20-Oct-2015 11:19:59.206 INFO [http-nio-8080-exec-404] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:40:20.509 INFO [http-nio-8080-exec-407] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:40:20.523 INFO [http-nio-8080-exec-407] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:40:21.130 SEVERE [http-nio-8080-exec-407] org.apache.catalina.core.StandardContext.listenerStart Exception sending context initialized event to listener instance of class org.springframework.web.context.ContextLoaderListener
+ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'homeController' defined in file [/home/apprentice/FlooringMastery/ContactListMVC/target/spring-mvc-webapp/WEB-INF/classes/com/mycompany/contactlistmvc/controller/HomeController.class]: Unsatisfied dependency expressed through constructor argument with index 0 of type [com.mycompany.contactlistmvc.dao.ContactListDao]: : No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:747)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:185)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1114)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1017)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:504)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:475)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:300)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:195)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:703)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:482)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:403)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:306)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4738)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5181)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:586)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:460)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1586)
+	at sun.reflect.GeneratedMethodAccessor78.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1460)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:906)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:344)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.mycompany.contactlistmvc.dao.ContactListDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1103)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:963)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:858)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:811)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:739)
+	... 59 more
+
+20-Oct-2015 11:40:21.133 INFO [http-nio-8080-exec-407] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:42:41.639 INFO [http-nio-8080-exec-410] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:42:41.654 INFO [http-nio-8080-exec-410] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:42:48.679 INFO [http-nio-8080-exec-407] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:43:50.008 INFO [http-nio-8080-exec-409] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:43:50.019 INFO [http-nio-8080-exec-409] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:51:57.360 INFO [http-nio-8080-exec-413] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:51:57.384 INFO [http-nio-8080-exec-413] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:51:58.429 INFO [http-nio-8080-exec-415] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:52:02.700 INFO [http-nio-8080-exec-414] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 11:52:02.702 INFO [http-nio-8080-exec-414] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 11:52:03.603 INFO [http-nio-8080-exec-421] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 11:52:03.621 INFO [http-nio-8080-exec-421] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 11:52:04.525 INFO [http-nio-8080-exec-417] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 12:01:41.382 INFO [http-nio-8080-exec-423] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 12:01:41.386 INFO [http-nio-8080-exec-423] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 12:02:14.089 INFO [http-nio-8080-exec-438] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 12:02:14.105 INFO [http-nio-8080-exec-438] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 12:02:15.645 INFO [http-nio-8080-exec-434] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 13:10:28.511 INFO [http-nio-8080-exec-433] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 13:10:28.514 INFO [http-nio-8080-exec-433] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 13:10:53.821 INFO [http-nio-8080-exec-438] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 13:10:53.837 INFO [http-nio-8080-exec-438] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 13:10:55.520 INFO [http-nio-8080-exec-444] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 13:16:15.015 INFO [http-nio-8080-exec-443] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 13:16:15.018 INFO [http-nio-8080-exec-443] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 13:16:15.896 INFO [http-nio-8080-exec-444] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 13:16:15.910 INFO [http-nio-8080-exec-444] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 13:16:17.228 INFO [http-nio-8080-exec-450] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'

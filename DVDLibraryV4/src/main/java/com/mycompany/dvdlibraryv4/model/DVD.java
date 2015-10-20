@@ -45,16 +45,19 @@ public class DVD {
         if (!Objects.equals(this.title, other.title)) {
             return false;
         }
-        if (!Objects.equals(this.lastName, other.lastName)) {
+        if (!Objects.equals(this.releaseDate, other.releaseDate)) {
             return false;
         }
-        if (!Objects.equals(this.company, other.company)) {
+        if (!Objects.equals(this.mpaaRating, other.mpaaRating)) {
             return false;
         }
-        if (!Objects.equals(this.phone, other.phone)) {
+        if (!Objects.equals(this.director, other.director)) {
             return false;
         }
-        if (!Objects.equals(this.email, other.email)) {
+        if (!Objects.equals(this.studio, other.studio)) {
+            return false;
+        }
+        if (!Objects.equals(this.note, other.note)) {
             return false;
         }
         return true;

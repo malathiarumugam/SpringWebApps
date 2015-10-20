@@ -30,16 +30,63 @@
                         <a href="${pageContext.request.contextPath}/Add">Add</a>
                     </li>
                     <li role="presentation">
-                        <a href="${pageContext.request.contextPath}/ListAll">List All</a>
-                    </li>
-                    <li role="presentation">
                         <a href="${pageContext.request.contextPath}/Display">Display</a>
                     </li>
                 </ul>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>My Movies</h2>
+                    <table id="total" class="table table-hover">
+                        <tr>
+                            <th>Total Number of movies</th>
+                        </tr>
+                        <tbody id="totalRows"></tbody>
+                    </table>
+                    <table id="addressTable" class="table table-hover">
+                        <tr>
+                            <th width="30%">Title</th>
+                            <th width="10%">Release Date</th>
+<!--                            <th width="10%">MPAA Rating</th>
+                            <th width="15%">Director</th>
+                            <th width="15%">Studio</th>
+                            <th width="20%">Notes</th>-->
+                        </tr>
+                        <tbody id="contentRows"></tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-                    
-        <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>            
-    </body>
-</html>
+        <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog"
+             aria-labelledby="detailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <h4 class="modal-title" id="detailsModalLabel">The chosen one.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3 id="contact-id"></h3>
+                        <table id="addressTable" class="table table-hover">
+                            <tr>
+                                <th width="30%">Title</th>
+                                <th width="10%">Release Date</th>
+                                <th width="10%">MPAA Rating</th>
+                                <th width="15%">Director</th>
+                                <th width="15%">Studio</th>
+                                <th width="20%">Notes</th>
+                            </tr>
+                            <tbody id="modalRows"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>  
+                        <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+                        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script> 
+                        <script src="${pageContext.request.contextPath}/js/dvdlibrary.js"></script>
+                        </body>
+                        </html>

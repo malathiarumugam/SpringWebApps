@@ -30,12 +30,84 @@
                         <a href="${pageContext.request.contextPath}/Add">Add</a>
                     </li>
                     <li role="presentation">
-                        <a href="${pageContext.request.contextPath}/ListAll">List All</a>
-                    </li>
-                    <li role="presentation">
                         <a href="${pageContext.request.contextPath}/Display">Display</a>
                     </li>
                 </ul>
+            </div>
+            <div class="row">        
+                <div class="col-md-10">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="add-title" class="col-md-2 control-label">
+                                Title:
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-title"
+                                       placeholder="A catchy title"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-release" class="col-md-2 control-label">
+                                Release Date:
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-release"
+                                       placeholder="When did this thing come out?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-rating" class="col-md-2 control-label">
+                                MPAA Rating:
+                            </label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-rating"
+                                       placeholder="PG-13, R where we at?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-director" class="col-md-2 control-label">Director:</label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-director"
+                                       placeholder="Who directed this?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-studio" class="col-md-2 control-label">Studio:</label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-studio"
+                                       placeholder="Who made this?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="add-note" class="col-md-2 control-label">Notes:</label>
+                            <div class="col-md-8">
+                                <input type="text"
+                                       class="form-control"
+                                       id="add-note"
+                                       placeholder="Any notes?"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-8">
+                                <button type="submit"
+                                        id="add-button"
+                                        class="btn btn-default">
+                                    Create Movie
+                                </button>
+                            </div>
+                        </div>
+                    </form>    
+                </div>
             </div>
         </div>
                     
