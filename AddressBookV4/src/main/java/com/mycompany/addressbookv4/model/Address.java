@@ -1,20 +1,24 @@
-
-
-
 package com.mycompany.addressbookv4.model;
 
+import java.util.Objects;
 
 public class Address {
 
-    private int contactId;
+    private int addressId;
+
+    public int getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
+    }
     private String fName;
     private String lName;
     private String street;
     private String city;
     private String state;
     private String zip;
-
-
 
     public Address() {
     }
@@ -32,17 +36,6 @@ public class Address {
         this.state = state;
         this.zip = zip;
     }
-    
-    
-    
-
-    public int getContactId() {
-        return contactId;
-    }
-
-    public void setContactId(int contactId) {
-        this.contactId = contactId;
-    }
 
     public String getfName() {
         return fName;
@@ -59,7 +52,7 @@ public class Address {
     public void setlName(String lName) {
         this.lName = lName;
     }
-    
+
     public String getFirstName() {
         return fName;
     }
@@ -107,10 +100,56 @@ public class Address {
     public void setZip(String zip) {
         this.zip = zip;
     }
-    
+
     public String toString() {
-        return fName + ' ' + lName +'\n' +
-                street + '\n' + 
-                city + ", " + state + ' ' + zip;             
+        return fName + ' ' + lName + '\n'
+                + street + '\n'
+                + city + ", " + state + ' ' + zip;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + this.addressId;
+        hash = 37 * hash + Objects.hashCode(this.fName);
+        hash = 37 * hash + Objects.hashCode(this.lName);
+        hash = 37 * hash + Objects.hashCode(this.street);
+        hash = 37 * hash + Objects.hashCode(this.city);
+        hash = 37 * hash + Objects.hashCode(this.state);
+        hash = 37 * hash + Objects.hashCode(this.zip);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Address other = (Address) obj;
+        if (this.addressId != other.addressId) {
+            return false;
+        }
+        if (!Objects.equals(this.fName, other.fName)) {
+            return false;
+        }
+        if (!Objects.equals(this.lName, other.lName)) {
+            return false;
+        }
+        if (!Objects.equals(this.street, other.street)) {
+            return false;
+        }
+        if (!Objects.equals(this.city, other.city)) {
+            return false;
+        }
+        if (!Objects.equals(this.state, other.state)) {
+            return false;
+        }
+        if (!Objects.equals(this.zip, other.zip)) {
+            return false;
+        }
+        return true;
     }
 }

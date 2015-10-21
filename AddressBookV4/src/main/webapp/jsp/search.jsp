@@ -18,7 +18,7 @@
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon.png">     
         <title>Address Book</title>
     </head>
-    
+
     <body>
         <div class="container">
             <h1>Search for an Entry</h1>
@@ -88,8 +88,8 @@
                     </table>
                 </div>
             </div>
-
             <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
-            <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>      
+            <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>   
+            <script src="${pageContext.request.contextPath}/js/searchBook.js"></script>
     </body>
 </html>
