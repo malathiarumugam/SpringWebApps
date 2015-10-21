@@ -117,6 +117,7 @@ public class AddressListDaoTest {
 // create new address
         Address nc2 = new Address();
         nc2.setfName("John");
+        nc2.setlName("Jacob");
         nc2.setStreet("Apple");
         nc2.setCity("john@jones.com");
         nc2.setState("5556667777");
@@ -133,10 +134,10 @@ public class AddressListDaoTest {
         dao.addAddress(nc3);
 // Create search criteria
         Map<SearchTerm, String> criteria = new HashMap<>();
-        criteria.put(SearchTerm.LAST_NAME, "Jones");
+        criteria.put(SearchTerm.LAST_NAME, "Smith");
         List<Address> cList = dao.searchAddresss(criteria);
-        assertEquals(1, cList.size());
-        assertEquals(nc2, cList.get(0));
+        assertEquals(2, cList.size());
+        assertEquals(nc, cList.get(0));
 // New search criteria - look for Smith
         criteria.put(SearchTerm.LAST_NAME, "Smith");
         cList = dao.searchAddresss(criteria);

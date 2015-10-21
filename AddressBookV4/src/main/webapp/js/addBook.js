@@ -11,7 +11,7 @@ $(document).ready(function () {
 // we don’t want the button to actually submit
 // we'll handle data submission via ajax
         event.preventDefault();
-// Make an Ajax call to the server. HTTP verb = POST, URL = contact
+// Make an Ajax call to the server. HTTP verb = POST, URL = address
         $.ajax({
             type: 'POST',
             url: 'address',
@@ -45,38 +45,38 @@ $(document).ready(function () {
 //==========
 // FUNCTIONS
 //==========
-// Load contacts into the summary table
-// Load contacts into the summary table
-// Load contacts into the summary table
+// Load addresss into the summary table
+// Load addresss into the summary table
+// Load addresss into the summary table
 function loadContacts() {
 // clear the previous list
     clearContactTable();
-// grab the tbody element that will hold the new list of contacts
+// grab the tbody element that will hold the new list of addresss
     var cTable = $('#contentRows');
-// Make an Ajax GET call to the 'contacts' endpoint. Iterate through
+// Make an Ajax GET call to the 'addresss' endpoint. Iterate through
 // each of the JSON objects that are returned and render them to the
 // summary table.
     $.ajax({
         url: "address"
     }).success(function (data, status) {
-        $.each(data, function (index, contact) {
+        $.each(data, function (index, address) {
             cTable.append($('<tr>')
                     .append($('<td>')
                             .append($('<a>')
                                     .attr({
-                                        'data-contact-id': contact.contactId,
+                                        'data-address-id': address.addressId,
                                         'data-toggle': 'modal',
                                         'data-target': '#detailsModal'
                                     })
-                                    .text(contact.firstName + ' ' +
-                                            contact.lastName)
+                                    .text(address.firstName + ' ' +
+                                            address.lastName)
                                     ) // ends the <a> tag
-                            ) // ends the <td> tag for the contact name
-                    .append($('<td>').text(contact.company))
+                            ) // ends the <td> tag for the address name
+                    .append($('<td>').text(address.street))
                     .append($('<td>')
                             .append($('<a>')
                                     .attr({
-                                        'data-contact-id': contact.contactId,
+                                        'data-address-id': address.addressId,
                                         'data-toggle': 'modal',
                                         'data-target': '#editModal'
                                     })
@@ -87,7 +87,7 @@ function loadContacts() {
                             .append($('<a>')
                                     .attr({
                                         'onClick': 'deleteContact(' +
-                                                contact.contactId + ')'
+                                                address.addressId + ')'
                                     })
                                     .text('Delete')
                                     ) // ends the <a> tag
@@ -97,6 +97,17 @@ function loadContacts() {
     });
 }
 
+function deleteContact(id) {
+    var answer = confirm("Do you really want to delete this Address?");
+    if (answer === true) {
+        $.ajax({
+            type: 'DELETE',
+            url: 'address/' + id
+        }).success(function () {
+            loadContacts();
+        });
+    }
+}
 // Clear all content rows from the summary table
 function clearContactTable() {
     $('#contentRows').empty();
@@ -106,40 +117,42 @@ function clearContactTable() {
 $('#detailsModal').on('show.bs.modal', function (event) {
 // get the element that triggered the event
     var element = $(event.relatedTarget);
-    var contactId = element.data('contact-id');
+    var addressId = element.data('address-id');
     var modal = $(this);
-// make an ajax call to get contact information for given contact id
-// this is a GET request to contact/{id}
+// make an ajax call to get address information for given address id
+// this is a GET request to address/{id}
 // upon success, put the returned JSON data into the modal dialog
     $.ajax({
         type: 'GET',
-        url: 'contact/' + contactId
-    }).success(function (contact) {
-        modal.find('#contact-id').text(contact.contactId);
-        modal.find('#contact-firstName').text(contact.firstName);
-        modal.find('#contact-lastName').text(contact.lastName);
-        modal.find('#contact-company').text(contact.company);
-        modal.find('#contact-phone').text(contact.phone);
-        modal.find('#contact-email').text(contact.email);
+        url: 'address/' + addressId
+    }).success(function (address) {
+        modal.find('#add-id').text(address.addressId);
+        modal.find('#add-first-Name').text(address.firstName);
+        modal.find('#add-last-Name').text(address.lastName);
+        modal.find('#add-street').text(address.street);
+        modal.find('#add-city').text(address.city);
+        modal.find('#add-state').text(address.state);
+        modal.find('#add-zip').text(address.zip);
     });
 });
 
 // This code runs in response to the show.hs.modal event for the edit Modal
 $('#editModal').on('show.bs.modal', function (event) {
     var element = $(event.relatedTarget);
-    var contactId = element.data('contact-id');
+    var addressId = element.data('address-id');
     var modal = $(this);
     $.ajax({
         type: 'GET',
-        url: 'contact/' + contactId
-    }).success(function (contact) {
-        modal.find('#edit-id').text(contact.contactId);
-        modal.find('#edit-contact-id').val(contact.contactId);
-        modal.find('#edit-first-name').val(contact.firstName);
-        modal.find('#edit-last-name').val(contact.lastName);
-        modal.find('#edit-company').val(contact.company);
-        modal.find('#edit-email').val(contact.email);
-        modal.find('#edit-phone').val(contact.phone);
+        url: 'address/' + addressId
+    }).success(function (address) {
+        modal.find('#address-id').text(address.addressId);
+        modal.find('#edit-address-id').val(address.addressId);
+        modal.find('#edit-first-name').val(address.firstName);
+        modal.find('#edit-last-name').val(address.lastName);
+        modal.find('#edit-street').val(address.street);
+        modal.find('#edit-state').val(address.state);
+        modal.find('#edit-city').val(address.city);
+        modal.find('#edit-zip').val(address.zip);
     });
 });
 
@@ -149,18 +162,19 @@ $('#edit-button').click(function (event) {
     event.preventDefault();
 // Ajax call -
 // Method - PUT
-// URL - contact/{id}
+// URL - address/{id}
 // Just reload all of the Contacts upon success
     $.ajax({
         type: 'PUT',
-        url: 'contact/' + $('#edit-contact-id').val(),
+        url: 'address/' + $('#edit-address-id').val(),
         data: JSON.stringify({
-            contactId: $('#edit-contact-id').val(),
+            addressId: $('#edit-address-id').val(),
             firstName: $('#edit-first-name').val(),
             lastName: $('#edit-last-name').val(),
-            company: $('#edit-company').val(),
-            phone: $('#edit-phone').val(),
-            email: $('#edit-email').val()
+            street: $('#edit-street').val(),
+            city: $('#edit-city').val(),
+            state: $('#edit-state').val(),
+            zip: $('#edit-zip').val()
         }),
         headers: {
             'Accept': 'application/json',

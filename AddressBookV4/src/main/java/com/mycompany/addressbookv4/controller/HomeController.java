@@ -104,7 +104,7 @@ public class HomeController {
 // be put in the body of the response going back to the caller.
     @RequestMapping(value = "/address", method = RequestMethod.GET)
     @ResponseBody
-    public List<Address> getAllAddresss() {
+    public List<Address> getAllAddress() {
 // get all of the Addresss from the data layer
         return dao.getAllAddresss();
     }

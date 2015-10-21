@@ -20,10 +20,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @Controller
 public class AddController {
     
-    @RequestMapping(value={"/add"}, method = RequestMethod.GET)
-    public String displayHomePage() {
-        return "add";
-    }
+   
     
     private AddressBook dao;
 
@@ -31,82 +28,87 @@ public class AddController {
     public AddController(AddressBook dao) {
         this.dao = dao;
     }
-
-    @RequestMapping(value = "/address/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public Address getAddress(@PathVariable("id") int id) {
-        // retrieve the Address associated with the given id and return it
-        return dao.getAddressById(id);
+    
+    @RequestMapping(value={"/add"}, method = RequestMethod.GET)
+    public String displayHomePage() {
+        return "add";
     }
-
-    // This method will be invoked by Spring MVC when it sees a POST request for
-// AddressListMVC/address. It persists the given Address to the data layer.
 //
-// @ResponseStatus tells Spring MVC to return an HTTP CREATED status upon
-//success
+//    @RequestMapping(value = "/address/{id}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public Address getAddress(@PathVariable("id") int id) {
+//        // retrieve the Address associated with the given id and return it
+//        return dao.getAddressById(id);
+//    }
 //
-// @ResponseBody indicates that the object returned by this method should
-// be put in the body of the response going back to the caller.
+//    // This method will be invoked by Spring MVC when it sees a POST request for
+//// AddressListMVC/address. It persists the given Address to the data layer.
+////
+//// @ResponseStatus tells Spring MVC to return an HTTP CREATED status upon
+////success
+////
+//// @ResponseBody indicates that the object returned by this method should
+//// be put in the body of the response going back to the caller.
+////
+//// @RequestBody indicates that we expect a Address object
+//// in the body of the incoming request.
+//    @RequestMapping(value = "/address", method = RequestMethod.POST)
+//    @ResponseStatus(HttpStatus.CREATED)
+//    @ResponseBody
+//    public Address createAddress(@Valid @RequestBody Address address) {
+//        // persist the incoming address
+//        dao.addAddress(address);
+//        // The addAddress call to the dao assigned a addressId to the incoming
+//        // Address and set that value on the object. Now we return the updated
+//        // object to the caller.
+//        return address;
 //
-// @RequestBody indicates that we expect a Address object
-// in the body of the incoming request.
-    @RequestMapping(value = "/address", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody
-    public Address createAddress(@Valid @RequestBody Address address) {
-        // persist the incoming address
-        dao.addAddress(address);
-        // The addAddress call to the dao assigned a addressId to the incoming
-        // Address and set that value on the object. Now we return the updated
-        // object to the caller.
-        return address;
-
-    }
-
-    @RequestMapping(value = "/address/{id}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteAddress(@PathVariable("id") int id) {
-        // remove the Address associated with the given id from the datalayer
-        dao.removeAddress(id);
-    }
-
-    // This method will be invoked by Spring MVC when it sees a PUT request for
-// AddressListMVC/address/<some-address-id>. It updates the given Address
-// to the data layer.
+//    }
 //
-// @ResponseStatus tells Spring MVC to return HTTP NO_CONTENT from this call
-// because this method has no return value.
+//    @RequestMapping(value = "/address/{id}", method = RequestMethod.DELETE)
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void deleteAddress(@PathVariable("id") int id) {
+//        // remove the Address associated with the given id from the datalayer
+//        dao.removeAddress(id);
+//    }
 //
-// @PathVariable indicates that the portion of the URL path marked by curly
-// braces {...} should be stripped out, converted to an int and passed into
-// this method when it is invoked.
+//    // This method will be invoked by Spring MVC when it sees a PUT request for
+//// AddressListMVC/address/<some-address-id>. It updates the given Address
+//// to the data layer.
+////
+//// @ResponseStatus tells Spring MVC to return HTTP NO_CONTENT from this call
+//// because this method has no return value.
+////
+//// @PathVariable indicates that the portion of the URL path marked by curly
+//// braces {...} should be stripped out, converted to an int and passed into
+//// this method when it is invoked.
+////
+//// @RequestBody indicates that we expect a Address object in the body of the
+//// incoming request.
+//    @RequestMapping(value = "/address/{id}", method = RequestMethod.PUT)
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void putAddress(@PathVariable("id") int id, @RequestBody Address address) {
+//        // set the value of the PathVariable id on the incoming Address object
+//        // to ensure that a) the address id is set on the object and b) that
+//        // the value of the PathVariable id and the Address object id are the
+//        // same.
+//        address
+//                .setAddressId(id);
+//        // update the address
+//        dao.updateAddress(address);
+//    }
 //
-// @RequestBody indicates that we expect a Address object in the body of the
-// incoming request.
-    @RequestMapping(value = "/address/{id}", method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putAddress(@PathVariable("id") int id, @RequestBody Address address) {
-        // set the value of the PathVariable id on the incoming Address object
-        // to ensure that a) the address id is set on the object and b) that
-        // the value of the PathVariable id and the Address object id are the
-        // same.
-        address
-                .setAddressId(id);
-        // update the address
-        dao.updateAddress(address);
-    }
-
-    // This method will be invoked by Spring MVC when it sees a GET request for
-// AddressListMVC/addresss. It retrieves all of the Addresss from the
-// data layer and returns them in a List.
-//
-// @ResponseBody indicates that the List returned by this method should
-// be put in the body of the response going back to the caller.
-    @RequestMapping(value = "/address", method = RequestMethod.GET)
-    @ResponseBody
-    public List<Address> getAllAddresss() {
-// get all of the Addresss from the data layer
-        return dao.getAllAddresss();
-    }
+//    // This method will be invoked by Spring MVC when it sees a GET request for
+//// AddressListMVC/addresss. It retrieves all of the Addresss from the
+//// data layer and returns them in a List.
+////
+//// @ResponseBody indicates that the List returned by this method should
+//// be put in the body of the response going back to the caller.
+//    @RequestMapping(value = "/address", method = RequestMethod.GET)
+//    @ResponseBody
+//    public List<Address> getAllAddresss() {
+//// get all of the Addresss from the data layer
+//        return dao.getAllAddresss();
+//    }
     
 }
