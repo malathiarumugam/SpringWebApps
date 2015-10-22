@@ -126,13 +126,13 @@ $('#detailsModal').on('show.bs.modal', function (event) {
         type: 'GET',
         url: 'address/' + addressId
     }).success(function (address) {
-        modal.find('#add-id').text(address.addressId);
-        modal.find('#add-first-Name').text(address.firstName);
-        modal.find('#add-last-Name').text(address.lastName);
-        modal.find('#add-street').text(address.street);
-        modal.find('#add-city').text(address.city);
-        modal.find('#add-state').text(address.state);
-        modal.find('#add-zip').text(address.zip);
+        modal.find('#address-id').text(address.addressId);
+        modal.find('#address-firstName').text(address.fName);
+        modal.find('#address-lastName').text(address.lName);
+        modal.find('#address-street').text(address.street);
+        modal.find('#address-city').text(address.city);
+        modal.find('#address-state').text(address.state);
+        modal.find('#address-zip').text(address.zip);
     });
 });
 

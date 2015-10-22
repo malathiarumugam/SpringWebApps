@@ -8,10 +8,14 @@ import java.util.Objects;
 
 
 public class DVD {
+    
+    public DVD() {
+        
+    }
 
     private int id;
     private String title;
-    private LocalDate releaseDate;
+    private String releaseDate;
     private String mpaaRating;
     private String director;
     private String studio;
@@ -79,11 +83,11 @@ public class DVD {
         this.title = title;
     }
 
-    public LocalDate getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(LocalDate releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

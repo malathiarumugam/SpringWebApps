@@ -13,6 +13,9 @@ public class Address {
     public void setAddressId(int addressId) {
         this.addressId = addressId;
     }
+    
+    //@NotEmpty(message="You must supply a value for this field.")
+    //@Length(max=50, message="First name must be no more than 50 characters.")
     private String fName;
     private String lName;
     private String street;

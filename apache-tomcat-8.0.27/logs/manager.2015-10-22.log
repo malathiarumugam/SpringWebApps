@@ -1,0 +1,138 @@
+22-Oct-2015 08:22:38.799 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:22:55.485 INFO [http-nio-8080-exec-19] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:22:55.492 INFO [http-nio-8080-exec-20] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:22:55.504 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:22:56.025 INFO [http-nio-8080-exec-17] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context7979537387171049296.xml'
+22-Oct-2015 08:22:57.592 INFO [http-nio-8080-exec-16] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 08:30:18.165 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:30:33.734 INFO [http-nio-8080-exec-26] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:30:33.771 INFO [http-nio-8080-exec-27] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:30:40.034 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:30:40.050 INFO [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:30:52.847 INFO [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:30:52.865 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:30:52.880 INFO [http-nio-8080-exec-30] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context6707055312298188892.xml'
+22-Oct-2015 08:30:54.183 INFO [http-nio-8080-exec-29] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 08:36:37.095 INFO [http-nio-8080-exec-39] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:36:40.733 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:36:40.745 INFO [http-nio-8080-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:36:51.013 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:36:51.020 INFO [http-nio-8080-exec-44] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:36:51.042 INFO [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context4961738087404558180.xml'
+22-Oct-2015 08:36:52.212 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 08:37:13.943 INFO [http-nio-8080-exec-38] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:37:13.954 INFO [http-nio-8080-exec-47] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:37:13.969 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:37:14.497 INFO [http-nio-8080-exec-47] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context4272039261373789293.xml'
+22-Oct-2015 08:37:15.794 INFO [http-nio-8080-exec-36] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 08:39:10.632 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:39:10.643 INFO [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:39:10.660 INFO [http-nio-8080-exec-49] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context4733957499869811572.xml'
+22-Oct-2015 08:39:12.058 INFO [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:39:30.614 INFO [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:39:35.505 INFO [http-nio-8080-exec-49] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:39:35.510 INFO [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:39:35.520 INFO [http-nio-8080-exec-52] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:39:36.041 INFO [http-nio-8080-exec-56] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context1094761246238426260.xml'
+22-Oct-2015 08:39:37.261 INFO [http-nio-8080-exec-54] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:42:16.616 INFO [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:43:23.286 INFO [http-nio-8080-exec-63] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:43:23.301 INFO [http-nio-8080-exec-64] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:43:33.031 INFO [http-nio-8080-exec-69] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:43:33.036 INFO [http-nio-8080-exec-62] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:43:33.047 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context4983128671624710641.xml'
+22-Oct-2015 08:43:34.295 INFO [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:47:10.369 INFO [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:47:29.529 INFO [http-nio-8080-exec-75] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:47:29.539 INFO [http-nio-8080-exec-73] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:47:29.552 INFO [http-nio-8080-exec-76] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:47:30.099 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context1213150535616262956.xml'
+22-Oct-2015 08:47:31.211 INFO [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:47:39.726 INFO [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:47:39.736 INFO [http-nio-8080-exec-82] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:47:39.756 INFO [http-nio-8080-exec-69] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:47:40.288 INFO [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context5666905261962869859.xml'
+22-Oct-2015 08:47:41.409 INFO [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:49:56.911 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:50:08.896 INFO [http-nio-8080-exec-85] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:50:08.917 INFO [http-nio-8080-exec-86] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:50:20.563 INFO [http-nio-8080-exec-93] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:50:20.567 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:50:20.588 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context2922829358517547073.xml'
+22-Oct-2015 08:50:21.688 INFO [http-nio-8080-exec-91] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:50:57.713 INFO [http-nio-8080-exec-95] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:51:09.671 INFO [http-nio-8080-exec-102] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:51:09.688 INFO [http-nio-8080-exec-97] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:51:19.011 INFO [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:51:19.015 INFO [http-nio-8080-exec-104] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:51:19.024 INFO [http-nio-8080-exec-102] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context5325895230117902565.xml'
+22-Oct-2015 08:51:20.127 INFO [http-nio-8080-exec-98] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:52:07.779 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:52:12.669 INFO [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:52:12.676 INFO [http-nio-8080-exec-106] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/AddressBookV4'
+22-Oct-2015 08:52:22.461 INFO [http-nio-8080-exec-110] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:52:22.470 INFO [http-nio-8080-exec-107] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:52:22.479 INFO [http-nio-8080-exec-112] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context6616930970333418745.xml'
+22-Oct-2015 08:52:23.615 INFO [http-nio-8080-exec-109] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/AddressBookV4'
+22-Oct-2015 08:53:33.571 INFO [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:53:33.575 INFO [http-nio-8080-exec-119] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:53:33.589 INFO [http-nio-8080-exec-114] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:53:34.110 INFO [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context7833372872675414762.xml'
+22-Oct-2015 08:53:35.149 INFO [http-nio-8080-exec-115] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 08:55:56.843 INFO [http-nio-8080-exec-126] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:56:20.108 INFO [http-nio-8080-exec-123] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:56:20.116 INFO [http-nio-8080-exec-124] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:56:31.544 INFO [http-nio-8080-exec-130] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:56:31.547 INFO [http-nio-8080-exec-131] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:56:31.557 INFO [http-nio-8080-exec-125] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context3840118906581541965.xml'
+22-Oct-2015 08:56:32.586 INFO [http-nio-8080-exec-132] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 08:58:51.725 INFO [http-nio-8080-exec-138] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:58:51.742 INFO [http-nio-8080-exec-130] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/DVDLibraryV4'
+22-Oct-2015 08:59:05.447 INFO [http-nio-8080-exec-136] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:59:05.460 INFO [http-nio-8080-exec-132] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/DVDLibraryV4'
+22-Oct-2015 08:59:05.460 SEVERE [http-nio-8080-exec-132] org.apache.catalina.core.ApplicationContext.log Manager: ManagerServlet.reload[/DVDLibraryV4]
+ java.lang.IllegalStateException: Context with name [/DVDLibraryV4] has not yet been started
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3737)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:354)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:217)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:614)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+22-Oct-2015 08:59:14.690 INFO [http-nio-8080-exec-139] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:59:14.709 INFO [http-nio-8080-exec-134] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 08:59:26.262 INFO [http-nio-8080-exec-134] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:59:26.273 INFO [http-nio-8080-exec-144] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 08:59:26.288 INFO [http-nio-8080-exec-145] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context5133010475900214937.xml'
+22-Oct-2015 08:59:27.483 INFO [http-nio-8080-exec-141] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 09:09:42.355 INFO [http-nio-8080-exec-146] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 09:16:47.182 INFO [http-nio-8080-exec-146] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 09:16:47.185 INFO [http-nio-8080-exec-140] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 09:16:47.194 INFO [http-nio-8080-exec-148] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/DVDLibraryV4'
+22-Oct-2015 09:16:47.719 INFO [http-nio-8080-exec-145] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/tmp/context6391605841580715669.xml'
+22-Oct-2015 09:16:48.769 INFO [http-nio-8080-exec-147] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/DVDLibraryV4'
+22-Oct-2015 10:02:41.566 INFO [http-nio-8080-exec-156] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+22-Oct-2015 10:02:41.587 INFO [http-nio-8080-exec-157] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/AddressBookV4'

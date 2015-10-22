@@ -275,3 +275,62 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 20-Oct-2015 13:16:15.896 INFO [http-nio-8080-exec-444] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
 20-Oct-2015 13:16:15.910 INFO [http-nio-8080-exec-444] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
 20-Oct-2015 13:16:17.228 INFO [http-nio-8080-exec-450] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 15:31:11.130 INFO [http-nio-8080-exec-455] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 15:31:11.133 INFO [http-nio-8080-exec-455] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 15:31:16.277 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 15:31:16.315 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 15:31:18.623 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 15:31:18.646 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 15:31:20.420 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 15:31:20.444 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 15:31:21.698 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+20-Oct-2015 15:31:21.699 INFO [localhost-startStop-1] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+20-Oct-2015 15:31:21.809 INFO [http-nio-8080-exec-4] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 15:31:22.084 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 15:31:22.088 INFO [http-nio-8080-exec-8] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 15:31:23.197 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 15:31:23.221 INFO [http-nio-8080-exec-2] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 15:31:25.584 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 15:32:49.967 INFO [http-nio-8080-exec-13] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 15:32:51.061 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 15:32:51.078 INFO [http-nio-8080-exec-7] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 15:32:58.886 INFO [http-nio-8080-exec-11] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 16:04:40.829 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:04:41.295 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:04:41.311 INFO [http-nio-8080-exec-21] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:05:11.135 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:05:12.011 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:05:12.034 INFO [http-nio-8080-exec-18] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:07:49.547 INFO [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:07:50.288 INFO [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:07:50.316 INFO [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:07:51.253 INFO [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 16:10:09.112 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+20-Oct-2015 16:10:09.127 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:10:09.881 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:10:09.904 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:10:35.665 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:10:36.126 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:10:36.142 INFO [http-nio-8080-exec-43] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:13:20.699 INFO [http-nio-8080-exec-39] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:13:21.156 INFO [http-nio-8080-exec-39] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:13:21.170 INFO [http-nio-8080-exec-39] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:16:32.635 INFO [http-nio-8080-exec-49] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:16:33.068 INFO [http-nio-8080-exec-49] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:16:33.084 INFO [http-nio-8080-exec-49] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:31:42.872 INFO [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:31:43.268 INFO [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:31:43.296 INFO [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:34:24.435 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:34:25.022 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:34:25.066 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:35:49.235 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:35:49.703 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:35:49.717 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:38:02.716 INFO [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:38:03.176 INFO [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:38:03.193 INFO [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 16:42:06.949 INFO [http-nio-8080-exec-90] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+20-Oct-2015 16:42:07.469 INFO [http-nio-8080-exec-90] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+20-Oct-2015 16:42:07.484 INFO [http-nio-8080-exec-90] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+20-Oct-2015 17:01:10.327 INFO [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'

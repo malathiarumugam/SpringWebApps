@@ -90,8 +90,7 @@ public class HomeController {
         // to ensure that a) the address id is set on the object and b) that
         // the value of the PathVariable id and the Address object id are the
         // same.
-        address
-                .setAddressId(id);
+        address.setAddressId(id);
         // update the address
         dao.updateAddress(address);
     }

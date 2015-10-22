@@ -43,14 +43,10 @@
                         </tr>
                         <tbody id="totalRows"></tbody>
                     </table>
-                    <table id="addressTable" class="table table-hover">
+                    <table id="DVD-id" class="table table-hover">
                         <tr>
                             <th width="30%">Title</th>
                             <th width="10%">Release Date</th>
-<!--                            <th width="10%">MPAA Rating</th>
-                            <th width="15%">Director</th>
-                            <th width="15%">Studio</th>
-                            <th width="20%">Notes</th>-->
                         </tr>
                         <tbody id="contentRows"></tbody>
                     </table>
@@ -69,8 +65,8 @@
                         <h4 class="modal-title" id="detailsModalLabel">The chosen one.</h4>
                     </div>
                     <div class="modal-body">
-                        <h3 id="contact-id"></h3>
-                        <table id="addressTable" class="table table-hover">
+                        <h3 id="DVD-id"></h3>
+                        <table id="movieTable" class="table table-hover">
                             <tr>
                                 <th width="30%">Title</th>
                                 <th width="10%">Release Date</th>
@@ -84,9 +80,87 @@
                     </div>
                 </div>
             </div>
-        </div>  
-                        <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
-                        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script> 
-                        <script src="${pageContext.request.contextPath}/js/dvdlibrary.js"></script>
-                        </body>
-                        </html>
+        </div> 
+                    
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+             aria-labelledby="detailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="detailsModalLabel">Edit Entry</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3 id="DVD-id"></h3>
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="edit-title" class="col-md-4 control-label">
+                                    Title:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="edit-title" placeholder="Blank Title">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-release" class="col-md-4 control-label">
+                                    Release Date:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="edit-release" placeholder="When did it come out?">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-rating" class="col-md-4 control-label">
+                                    MPAA Rating:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="edit-rating" placeholder="Rated R?">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-director" class="col-md-4 control-label">
+                                    Director:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="edit-director" placeholder="Who was the Director?">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="edit-studio" class="col-md-4 control-label">
+                                    Studio:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="edit-studio" placeholder="Who paid a bunch to make it?">
+                                </div>
+                            </div>    
+                            <div class="form-group">
+                                <label for="edit-note" class="col-md-4 control-label">
+                                    Note:
+                                </label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="edit-note" placeholder="Any notes?">
+                                </div>
+                            </div>    
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-8">
+                                    <button type="submit" id="edit-button" class="btn btn-default" data-dismiss="modal">
+                                        Edit Movie
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                        Cancel
+                                    </button>
+                                    <input type="hidden" id="edit-DVD-id">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>                 
+<script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script> 
+<script src="${pageContext.request.contextPath}/js/dvdlibrary.js"></script>
+</body>
+</html>
