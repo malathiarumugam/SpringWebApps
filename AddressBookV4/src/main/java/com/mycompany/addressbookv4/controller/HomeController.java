@@ -50,18 +50,7 @@ public class HomeController {
 //
 // @RequestBody indicates that we expect a Address object
 // in the body of the incoming request.
-    @RequestMapping(value = "/address", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody
-    public Address createAddress(@Valid @RequestBody Address address) {
-        // persist the incoming address
-        dao.addAddress(address);
-        // The addAddress call to the dao assigned a addressId to the incoming
-        // Address and set that value on the object. Now we return the updated
-        // object to the caller.
-        return address;
 
-    }
 
     @RequestMapping(value = "/address/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
@@ -90,7 +79,8 @@ public class HomeController {
         // to ensure that a) the address id is set on the object and b) that
         // the value of the PathVariable id and the Address object id are the
         // same.
-        address.setAddressId(id);
+        address
+                .setAddressId(id);
         // update the address
         dao.updateAddress(address);
     }
