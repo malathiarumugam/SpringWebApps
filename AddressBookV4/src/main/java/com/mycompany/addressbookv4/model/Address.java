@@ -1,6 +1,8 @@
 package com.mycompany.addressbookv4.model;
 
 import java.util.Objects;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class Address {
 
@@ -13,14 +15,28 @@ public class Address {
     public void setAddressId(int addressId) {
         this.addressId = addressId;
     }
-    
-    //@NotEmpty(message="You must supply a value for this field.")
-    //@Length(max=50, message="First name must be no more than 50 characters.")
+    @NotEmpty(message="You must supply a value for first name.")
+    @Length(max=50, message="First Name must be no more than 50 characters in length.")
     private String fName;
+    
+    @NotEmpty(message="You must supply a value for last name.")
+    @Length(max=50, message="Last Name must be no more than 50 characters in length.")
     private String lName;
+    
+    @NotEmpty(message="You must supply a value for street")
+    @Length(max=50, message="Street Name must be no more than 50 characters in length.")
     private String street;
+    
+    @NotEmpty(message="You must supply a value for city.")
+    @Length(max=50, message="City must be no more than 50 characters in length.")
     private String city;
+    
+    @NotEmpty(message="You must supply a value for state.")
+    @Length(max=2, message="State must be no more than 2 characters in length.")
     private String state;
+    
+    @NotEmpty(message="You must supply a value for zip code.")
+    @Length(max=10, message="Zip code must be no more than 10 characters in length.")
     private String zip;
 
     public Address() {

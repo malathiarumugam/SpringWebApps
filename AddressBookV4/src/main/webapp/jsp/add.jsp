@@ -108,7 +108,8 @@
                                 </button>
                             </div>
                         </div>
-                    </form>    
+                    </form>
+                    <div id="validationErrors" style="color: red"/>
                 </div>
 
             </div>

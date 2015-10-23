@@ -1,6 +1,3 @@
-
-
-
 package com.mycompany.addressbookv4.controller;
 
 import com.mycompany.addressbookv4.dao.AddressBook;
@@ -19,21 +16,32 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
 public class AddController {
-    
-   
-    
+
     private AddressBook dao;
 
     @Inject
     public AddController(AddressBook dao) {
         this.dao = dao;
     }
-    
-    @RequestMapping(value={"/add"}, method = RequestMethod.GET)
+
+    @RequestMapping(value = {"/add"}, method = RequestMethod.GET)
     public String displayHomePage() {
         return "add";
     }
 //
+
+    @RequestMapping(value = "/address", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseBody
+    public Address createAddress(@Valid @RequestBody Address address) {
+        // persist the incoming address
+        dao.addAddress(address);
+        // The addAddress call to the dao assigned a addressId to the incoming
+        // Address and set that value on the object. Now we return the updated
+        // object to the caller.
+        return address;
+
+    }
 //    @RequestMapping(value = "/address/{id}", method = RequestMethod.GET)
 //    @ResponseBody
 //    public Address getAddress(@PathVariable("id") int id) {
@@ -110,5 +118,5 @@ public class AddController {
 //// get all of the Addresss from the data layer
 //        return dao.getAllAddresss();
 //    }
-    
+
 }

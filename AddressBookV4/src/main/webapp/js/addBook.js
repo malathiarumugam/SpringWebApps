@@ -37,8 +37,15 @@ $(document).ready(function () {
             $('#add-city').val('');
             $('#add-state').val('');
             $('#add-zip').val('');
+            $('#validationErrors').empty();
             loadContacts();
 //return false;
+        }).error(function (data, status) {
+            $('#validationErrors').empty();
+            $.each(data.responseJSON.fieldErrors, function (index, validationError) {
+                var errorDiv = $('#validationErrors');
+                errorDiv.append(validationError.message).append($('<br>'));
+            });
         });
     });
 });
@@ -50,50 +57,55 @@ $(document).ready(function () {
 // Load addresss into the summary table
 function loadContacts() {
 // clear the previous list
-    clearContactTable();
 // grab the tbody element that will hold the new list of addresss
-    var cTable = $('#contentRows');
 // Make an Ajax GET call to the 'addresss' endpoint. Iterate through
 // each of the JSON objects that are returned and render them to the
 // summary table.
     $.ajax({
         url: "address"
     }).success(function (data, status) {
-        $.each(data, function (index, address) {
-            cTable.append($('<tr>')
-                    .append($('<td>')
-                            .append($('<a>')
-                                    .attr({
-                                        'data-address-id': address.addressId,
-                                        'data-toggle': 'modal',
-                                        'data-target': '#detailsModal'
-                                    })
-                                    .text(address.firstName + ' ' +
-                                            address.lastName)
-                                    ) // ends the <a> tag
-                            ) // ends the <td> tag for the address name
-                    .append($('<td>').text(address.street))
-                    .append($('<td>')
-                            .append($('<a>')
-                                    .attr({
-                                        'data-address-id': address.addressId,
-                                        'data-toggle': 'modal',
-                                        'data-target': '#editModal'
-                                    })
-                                    .text('Edit')
-                                    ) // ends the <a> tag
-                            ) // ends the <td> tag for Edit
-                    .append($('<td>')
-                            .append($('<a>')
-                                    .attr({
-                                        'onClick': 'deleteContact(' +
-                                                address.addressId + ')'
-                                    })
-                                    .text('Delete')
-                                    ) // ends the <a> tag
-                            ) // ends the <td> tag for Delete
-                    ); // ends the <tr> for this Contact
-        }); // ends the 'each' function
+        fillAddressTable(data, status);
+    });
+}
+
+function fillAddressTable(addressBook, status) {
+    clearContactTable();
+// grab the tbody element that will hold the new list of contacts
+    var cTable = $('#contentRows');
+    $.each(addressBook, function (index, address) {
+        cTable.append($('<tr>')
+                .append($('<td>')
+                        .append($('<a>')
+                                .attr({
+                                    'data-address-id': address.addressId,
+                                    'data-toggle': 'modal',
+                                    'data-target': '#detailsModal'
+                                })
+                                .text(address.firstName + ' ' +
+                                        address.lastName)
+                                ) // ends the <a> tag
+                        ) // ends the <td> tag for the address name
+                .append($('<td>').text(address.street))
+                .append($('<td>')
+                        .append($('<a>')
+                                .attr({
+                                    'data-address-id': address.addressId,
+                                    'data-toggle': 'modal',
+                                    'data-target': '#editModal'
+                                })
+                                .text('Edit')
+                                ) // ends the <a> tag
+                        ) // ends the <td> tag for Edit
+                .append($('<td>')
+                        .append($('<a>')
+                                .attr({
+                                    'onClick': 'deleteContact(' +
+                                            address.addressId + ')'
+                                })
+                                .text('Delete')
+                                ) // ends the <a> tag
+                        ) // ends the <td> tag for Delete
+                ); // ends the <tr> for this Contact
     });
 }
 
@@ -127,8 +139,8 @@ $('#detailsModal').on('show.bs.modal', function (event) {
         url: 'address/' + addressId
     }).success(function (address) {
         modal.find('#address-id').text(address.addressId);
-        modal.find('#address-firstName').text(address.fName);
-        modal.find('#address-lastName').text(address.lName);
+        modal.find('#address-first-name').text(address.fName);
+        modal.find('#address-last-name').text(address.lName);
         modal.find('#address-street').text(address.street);
         modal.find('#address-city').text(address.city);
         modal.find('#address-state').text(address.state);
@@ -186,3 +198,34 @@ $('#edit-button').click(function (event) {
     });
 });
 
+$('#search-button').click(function (event) {
+// we don’t want the button to actually submit
+// we'll handle data submission via ajax
+    event.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'search/addresss',
+        data: JSON.stringify({
+            addressId: $('#search-address-id').val(),
+            fName: $('#search-first-name').val(),
+            lName: $('#search-last-name').val(),
+            street: $('#search-street').val(),
+            city: $('#search-city').val(),
+            state: $('#search-state').val(),
+            zip: $('#search-zip').val()
+        }),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'dataType': 'json'
+    }).success(function (data, status) {
+        $('#search-first-name').val('');
+        $('#search-last-name').val('');
+        $('#search-street').val('');
+        $('#search-city').val('');
+        $('#search-state').val('');
+        $('#search-zip').val('');
+        fillAddressTable(data, status);
+    });
+});

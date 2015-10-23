@@ -43,16 +43,15 @@
                         <tr>
                             <th width="35%">Address</th>
                             <th width="35%">Street</th>
-                            <th width="10%">City</th>
-                            <th width="5%">State</th>
-                            <th width="10%">Zip Code</th>
+                            <th width="10%"></th>
+                            <th width="5%"></th>
                         </tr>
                         <tbody id="contentRows"></tbody>
                     </table>
                 </div>
             </div>
         </div>
-                    
+
         <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog"
              aria-labelledby="detailsModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -70,11 +69,11 @@
                         <table class="table table-bordered">
                             <tr>
                                 <th>First Name:</th>
-                                <td id="address-firstName"></td>
+                                <td id="address-first-name"></td>
                             </tr>
                             <tr>
                                 <th>Last Name:</th>
-                                <td id="address-lastName"></td>
+                                <td id="address-last-name"></td>
                             </tr>
                             <tr>
                                 <th>Street:</th>
@@ -95,7 +94,8 @@
                         </table>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <button type="button" class="btn btn-default" data-
+                                dismiss="modal">
                             Close
                         </button>
                     </div>
@@ -177,12 +177,15 @@
                                 </div>
                             </div>
                         </form>
+                        <div id="validationErrors" style="color: red"/>
+
                     </div>
                 </div>
             </div>
-        </div>     
-        <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
-        <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>   
-        <script src="${pageContext.request.contextPath}/js/addBook.js"></script>
-    </body>
+        </div> 
+    </div>
+    <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>   
+    <script src="${pageContext.request.contextPath}/js/addBook.js"></script>
+</body>
 </html>
