@@ -147,8 +147,8 @@ $('#editModal').on('show.bs.modal', function (event) {
     }).success(function (address) {
         modal.find('#address-id').text(address.addressId);
         modal.find('#edit-address-id').val(address.addressId);
-        modal.find('#edit-first-name').val(address.firstName);
-        modal.find('#edit-last-name').val(address.lastName);
+        modal.find('#edit-first-name').val(address.fName);
+        modal.find('#edit-last-name').val(address.lName);
         modal.find('#edit-street').val(address.street);
         modal.find('#edit-state').val(address.state);
         modal.find('#edit-city').val(address.city);

@@ -31,13 +31,16 @@ public class AddController {
         return "Add";
     }
     
-        @RequestMapping(value = "/dvd", method = RequestMethod.POST)
+    @RequestMapping(value = "/dvd", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     public DVD createDvd(@Valid @RequestBody DVD dvd) {
+        Access access = new Access();
+        
+            access.writeEntry("movies.txt", dvd);
+        
         dao.addDVD(dvd);
         return dvd;
     }
-    
     
 }

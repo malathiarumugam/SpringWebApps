@@ -43,8 +43,6 @@ public class HomeController {
         return dao.getDVDById(id);
     }
 
-
-
     @RequestMapping(value = "/dvd/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteDvd(@PathVariable("id") int id) {
@@ -53,11 +51,11 @@ public class HomeController {
 
     @RequestMapping(value = "/dvd/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putDVD(@PathVariable("id") int id, @RequestBody DVD movie) {
-        movie.setId(id);
-        dao.updateDVD(movie);
+    public void putDVD(@PathVariable("id") int id, @RequestBody DVD dvd) {
+        dvd.setId(id);
+        dao.updateDVD(dvd);
     }
-    @RequestMapping(value = "/dvd", method = RequestMethod.GET)
+    @RequestMapping(value = "/dvds", method = RequestMethod.GET)
     @ResponseBody
     public List<DVD> getAllDVDs() {
         return dao.getAllDVDs();
@@ -68,5 +66,7 @@ public class HomeController {
     public int getNumbers() {
         return dao.getAllDVDs().size();
     }
+    
+
     
 }

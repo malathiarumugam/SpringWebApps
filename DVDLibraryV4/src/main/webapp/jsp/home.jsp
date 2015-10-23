@@ -65,17 +65,33 @@
                         <h4 class="modal-title" id="detailsModalLabel">The chosen one.</h4>
                     </div>
                     <div class="modal-body">
-                        <h3 id="DVD-id"></h3>
+                        <h3 id="dvd-id"></h3>
                         <table id="movieTable" class="table table-hover">
                             <tr>
-                                <th width="30%">Title</th>
-                                <th width="10%">Release Date</th>
-                                <th width="10%">MPAA Rating</th>
-                                <th width="15%">Director</th>
-                                <th width="15%">Studio</th>
-                                <th width="20%">Notes</th>
+                                <tr>
+                                <th>Title:</th>
+                                <td id="add-title"></td>
                             </tr>
-                            <tbody id="modalRows"></tbody>
+                            <tr>
+                                <th>Release Date:</th>
+                                <td id="add-release"></td>
+                            </tr>
+                            <tr>
+                                <th>MPAA Rating:</th>
+                                <td id="add-rating"></td>
+                            </tr>
+                            <tr>
+                                <th>Director:</th>
+                                <td id="add-director"></td>
+                            </tr>
+                            <tr>
+                                <th>Studio:</th>
+                                <td id="add-studio"></td>
+                            </tr>
+                            <tr>
+                                <th>Note:</th>
+                                <td id="add-note"></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
@@ -93,7 +109,7 @@
                         <h4 class="modal-title" id="detailsModalLabel">Edit Entry</h4>
                     </div>
                     <div class="modal-body">
-                        <h3 id="DVD-id"></h3>
+                        <h3 id="dvd-id"></h3>
                         <form class="form-horizontal" role="form">
                             <div class="form-group">
                                 <label for="edit-title" class="col-md-4 control-label">

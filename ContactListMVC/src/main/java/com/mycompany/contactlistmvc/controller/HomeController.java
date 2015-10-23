@@ -56,7 +56,7 @@ public class HomeController {
 
     @RequestMapping(value = "/contact/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putContact(@PathVariable("id") int id, @RequestBody Contact contact) {
+    public void putContact(@PathVariable("id") int id,@Valid @RequestBody Contact contact) {
         contact.setContactId(id);
 // update the contact
         dao.updateContact(contact);

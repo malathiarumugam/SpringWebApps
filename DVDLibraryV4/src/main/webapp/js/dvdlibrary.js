@@ -7,12 +7,12 @@ $(document).ready(function () {
             type: 'POST',
             url: 'dvd',
             data: JSON.stringify({
-                Title: $('#add-title').val(),
-                ReleaseDate: $('#add-release').val(),
-                MPAARating: $('#add-rating').val(),
-                Director: $('#add-director').val(),
-                Studio: $('#add-studio').val(),
-                Note: $('#add-note').val()
+                title: $('#add-title').val(),
+                releaseDate: $('#add-release').val(),
+                mpaaRating: $('#add-rating').val(),
+                director: $('#add-director').val(),
+                studio: $('#add-studio').val(),
+                note: $('#add-note').val()
             }),
             headers: {
                 'Accept': 'application/json',
@@ -26,12 +26,12 @@ $(document).ready(function () {
             $('#add-director').val('');
             $('#add-studio').val('');
             $('#add-note').val('');
-            //  loadDVDs();
+            loadDVDs();
 //return false;
         });
     });
 
-    
+
 });
 //==========
 // FUNCTIONS
@@ -51,13 +51,13 @@ function totalMovies() {
 
 function loadDVDs() {
 // clear the previous list
-    //clearDVDTable();
+    clearDVDTable();
 // grab the tbody element that will hold the new list of DVDs
     var cTable = $('#contentRows');
 // Iterate through each of the JSON objects in the test DVD data
 // and render to the summary table
     $.ajax({
-        url: "dvd"
+        url: "dvds"
     }).success(function (data, status) {
         $.each(data, function (index, dvd) {
             cTable.append($('<tr>')
@@ -85,8 +85,7 @@ function loadDVDs() {
                     .append($('<td>')
                             .append($('<a>')
                                     .attr({
-                                        'onClick': 'deleteDvd(' +
-                                                dvd.id + ')'
+                                        'onClick': 'deleteDvd(' + dvd.id + ')'
                                     })
                                     .text('Delete')
                                     ) // ends the <a> tag
@@ -122,7 +121,7 @@ $('#detailsModal').on('show.bs.modal', function (event) {
 // the DVDId for the given DVD. We'll use that to retrieve the
 // DVD's details.
     var element = $(event.relatedTarget);
-    var dvdId = element.data('DVD-id');
+    var dvdId = element.data('dvd-id');
     var modal = $(this);
 // make an ajax call to get address information for given address id
 // this is a GET request to address/{id}
@@ -133,8 +132,8 @@ $('#detailsModal').on('show.bs.modal', function (event) {
     }).success(function (dvd) {
         modal.find('#add-id').text(dvd.id);
         modal.find('#add-title').text(dvd.title);
-        modal.find('#add-release').text(dvd.release);
-        modal.find('#add-rating').text(dvd.rating);
+        modal.find('#add-release').text(dvd.releaseDate);
+        modal.find('#add-rating').text(dvd.mpaaRating);
         modal.find('#add-director').text(dvd.director);
         modal.find('#add-studio').text(dvd.studio);
         modal.find('#add-note').text(dvd.note);
@@ -143,46 +142,47 @@ $('#detailsModal').on('show.bs.modal', function (event) {
 
 $('#editModal').on('show.bs.modal', function (event) {
     var element = $(event.relatedTarget);
-    var dvdId = element.data('DVD-id');
+    var dvdId = element.data('dvd-id');
     var modal = $(this);
     $.ajax({
         type: 'GET',
         url: 'dvd/' + dvdId
     }).success(function (dvd) {
-        modal.find('#add-id').text(dvd.id);
-        modal.find('#add-title').text(dvd.title);
-        modal.find('#add-release').text(dvd.release);
-        modal.find('#add-rating').text(dvd.rating);
-        modal.find('#add-director').text(dvd.director);
-        modal.find('#add-studio').text(dvd.studio);
-        modal.find('#add-note').text(dvd.note);
+        modal.find('#dvd-id').text(dvd.id);
+        modal.find('#edit-DVD-id').val(dvd.id);
+        modal.find('#edit-title').val(dvd.title);
+        modal.find('#edit-release').val(dvd.releaseDate);
+        modal.find('#edit-rating').val(dvd.mpaaRating);
+        modal.find('#edit-director').val(dvd.director);
+        modal.find('#edit-studio').val(dvd.studio);
+        modal.find('#edit-note').val(dvd.note);
     });
 });
 
 $('#edit-button').click(function (event) {
 // prevent the button press from submitting the whole page
-        event.preventDefault();
-        $.ajax({
-            type: 'PUT',
-            url: 'dvd/' + $('#edit-id').val(),
-            data: JSON.stringify({
-                movieId: $('#edit-id').val(),
-                firstName: $('#edit-title').val(),
-                lastName: $('#edit-release').val(),
-                street: $('#edit-rating').val(),
-                city: $('#edit-director').val(),
-                state: $('#edit-studio').val(),
-                zip: $('#edit-note').val()
-            }),
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            'dataType': 'json'
-        }).success(function () {
-            loadDVDs();
-        });
+    event.preventDefault();
+    $.ajax({
+        type: 'PUT',
+        url: 'dvd/' + $('#edit-DVD-id').val(),
+        data: JSON.stringify({
+            id: $('#edit-DVD-id').val(),
+            title: $('#edit-title').val(),
+            releaseDate: $('#edit-release').val(),
+            mpaaRating: $('#edit-rating').val(),
+            director: $('#edit-director').val(),
+            studio: $('#edit-studio').val(),
+            note: $('#edit-note').val()
+        }),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'dataType': 'json'
+    }).success(function () {
+        loadDVDs();
     });
+});
 
 //
 //var dummyDetailsDVD =

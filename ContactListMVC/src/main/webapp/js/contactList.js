@@ -1,7 +1,6 @@
 // Document ready function
 $(document).ready(function () {
     loadContacts();
-
     // on click for our add button
     $('#add-button').click(function (event) {
 // we don’t want the button to actually submit
@@ -25,6 +24,7 @@ $(document).ready(function () {
             },
             'dataType': 'json'
         }).success(function (data, status) {
+
 // If the call succeeds, clear the form and reload the summary
             $('#add-first-name').val('');
             $('#add-last-name').val('');
@@ -32,7 +32,13 @@ $(document).ready(function () {
             $('#add-phone').val('');
             $('#add-email').val('');
             loadContacts();
-//return false;
+            $('#validationErrors').empty();
+        }).error(function (data, status) {
+            $('#validationErrors').empty();
+            $.each(data.responseJSON.fieldErrors, function (index, validationError) {
+                var errorDiv = $('#validationErrors');
+                errorDiv.append(validationError.message).append($('<br>'));
+            });
         });
     });
     $('#edit-button').click(function (event) {
@@ -60,6 +66,7 @@ $(document).ready(function () {
             'dataType': 'json'
         }).success(function () {
             loadContacts();
+            $('editModal')
         });
     });
 });
@@ -70,53 +77,83 @@ $(document).ready(function () {
 //
 // Load contacts into the summary table
 function loadContacts() {
+    $.ajax({
+        url: "contacts"
+    }).success(function (data, status) {
+        fillContactTable(data, status);
+    });
+}
+function fillContactTable(contactList, status) {
 // clear the previous list
     clearContactTable();
 // grab the tbody element that will hold the new list of contacts
     var cTable = $('#contentRows');
-// Make an Ajax GET call to the 'contacts' endpoint. Iterate through
-// each of the JSON objects that are returned and render them to the
-// summary table.
-    $.ajax({
-        url: "contacts"
-    }).success(function (data, status) {
-        $.each(data, function (index, contact) {
-            cTable.append($('<tr>')
-                    .append($('<td>')
-                            .append($('<a>')
-                                    .attr({
-                                        'data-contact-id': contact.contactId,
-                                        'data-toggle': 'modal',
-                                        'data-target': '#detailsModal'
-                                    })
-                                    .text(contact.firstName + ' ' +
-                                            contact.lastName)
-                                    ) // ends the <a> tag
-                            ) // ends th
-                    .append($('<td>').text(contact.company))
-                    .append($('<td>')
-                            .append($('<a>')
-                                    .attr({
-                                        'data-contact-id': contact.contactId,
-                                        'data-toggle': 'modal',
-                                        'data-target': '#editModal'
-                                    })
-                                    .text('Edit')
-                                    ) // ends the <a> tag
-                            ) // ends the <td> tag for Edit
-                    .append($('<td>')
-                            .append($('<a>')
-                                    .attr({
-                                        'onClick': 'deleteContact(' + contact.contactId + ')'
-                                    })
-                                    .text('Delete')
-                                    ) // ends the <a> tag
-                            ) // ends the <td> tag for Delete
-                    ); // ends the <tr> for this Contact
-        }); // ends the 'each' function
-    });
+// render the new contact data to the table
+    $.each(contactList, function (index, contact) {
+        cTable.append($('<tr>')
+                .append($('<td>')
+                        .append($('<a>')
+                                .attr({
+                                    'data-contact-id': contact.contactId,
+                                    'data-toggle': 'modal',
+                                    'data-target': '#detailsModal'
+                                })
+                                .text(contact.firstName + ' ' +
+                                        contact.lastName)
+                                ) // ends the <a> tag
+                        ) // ends the <td> tag for the contact name
+                .append($('<td>').text(contact.company))
+                .append($('<td>')
+                        .append($('<a>')
+                                .attr({
+                                    'data-contact-id': contact.contactId,
+                                    'data-toggle': 'modal',
+                                    'data-target': '#editModal'
+                                })
+                                .text('Edit')
+                                ) // ends the <a> tag
+                        ) // ends the <td> tag for Edit
+                .append($('<td>')
+                        .append($('<a>')
+                                .attr({
+                                    'onClick': 'deleteContact(' +
+                                            contact.contactId + ')'
+                                })
+                                .text('Delete')
+                                ) // ends the <a> tag
+                        ) // ends the <td> tag for Delete
+                ); // ends the <tr> for this Contact
+    }); // ends the 'each' function
 }
 
+$('#search-button').click(function (event) {
+// we don’t want the button to actually submit
+// we'll handle data submission via ajax
+    event.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'search/contacts',
+        data: JSON.stringify({
+            firstName: $('#search-first-name').val(),
+            lastName: $('#search-last-name').val(),
+            company: $('#search-company').val(),
+            phone: $('#search-phone').val(),
+            email: $('#search-email').val()
+        }),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'dataType': 'json'
+    }).success(function (data, status) {
+        $('#search-first-name').val('');
+        $('#search-last-name').val('');
+        $('#search-company').val('');
+        $('#search-phone').val('');
+        $('#search-email').val('');
+        fillContactTable(data, status);
+    });
+});
 function deleteContact(id) {
     var answer = confirm("Do you really want to delete this contact?");
     if (answer === true) {

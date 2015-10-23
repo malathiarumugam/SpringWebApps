@@ -3,7 +3,6 @@
 
 package com.mycompany.dvdlibraryv4.model;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 
@@ -32,6 +31,11 @@ public class DVD {
         hash = 37 * hash + Objects.hashCode(this.studio);
         hash = 37 * hash + Objects.hashCode(this.note);
         return hash;
+    }
+
+    @Override
+    public String toString() {
+        return "DVD{" + "id=" + id + ", title=" + title + ", releaseDate=" + releaseDate + ", mpaaRating=" + mpaaRating + ", director=" + director + ", studio=" + studio + ", note=" + note + '}';
     }
 
     @Override

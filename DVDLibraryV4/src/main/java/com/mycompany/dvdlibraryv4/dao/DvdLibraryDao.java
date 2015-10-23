@@ -16,13 +16,13 @@ import java.util.Map;
 public interface DvdLibraryDao {
     // add the given DVD to the data store
 
-    public DVD addDVD(DVD DVD);
+    public DVD addDVD(DVD dvd);
 // remove the DVD with the given id from the data store
 
     public void removeDVD(int DVDId);
 // update the given DVD in the data store
 
-    public void updateDVD(DVD DVD);
+    public void updateDVD(DVD dvd);
 // retrieve all DVDs from the data store
 
     public List<DVD> getAllDVDs();

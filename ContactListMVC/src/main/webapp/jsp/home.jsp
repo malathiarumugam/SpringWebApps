@@ -111,9 +111,12 @@
                                 </button>
                             </div>
                         </div>
+                        
+                <div id="validationErrors" style="color:red"/>
                 </div>
                 </form>
             </div>
+            
         </div>
         <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog"
              aria-labelledby="detailsModalLabel" aria-hidden="true">
@@ -217,7 +220,7 @@
                             </div>    
                             <div class="form-group">
                                 <div class="col-md-offset-4 col-md-8">
-                                    <button type="submit" id="edit-button" class="btn btn-default" data-dismiss="modal">
+                                    <button type="submit" id="edit-button" class="btn btn-default">
                                         Edit Contact
                                     </button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -227,6 +230,7 @@
                                 </div>
                             </div>
                         </form>
+                        <div id="validationErrors" style="color:red"/>
                     </div>
                 </div>
             </div>
