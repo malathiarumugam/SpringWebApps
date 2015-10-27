@@ -1,21 +1,17 @@
 /* 
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-// Document ready function
 $(document).ready(function () {
     loadContacts();
-    // on click for our add button
+
     $('#add-button').click(function (event) {
-// we don’t want the button to actually submit
-// we'll handle data submission via ajax
         event.preventDefault();
-// Make an Ajax call to the server. HTTP verb = POST, URL = address
         $.ajax({
             type: 'POST',
             url: 'address',
-// Build a JSON object from the data in the form
             data: JSON.stringify({
                 fName: $('#add-first-name').val(),
                 lName: $('#add-last-name').val(),
@@ -30,7 +26,6 @@ $(document).ready(function () {
             },
             'dataType': 'json'
         }).success(function (data, status) {
-// If the call succeeds, clear the form and reload the summary table
             $('#add-first-name').val('');
             $('#add-last-name').val('');
             $('#add-street').val('');
@@ -56,6 +51,11 @@ $(document).ready(function () {
 // Load addresss into the summary table
 // Load addresss into the summary table
 function loadContacts() {
+// clear the previous list
+// grab the tbody element that will hold the new list of addresss
+// Make an Ajax GET call to the 'addresss' endpoint. Iterate through
+// each of the JSON objects that are returned and render them to the
+// summary table.
     $.ajax({
         url: "address"
     }).success(function (data, status) {
@@ -65,6 +65,7 @@ function loadContacts() {
 
 function fillAddressTable(addressBook, status) {
     clearContactTable();
+// grab the tbody element that will hold the new list of contacts
     var cTable = $('#contentRows');
     $.each(addressBook, function (index, address) {
         cTable.append($('<tr>')
@@ -153,8 +154,8 @@ $('#editModal').on('show.bs.modal', function (event) {
     }).success(function (address) {
         modal.find('#address-id').text(address.addressId);
         modal.find('#edit-address-id').val(address.addressId);
-        modal.find('#edit-first-name').val(address.fName);
-        modal.find('#edit-last-name').val(address.lName);
+        modal.find('#edit-first-name').val(address.firstName);
+        modal.find('#edit-last-name').val(address.lastName);
         modal.find('#edit-street').val(address.street);
         modal.find('#edit-state').val(address.state);
         modal.find('#edit-city').val(address.city);

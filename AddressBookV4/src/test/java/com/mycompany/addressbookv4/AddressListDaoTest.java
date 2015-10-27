@@ -1,7 +1,5 @@
 package com.mycompany.addressbookv4;
 
-
-
 import com.mycompany.addressbookv4.dao.AddressBook;
 import com.mycompany.addressbookv4.dao.SearchTerm;
 import java.util.HashMap;
@@ -16,8 +14,8 @@ import com.mycompany.addressbookv4.model.Address;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertTrue;
 import static junit.framework.TestCase.assertNull;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class AddressListDaoTest {
 
@@ -36,9 +34,11 @@ public class AddressListDaoTest {
 
     @Before
     public void setUp() {
-        ApplicationContext ctx
-                = new ClassPathXmlApplicationContext("test-applicationContext.xml");
-        dao = ctx.getBean("addressBookDao", AddressBook.class);
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("test-applicationContext.xml");
+        dao = (AddressBook) ctx.getBean("AddressBook");
+// Grab a JdbcTemplate to use for cleaning up
+        JdbcTemplate cleaner = (JdbcTemplate) ctx.getBean("jdbcTemplate");
+        cleaner.execute("delete from addresses");
     }
 
     @After
@@ -53,7 +53,7 @@ public class AddressListDaoTest {
         nc.setlName("Doe");
         nc.setStreet("Oracle");
         nc.setCity("john@doe.com");
-        nc.setState("1234445678");
+        nc.setState("12");
         nc.setZip("1234445678");
         dao.addAddress(nc);
         Address fromDb = dao.getAddressById(nc.getAddressId());
@@ -70,10 +70,10 @@ public class AddressListDaoTest {
         nc.setlName("Smith");
         nc.setStreet("Sun");
         nc.setCity("jimmy@smith.com");
+        nc.setState("11");
         nc.setZip("1234445678");
-        nc.setState("1112223333");
         dao.addAddress(nc);
-        nc.setState("9999999999");
+        nc.setState("99");
         dao.updateAddress(nc);
         Address fromDb = dao.getAddressById(nc.getAddressId());
         assertEquals(fromDb, nc);
@@ -87,7 +87,7 @@ public class AddressListDaoTest {
         nc.setlName("Smith");
         nc.setStreet("Sun");
         nc.setCity("jimmy@smith.com");
-        nc.setState("1112223333");
+        nc.setState("qq");
         nc.setZip("1234445678");
         dao.addAddress(nc);
 // create new address
@@ -96,8 +96,8 @@ public class AddressListDaoTest {
         nc2.setlName("Jones");
         nc2.setStreet("Apple");
         nc2.setCity("john@jones.com");
-        nc2.setState("5556667777");
-        nc.setZip("1234445678");
+        nc2.setState("55");
+        nc2.setZip("1234445678");
         dao.addAddress(nc2);
         List<Address> cList = dao.getAllAddresss();
         assertEquals(cList.size(), 2);
@@ -111,8 +111,8 @@ public class AddressListDaoTest {
         nc.setlName("Smith");
         nc.setStreet("Sun");
         nc.setCity("jimmy@smith.com");
-        nc.setState("1112223333");
-        nc.setZip("1234445678");
+        nc.setState("11");
+        nc.setZip("12");
         dao.addAddress(nc);
 // create new address
         Address nc2 = new Address();
@@ -120,8 +120,8 @@ public class AddressListDaoTest {
         nc2.setlName("Jacob");
         nc2.setStreet("Apple");
         nc2.setCity("john@jones.com");
-        nc2.setState("5556667777");
-        nc.setZip("1234445678");
+        nc2.setState("55");
+        nc2.setZip("1234445678");
         dao.addAddress(nc2);
 // create new address - same last name as first address but different
 // company
@@ -130,7 +130,8 @@ public class AddressListDaoTest {
         nc3.setlName("Smith");
         nc3.setStreet("Microsoft");
         nc3.setCity("steve@msft.com");
-        nc3.setState("5552221234");
+        nc3.setState("MN");
+        nc3.setZip("55106");
         dao.addAddress(nc3);
 // Create search criteria
         Map<SearchTerm, String> criteria = new HashMap<>();
