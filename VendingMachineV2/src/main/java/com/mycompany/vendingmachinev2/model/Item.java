@@ -6,15 +6,32 @@
 package com.mycompany.vendingmachinev2.model;
 
 import java.text.DecimalFormat;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 /**
  *
  * @author apprentice
  */
 public class Item {
+    
+    @NotEmpty(message = "You must supply a value for item name.")
+    @Length(max = 50, message = "Name must be no more than 50 characters in length.")
     private String name;
+    
+    @NotEmpty(message = "You must supply a value for item code.")
+    @Length(max = 2, message = "Item code must be no more than 2 characters in length.")
     private String code;
-
+    
+    @NotEmpty(message = "You must supply a value for item cost.")
+    @Length(max = 4, message = "Item cost must be no more than $99.")
+    private double cost;
+    
+    @NotEmpty(message = "You must supply a value for item inventory.")
+    @Length(max = 2, message = "Item inventory cannot be greater than 99.")
+    private int count;
+    
+    
     public String getCode() {
         return code;
     }
@@ -22,8 +39,7 @@ public class Item {
     public void setCode(String code) {
         this.code = code;
     }
-    private double cost;
-    private int count;
+    
     
     DecimalFormat df = new DecimalFormat("#0.00");
     

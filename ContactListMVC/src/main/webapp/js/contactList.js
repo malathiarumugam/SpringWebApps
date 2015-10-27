@@ -3,14 +3,10 @@ $(document).ready(function () {
     loadContacts();
     // on click for our add button
     $('#add-button').click(function (event) {
-// we don’t want the button to actually submit
-// we'll handle data submission via ajax
         event.preventDefault();
-// Make an Ajax call to the server. HTTP verb = POST, URL = contact
         $.ajax({
             type: 'POST',
             url: 'contact',
-// Build a JSON object from the data in the form
             data: JSON.stringify({
                 firstName: $('#add-first-name').val(),
                 lastName: $('#add-last-name').val(),
@@ -24,8 +20,6 @@ $(document).ready(function () {
             },
             'dataType': 'json'
         }).success(function (data, status) {
-
-// If the call succeeds, clear the form and reload the summary
             $('#add-first-name').val('');
             $('#add-last-name').val('');
             $('#add-company').val('');

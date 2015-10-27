@@ -56,11 +56,6 @@ $(document).ready(function () {
 // Load addresss into the summary table
 // Load addresss into the summary table
 function loadContacts() {
-// clear the previous list
-// grab the tbody element that will hold the new list of addresss
-// Make an Ajax GET call to the 'addresss' endpoint. Iterate through
-// each of the JSON objects that are returned and render them to the
-// summary table.
     $.ajax({
         url: "address"
     }).success(function (data, status) {
@@ -70,7 +65,6 @@ function loadContacts() {
 
 function fillAddressTable(addressBook, status) {
     clearContactTable();
-// grab the tbody element that will hold the new list of contacts
     var cTable = $('#contentRows');
     $.each(addressBook, function (index, address) {
         cTable.append($('<tr>')

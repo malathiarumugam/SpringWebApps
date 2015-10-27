@@ -1,1 +1,1 @@
-DVD{id=0, title=stuff, releaseDate=, mpaaRating=, director=, studio=, note=}
+DVD{id=0, title=e, releaseDate=t, mpaaRating=t, director=t, studio=t, note=t}

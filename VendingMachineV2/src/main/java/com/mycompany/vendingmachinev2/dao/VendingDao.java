@@ -26,5 +26,8 @@ public interface VendingDao {
     public void addItem(Item item);
     
     public List<Item> getAllItems();
+
+    public void updateItem(Item item);
+    
     
 }

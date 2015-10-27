@@ -1,23 +1,35 @@
-
-
-
 package com.mycompany.dvdlibraryv4.model;
 
 import java.util.Objects;
-
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class DVD {
-    
+
     public DVD() {
-        
+
     }
 
     private int id;
+
+    @NotEmpty(message = "You must supply a value for title.")
+    @Length(max = 50, message = "First Name must be no more than 50 characters in length.")
     private String title;
+    @NotEmpty(message = "You must supply a value for release date.")
+    @Length(max = 10, message = "First Name must be no more than 50 characters in length.")
     private String releaseDate;
+    @NotEmpty(message = "You must supply a value for the MPAA rating.")
+    @Length(max = 10, message = "First Name must be no more than 50 characters in length.")
     private String mpaaRating;
+    
+    @NotEmpty(message = "You must supply a value for the director.")
+    @Length(max = 50, message = "First Name must be no more than 50 characters in length.")
     private String director;
+
+    @NotEmpty(message = "You must supply a value for the studio.")
+    @Length(max = 50, message = "First Name must be no more than 50 characters in length.")
     private String studio;
+
     private String note;
 
     @Override

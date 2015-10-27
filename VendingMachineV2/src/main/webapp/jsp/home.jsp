@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello Controller Page</title>
+        <title>Vending Machine</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,6 +23,7 @@
             #inputs {
                 border: #222 solid 1px;
                 height: 35em;
+               
             }
         </style>
     </head>
@@ -34,6 +35,9 @@
                 <ul class="nav nav-tabs">   
                     <li role="presentation" class="active">
                         <a href="${pageContext.request.contextPath}/home">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/create">Create</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +60,7 @@
                         <div class="form-group">
                             <input type="text"
                                    class="form-control"
-                                   id="add-code"
+                                   id="vend-code"
                                    placeholder="Item Code"/>
                         </div>
                         <table id="money-id" class="table table-hover">
@@ -65,13 +69,13 @@
                         <div class="form-group">
                             <input type="text"
                                    class="form-control"
-                                   id="add-money"
+                                   id="vend-money"
                                    placeholder="Enter money amount here"/>
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-8">
                                 <button type="submit"
-                                        id="add-button"
+                                        id="vend-button"
                                         class="btn btn-default">
                                     Vend!
                                 </button>

@@ -210,3 +210,13 @@ Caused by: java.lang.ClassNotFoundException: com.mycompany.contactlistmvc.valida
 23-Oct-2015 14:22:54.996 INFO [http-nio-8080-exec-575] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
 23-Oct-2015 14:22:55.012 INFO [http-nio-8080-exec-575] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
 23-Oct-2015 14:22:56.183 INFO [http-nio-8080-exec-580] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+23-Oct-2015 15:28:48.132 INFO [http-nio-8080-exec-585] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+23-Oct-2015 15:28:48.135 INFO [http-nio-8080-exec-585] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+23-Oct-2015 15:28:48.613 INFO [http-nio-8080-exec-585] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+23-Oct-2015 15:28:48.632 INFO [http-nio-8080-exec-585] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+23-Oct-2015 15:28:49.376 INFO [http-nio-8080-exec-587] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+23-Oct-2015 15:30:15.783 INFO [http-nio-8080-exec-593] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+23-Oct-2015 15:30:15.785 INFO [http-nio-8080-exec-593] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+23-Oct-2015 15:30:16.739 INFO [http-nio-8080-exec-586] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+23-Oct-2015 15:30:16.762 INFO [http-nio-8080-exec-586] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+23-Oct-2015 15:30:17.528 INFO [http-nio-8080-exec-594] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'

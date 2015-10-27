@@ -1,6 +1,5 @@
 $(document).ready(function () {
     loadDVDs();
-    totalMovies();
     $('#add-button').click(function (event) {
         event.preventDefault();
         $.ajax({
@@ -27,17 +26,23 @@ $(document).ready(function () {
             $('#add-studio').val('');
             $('#add-note').val('');
             loadDVDs();
-//return false;
+            $('#validationErrors').empty();
+        }).error(function (data, status) {
+            $('#validationErrors').empty();
+            $.each(data.responseJSON.fieldErrors, function (index,
+                    validationError) {
+                var errorDiv = $('#validationErrors');
+                errorDiv.append(validationError.message).append($('<br>'));
+            });
         });
+
     });
-
-
 });
 //==========
 // FUNCTIONS
 //==========
 function totalMovies() {
-    //clearTotal();
+    clearTotal();
     var numOfMovies = $('#totalRows');
     $.ajax({
         url: "count"
@@ -48,17 +53,36 @@ function totalMovies() {
     });
 }
 
+function searchMovies() {
+    clearSTotal();
+    var numOfMovies = $('#searchRows');
+    $.ajax({
+        url: "count2"
+    }).success(function (data, status) {
+        numOfMovies.append($('<tr>')
+                .append($('<td>').text(data))
+                );
+    });
+}
+
+
 
 function loadDVDs() {
 // clear the previous list
-    clearDVDTable();
-// grab the tbody element that will hold the new list of DVDs
-    var cTable = $('#contentRows');
+    totalMovies();
+    clearSTotal();
 // Iterate through each of the JSON objects in the test DVD data
 // and render to the summary table
     $.ajax({
         url: "dvds"
     }).success(function (data, status) {
+        fillDvdTable(data, status);
+    });
+}
+
+function fillDvdTable(data, status) {
+        clearDVDTable();
+    var cTable = $('#contentRows');
         $.each(data, function (index, dvd) {
             cTable.append($('<tr>')
                     .append($('<td>')
@@ -91,9 +115,41 @@ function loadDVDs() {
                                     ) // ends the <a> tag
                             ) // ends the <td> tag for Delete
                     );
-        });
     });
 }
+
+$('#search-button').click(function (event) {
+// we don’t want the button to actually submit
+// we'll handle data submission via ajax
+    event.preventDefault();
+    $.ajax({
+        type: 'POST',
+        url: 'search/dvds',
+        data: JSON.stringify({
+            id: $('#search-id').val(),
+            title: $('#search-title').val(),
+            releaseDate: $('#search-release').val(),
+            mpaaRating: $('#search-rating').val(),
+            director: $('#search-director').val(),
+            studio: $('#search-studio').val(),
+            note: $('#search-note').val()
+        }),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        'dataType': 'json'
+    }).success(function (data, status) {data: JSON.stringify
+        $('#search-title').val(''),
+        $('#search-release').val(''),
+        $('#search-rating').val(''),
+        $('#search-director').val('');
+        $('#search-studio').val('');
+        $('#search-note').val('');
+        fillDvdTable(data, status);
+        searchMovies();
+    });
+});
 
 function deleteDvd(id) {
     var answer = confirm("Do you really want to delete this movie?");
@@ -113,6 +169,10 @@ function clearDVDTable() {
 
 function clearTotal() {
     $('#totalRows').empty();
+}
+
+function clearSTotal() {
+    $('#searchRows').empty();
 }
 
 $('#detailsModal').on('show.bs.modal', function (event) {
@@ -139,7 +199,6 @@ $('#detailsModal').on('show.bs.modal', function (event) {
         modal.find('#add-note').text(dvd.note);
     });
 });
-
 $('#editModal').on('show.bs.modal', function (event) {
     var element = $(event.relatedTarget);
     var dvdId = element.data('dvd-id');
@@ -158,7 +217,6 @@ $('#editModal').on('show.bs.modal', function (event) {
         modal.find('#edit-note').val(dvd.note);
     });
 });
-
 $('#edit-button').click(function (event) {
 // prevent the button press from submitting the whole page
     event.preventDefault();
@@ -177,13 +235,12 @@ $('#edit-button').click(function (event) {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
-        },
+        },    
         'dataType': 'json'
     }).success(function () {
         loadDVDs();
     });
 });
-
 //
 //var dummyDetailsDVD =
 //        {

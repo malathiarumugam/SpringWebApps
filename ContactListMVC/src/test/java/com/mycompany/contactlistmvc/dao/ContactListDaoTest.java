@@ -18,6 +18,7 @@ import static org.junit.Assert.*;
 import static junit.framework.TestCase.assertNull;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class ContactListDaoTest {
 
@@ -38,7 +39,10 @@ public class ContactListDaoTest {
     public void setUp() {
         ApplicationContext ctx
                 = new ClassPathXmlApplicationContext("test-applicationContext.xml");
-        dao = ctx.getBean("contactListDao", ContactListDao.class);
+dao = (ContactListDao) ctx.getBean("contactListDao");
+// Grab a JdbcTemplate to use for cleaning up
+        JdbcTemplate cleaner = (JdbcTemplate) ctx.getBean("jdbcTemplate");
+        cleaner.execute("delete from contacts");
     }
 
     @After

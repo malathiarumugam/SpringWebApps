@@ -14,6 +14,12 @@ public class VendingDaoImpl implements VendingDao {
 
     private Map<String, Item> itemMap = new HashMap<>();
     
+    public VendingDaoImpl() {
+//        itemMap.put("A1", new Item("Big REd", 0.50, 10, "A1"));
+//        itemMap.put("A2", new Item("Juicy Fruit", 0.50, 10, "A2"));
+        
+    }
+    
     @Override
     public Item findItemByCode(String itemCode) {
         for (Item a : itemMap.values()) {
@@ -48,6 +54,11 @@ public class VendingDaoImpl implements VendingDao {
     public List<Item> getAllItems() {
         List<Item> list = new ArrayList<Item>(itemMap.values());
         return list;
+    }
+    
+    @Override
+    public void updateItem(Item item) {
+        itemMap.put(item.getCode(), item);
     }
 
 }

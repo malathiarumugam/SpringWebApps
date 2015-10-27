@@ -1,5 +1,6 @@
 package com.mycompany.vendingmachinev2.controller;
 
+import com.mycompany.vendingmachinev2.model.Vend;
 import com.mycompany.vendingmachinev2.dao.VendingDao;
 import com.mycompany.vendingmachinev2.model.Item;
 import java.util.List;
@@ -29,37 +30,39 @@ public class HomeController {
         return "home";
     }
 
-    @RequestMapping(value = "/item/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public Item getContact(@PathVariable("id") String id) {
-        return dao.findItemByCode(id);
-    }
+//    @RequestMapping(value = "/item/{id}", method = RequestMethod.GET)
+//    @ResponseBody
+//    public Item getContact(@PathVariable("id") String id) {
+//        return dao.findItemByCode(id);
+//    }
+//    @RequestMapping(value = "/item/{id}", method = RequestMethod.DELETE)
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void deleteContact(@PathVariable("id") String id) {
+//        dao.removeItem(id);
+//    }
+//    @RequestMapping(value = "/item/{id}", method = RequestMethod.PUT)
+//    @ResponseStatus(HttpStatus.NO_CONTENT)
+//    public void putContact(@PathVariable("id") String id, @RequestBody Item item) {
+//        item.setCode(id);
+//    }
 
-    @RequestMapping(value = "/item", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
-    @ResponseBody
-    public Item createItem(@Valid @RequestBody String name, String code, double cost, int count) {
-        Item item = new Item(name, cost, count, code);
-        dao.addItem(item);
-        return item;
-    }
-
-    @RequestMapping(value = "/item/ {id}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteContact(@PathVariable("id") String id) {
-        dao.removeItem(id);
-    }
-
-    @RequestMapping(value = "/item/{id}", method = RequestMethod.PUT)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putContact(@PathVariable("id") String id, @RequestBody Item item) {
-        item.setCode(id);
-    }
 
     @RequestMapping(value = "/items", method = RequestMethod.GET)
     @ResponseBody
     public List<Item> getAllItems() {
 // get all of the Contacts from the data layer
         return dao.getAllItems();
+    }
+
+    @RequestMapping(value = "item/vend", method = RequestMethod.PUT)
+    @ResponseBody
+    public double buyItem(@RequestBody Vend item) {
+        double cost = dao.findItemByCode(item.getCode()).getCost();
+        if (item.getMoney() >= cost) {
+            dao.lowerItemCount(dao.findItemByCode(item.getCode()));
+            return item.getMoney() - cost;
+        } else {
+            return item.getMoney() - cost;
+        }
     }
 }

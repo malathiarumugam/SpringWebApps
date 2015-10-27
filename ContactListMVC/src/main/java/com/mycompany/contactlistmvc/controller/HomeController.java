@@ -47,7 +47,7 @@ public class HomeController {
         return contact;
     }
 
-    @RequestMapping(value = "/contact/ {id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/contact/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteContact(@PathVariable("id") int id) {
 // remove the Contact associated with the given id from the data layer 

@@ -30,7 +30,7 @@
                         <a href="${pageContext.request.contextPath}/Add">Add</a>
                     </li>
                     <li role="presentation">
-                        <a href="${pageContext.request.contextPath}/Display">Display</a>
+                        <a href="${pageContext.request.contextPath}/search">Search</a>
                     </li>
                 </ul>
             </div>

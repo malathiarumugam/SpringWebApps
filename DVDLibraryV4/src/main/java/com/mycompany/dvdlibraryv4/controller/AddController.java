@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @Controller
 public class AddController {
     
-     private DvdLibraryDao dao;
+    private DvdLibraryDao dao;
 
     @Inject
     public AddController(DvdLibraryDao dao) {
