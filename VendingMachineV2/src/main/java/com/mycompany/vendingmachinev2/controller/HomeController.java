@@ -95,7 +95,7 @@ public class HomeController {
         if (total >= 5 && total % 5 >= 0) {
             nickel = 1;
             total -= 5;
-            penny = (int) total;
+            penny = (int)Math.round(total);
         }
         ChangeString string = new ChangeString("Your change is " + (int) quarter + " quarters " + (int) dime + " dimes " + (int) nickel + " nickel " + penny + " pennies");
         return string;

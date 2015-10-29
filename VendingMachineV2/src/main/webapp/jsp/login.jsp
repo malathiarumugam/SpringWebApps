@@ -9,6 +9,12 @@
     <body>
         <div>
             <h2>Sign in to the Vending Machine App</h2>
+            <h3> For testing purposes there are only two login usernames right now.<br>
+            username: test (admin)<br>
+            password: password<br>
+            username: test2 (non-admin)<br>
+            password: password
+            </h3>
             <!-- #1 - If login_error == 1 then there was a failed login
             attempt -->
             <!--

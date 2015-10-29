@@ -2571,3 +2571,26 @@ Offending resource: ServletContext resource [/WEB-INF/spring-security.xml]
 29-Oct-2015 15:16:47.973 INFO [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
 29-Oct-2015 15:16:47.989 INFO [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
 29-Oct-2015 15:16:49.615 INFO [http-nio-8080-exec-53] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:31:32.283 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:31:32.303 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+29-Oct-2015 15:31:32.924 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+29-Oct-2015 15:31:32.938 INFO [http-nio-8080-exec-70] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+29-Oct-2015 15:31:39.326 INFO [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:33:59.785 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:33:59.788 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+29-Oct-2015 15:34:00.301 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+29-Oct-2015 15:34:00.316 INFO [http-nio-8080-exec-83] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+29-Oct-2015 15:34:27.866 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+29-Oct-2015 15:34:28.512 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+29-Oct-2015 15:34:28.532 INFO [http-nio-8080-exec-78] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+29-Oct-2015 15:34:33.604 INFO [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:34:56.109 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:34:56.112 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+29-Oct-2015 15:34:56.783 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+29-Oct-2015 15:34:56.806 INFO [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+29-Oct-2015 15:34:59.058 INFO [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:35:11.424 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Destroying Spring FrameworkServlet 'spring-dispatcher'
+29-Oct-2015 15:35:11.428 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+29-Oct-2015 15:35:12.125 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+29-Oct-2015 15:35:12.145 INFO [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+29-Oct-2015 15:36:09.440 INFO [http-nio-8080-exec-98] org.apache.catalina.core.ApplicationContext.log Initializing Spring FrameworkServlet 'spring-dispatcher'
