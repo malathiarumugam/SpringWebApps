@@ -21,11 +21,18 @@
             <hr/>
             <div class="navbar">
                 <ul class="nav nav-tabs">   
-                    <li role="presentation">
+                    <li role="presentation" >
                         <a href="${pageContext.request.contextPath}/home">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/mainAjaxPage">VendingMachine</a>
                     </li>
                     <li role="presentation" class="active">
                         <a href="${pageContext.request.contextPath}/create">Create</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/j_spring_security_logout">Log
+                            Out</a>
                     </li>
                 </ul>
             </div>

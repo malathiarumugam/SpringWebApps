@@ -28,7 +28,7 @@ public class Item {
     @Length(max = 2, message = "Item code must be no more than 2 characters in length.")
     private String code;
 
-    @NotNull(message = "Item cost must have a value.")
+    @NotNull(message = "Item cost must have a numeric value.")
     @Max(value = 99, message = "Item cost must be no more than $99.")
     private BigDecimal cost;
 

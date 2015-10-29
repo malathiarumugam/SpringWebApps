@@ -29,21 +29,11 @@ public class HomeController {
         return "home";
     }
 
-//    @RequestMapping(value = "/item/{id}", method = RequestMethod.GET)
-//    @ResponseBody
-//    public Item getContact(@PathVariable("id") String id) {
-//        return dao.findItemByCode(id);
-//    }
-//    @RequestMapping(value = "/item/{id}", method = RequestMethod.DELETE)
-//    @ResponseStatus(HttpStatus.NO_CONTENT)
-//    public void deleteContact(@PathVariable("id") String id) {
-//        dao.removeItem(id);
-//    }
-//    @RequestMapping(value = "/item/{id}", method = RequestMethod.PUT)
-//    @ResponseStatus(HttpStatus.NO_CONTENT)
-//    public void putContact(@PathVariable("id") String id, @RequestBody Item item) {
-//        item.setCode(id);
-//    }
+    @RequestMapping(value={"/mainAjaxPage"}, method=RequestMethod.GET)
+    public String displayMainAjaxPage() {
+        return "mainAjaxPage";
+    }
+
     @RequestMapping(value = "/items", method = RequestMethod.GET)
     @ResponseBody
     public List<Item> getAllItems() {
@@ -56,13 +46,13 @@ public class HomeController {
     public BigDecimal buyItem(@RequestBody VendingInfo item) {
         double cost = dao.findItemByCode(item.getCode()).getCost().doubleValue();
         double money = (item.getMoney().doubleValue() + item.getLeftover());
-        
+
         if (money >= cost) {
             dao.lowerItemCount(item.getCode());
             BigDecimal d = new BigDecimal(money - cost);
             return d;
         } else {
-            BigDecimal d = new BigDecimal(money*-1);
+            BigDecimal d = new BigDecimal(money * -1);
             return d;
         }
     }
@@ -71,10 +61,10 @@ public class HomeController {
     @ResponseBody
     public ChangeString returnChange(@RequestBody Change change) {
         double total = change.getTotal().doubleValue() * 100;
-        double quarter =0;
-        double dime =0;
-        double nickel =0;
-        int penny =0;
+        double quarter = 0;
+        double dime = 0;
+        double nickel = 0;
+        int penny = 0;
 
         if (total >= 100) {
             double dollars = (total - total % 25);
@@ -105,9 +95,9 @@ public class HomeController {
         if (total >= 5 && total % 5 >= 0) {
             nickel = 1;
             total -= 5;
-            penny = (int)total;
+            penny = (int) total;
         }
-        ChangeString string = new ChangeString("Your change is " + (int)quarter + " quarters " + (int)dime + " dimes " + (int)nickel + " nickel " + penny + " pennies");
+        ChangeString string = new ChangeString("Your change is " + (int) quarter + " quarters " + (int) dime + " dimes " + (int) nickel + " nickel " + penny + " pennies");
         return string;
     }
 }
