@@ -13,11 +13,13 @@ import java.util.Map;
 public class VendingDaoImpl implements VendingDao {
 
     private Map<String, Item> itemMap = new HashMap<>();
-    
-    public VendingDaoImpl() {
-//        itemMap.put("A1", new Item("Big REd", 0.50, 10, "A1"));
-//        itemMap.put("A2", new Item("Juicy Fruit", 0.50, 10, "A2"));
-        
+
+    public Map<String, Item> getItemMap() {
+        return itemMap;
+    }
+
+    public void setItemMap(Map<String, Item> itemMap) {
+        this.itemMap = itemMap;
     }
     
     @Override
@@ -31,8 +33,9 @@ public class VendingDaoImpl implements VendingDao {
     }
 
     @Override
-    public void lowerItemCount(Item name) {
-        name.setCount();
+    public void lowerItemCount(String code) {
+        Item item = findItemByCode(code);
+        item.setCountOne();
     }
 
     @Override
@@ -59,6 +62,10 @@ public class VendingDaoImpl implements VendingDao {
     @Override
     public void updateItem(Item item) {
         itemMap.put(item.getCode(), item);
+    }
+    
+    public List<Item> searchItems(Map<SearchTerm, String> criteria) {
+        return new ArrayList<Item>();
     }
 
 }

@@ -7,6 +7,7 @@ package com.mycompany.vendingmachinev2.dao;
 
 import com.mycompany.vendingmachinev2.model.Item;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -17,7 +18,7 @@ public interface VendingDao {
     
     public Item findItemByCode(String itemCode);
 
-    public void lowerItemCount(Item name);
+    public void lowerItemCount(String code);
 
     public void removeItem(String code);
     
@@ -28,6 +29,8 @@ public interface VendingDao {
     public List<Item> getAllItems();
 
     public void updateItem(Item item);
+    
+    public List<Item> searchItems(Map<SearchTerm, String> criteria);
     
     
 }

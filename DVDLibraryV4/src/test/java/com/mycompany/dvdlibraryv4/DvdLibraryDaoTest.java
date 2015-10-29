@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
 import static junit.framework.TestCase.assertNull;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 public class DvdLibraryDaoTest {
 
@@ -37,9 +38,12 @@ public class DvdLibraryDaoTest {
 
     @Before
     public void setUp() {
-        ApplicationContext ctx
+         ApplicationContext ctx
                 = new ClassPathXmlApplicationContext("test-applicationContext.xml");
-        dao = ctx.getBean("dvdLibraryDao", DvdLibraryDao.class);
+dao = (DvdLibraryDao) ctx.getBean("dvdlibraryDao");
+// Grab a JdbcTemplate to use for cleaning up
+        JdbcTemplate cleaner = (JdbcTemplate) ctx.getBean("jdbcTemplate");
+        cleaner.execute("delete from movies");
     }
 
     @After

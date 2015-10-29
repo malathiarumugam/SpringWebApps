@@ -61,7 +61,7 @@
                                 Item cost:
                             </label>
                             <div class="col-md-8">
-                                <input type="text"
+                                <input type="number" min="0" max="99"
                                        class="form-control"
                                        id="add-cost"
                                        placeholder="price?"/>
@@ -84,7 +84,7 @@
                                 Item Inventory:
                             </label>
                             <div class="col-md-8">
-                                <input type="number"
+                                <input type="number" min="1" max="10"
                                        class="form-control"
                                        id="add-count"
                                        placeholder="How many in stock?"/>
@@ -124,7 +124,7 @@
                                     Code:
                                 </label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="edit-Item-code" placeholder="Code please">
+                                    <input type="text" class="form-control" id="edit-Item-code" placeholder="Code please" readonly>
                                 </div>
                             </div>
                             <div class="form-group">

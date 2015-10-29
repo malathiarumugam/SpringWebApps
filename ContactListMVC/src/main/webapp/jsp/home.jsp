@@ -27,10 +27,18 @@
                         <a href="${pageContext.request.contextPath}/home">Home</a>
                     </li>
                     <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/mainAjaxPage">Contact List
+                            (Ajax)</a>
+                    </li>
+                    <li role="presentation">
                         <a href="${pageContext.request.contextPath}/search">Search</a>
                     </li>
                     <li role="presentation">
                         <a href="${pageContext.request.contextPath}/stats">Stats</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/displayContactListNoAjax">
+                            Contact List (No Ajax)</a>
                     </li>
                 </ul>
             </div>
@@ -111,12 +119,12 @@
                                 </button>
                             </div>
                         </div>
-                        
-                <div id="validationErrors" style="color:red"/>
+
+                        <div id="validationErrors" style="color:red"/>
                 </div>
                 </form>
             </div>
-            
+
         </div>
         <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog"
              aria-labelledby="detailsModalLabel" aria-hidden="true">

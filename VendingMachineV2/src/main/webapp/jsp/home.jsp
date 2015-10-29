@@ -16,21 +16,30 @@
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon.png">
         <style>
             #items {
-                border: #222 solid 1px;
-                height: 35em;
+                background-color: #b4b4b4;
+            }
+            img {
+                width: 100%;
+            }
+            #inputMoney {
+                padding: 0px 15px 0px 15px;
+            }
+            #inputCode {
+                padding: 20px 15px 0px 15px;
+            }
+            #vendButton {
+                padding-bottom: 10px;
+            }
+            .container {
+                background-color: #f4f4f4;
+            }
 
-            }
-            #inputs {
-                border: #222 solid 1px;
-                height: 35em;
-               
-            }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>Vending Machine</h1>
-            <hr/>
+            <!--            <h1>Vending Machine</h1>
+                        <hr/>-->
             <div class="navbar">
                 <ul class="nav nav-tabs">   
                     <li role="presentation" class="active">
@@ -42,7 +51,10 @@
                 </ul>
             </div>
             <div class="row">
-                <div class="col-md-8" id="items">
+                <div class="col-md-offset-2 col-md-6">
+                    <img src="img/pepsi2.jpg"/>
+                </div>
+                <div class="col-md-4" id="items">
                     <h3>Item List</h3>
                     <table id="vending-id" class="table table-hover">
                         <tr>
@@ -53,35 +65,53 @@
                         </tr>
                         <tbody id="contentRows"></tbody>
                     </table>
-                </div>
-                <div class="col-md-4" id="inputs">
-
                     <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <input type="text"
+                        <div class="form-group" id="inputCode">
+                            <select id="vend-code">
+                                
+                            </select>
+<!--                            <input type="text"
                                    class="form-control"
                                    id="vend-code"
-                                   placeholder="Item Code"/>
+                                   placeholder="Item Code"/>-->
                         </div>
-                        <table id="money-id" class="table table-hover">
-                            <tbody id="moneyRows"></tbody>
-                        </table>
-                        <div class="form-group">
+
+                        <div class="form-group" id="inputMoney">
                             <input type="text"
                                    class="form-control"
                                    id="vend-money"
                                    placeholder="Enter money amount here"/>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-8">
+                        <div class="form-group" id="vendButton">
+                            <div class="col-md-8">
                                 <button type="submit"
                                         id="vend-button"
                                         class="btn btn-default">
-                                    Vend!
+                                    Vend
                                 </button>
                             </div>
                         </div>
+                        <table id="money-id" class="table table-hover">
+                            <tbody id="moneyRows"></tbody>
+                        </table>
                     </form>
+                    <form>
+                        <table id="money-id" class="table table-hover">
+                            <tbody id="changeRows"></tbody>
+                        </table>
+                        <div class="form-group" id="changeButton">
+                            <button type="submit"
+                                    id="change-button"
+                                    class="btn btn-default">
+                                Return Change
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-md-offset-8 col-md-4" id="inputs">
+
                 </div>
             </div>
         </div>

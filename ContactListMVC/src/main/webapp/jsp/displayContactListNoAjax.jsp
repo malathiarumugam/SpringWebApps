@@ -15,22 +15,30 @@
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
         <!-- SWC Icon -->
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon.png">      
-        <title>Search Contacts</title>
+        <title>Company Contacts</title>
     </head>
     <body>
-            <div class="container">
-            <h1>Search Contacts</h1>
+        <div class="container">
+            <h1>Company Contacts</h1>
             <hr/>
             <div class="navbar">
                 <ul class="nav nav-tabs">   
                     <li role="presentation">
-                        <a href="${pageContext.request.contextPath}/Home">Home</a>
+                        <a href="${pageContext.request.contextPath}/home">Home</a>
                     </li>
-                    <li role="presentation"  class="active">
+                    <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/mainAjaxPage">Contact List
+                            (Ajax)</a>
+                    </li>
+                    <li role="presentation">
                         <a href="${pageContext.request.contextPath}/search">Search</a>
                     </li>
                     <li role="presentation">
                         <a href="${pageContext.request.contextPath}/stats">Stats</a>
+                    </li>
+                    <li role="presentation" class="active">
+                        <a href="${pageContext.request.contextPath}/displayContactListNoAjax">
+                            Contact List (No Ajax)</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +65,7 @@
                             <div class="col-md-8">
                                 <input type="text"
                                        class="form-control"
-                                       id="search-first-name"
+                                       id="add-first-name"
                                        placeholder="First Name"/>
                             </div>
                         </div>
@@ -68,7 +76,7 @@
                             <div class="col-md-8">
                                 <input type="text"
                                        class="form-control"
-                                       id="search-last-name"
+                                       id="add-last-name"
                                        placeholder="Last Name"/>
                             </div>
                         </div>
@@ -80,7 +88,7 @@
                             <div class="col-md-8">
                                 <input type="text"
                                        class="form-control"
-                                       id="search-company"
+                                       id="add-company"
                                        placeholder="Company"/>
                             </div>
                         </div>
@@ -89,7 +97,7 @@
                             <div class="col-md-8">
                                 <input type="email"
                                        class="form-control"
-                                       id="search-email"
+                                       id="add-email"
                                        placeholder="Email"/>
                             </div>
                         </div>
@@ -98,23 +106,25 @@
                             <div class="col-md-8">
                                 <input type="tel"
                                        class="form-control"
-                                       id="search-phone"
+                                       id="add-phone"
                                        placeholder="Phone"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">
                                 <button type="submit"
-                                        id="search-button"
+                                        id="add-button"
                                         class="btn btn-default">
                                     Create Contact
                                 </button>
                             </div>
                         </div>
+
+                        <div id="validationErrors" style="color:red"/>
                 </div>
                 </form>
             </div>
-            
+
         </div>
         <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog"
              aria-labelledby="detailsModalLabel" aria-hidden="true">
@@ -237,7 +247,6 @@
 
         <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>       
-        <script src="${pageContext.request.contextPath}/js/contactList.js"></script>  
+        <script src="${pageContext.request.contextPath}/js/contactList.js"></script>
     </body>
 </html>
-

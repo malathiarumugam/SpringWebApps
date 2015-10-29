@@ -60,7 +60,7 @@ $(document).ready(function () {
             'dataType': 'json'
         }).success(function () {
             loadContacts();
-            $('editModal')
+            $('editModal').modal('hide');
         });
     });
 });

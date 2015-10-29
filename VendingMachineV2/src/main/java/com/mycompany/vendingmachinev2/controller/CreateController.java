@@ -31,10 +31,14 @@ public class CreateController {
     @RequestMapping(value = "/item", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public Item createItem(@RequestBody Item item) {
-        Item item2 = new Item(item.getName(), item.getCost(), item.getCount(), item.getCode());
-        dao.addItem(item2);
-        return item2;
+    public Item createItem(@Valid @RequestBody Item item) {
+        for (Item a : dao.getAllItems()) {
+            if (a.getCode().equalsIgnoreCase(item.getCode())) {
+                return null;
+            }
+        }
+        dao.addItem(item);
+        return item;
     }
 
     @RequestMapping(value = "/item/{code}", method = RequestMethod.PUT)

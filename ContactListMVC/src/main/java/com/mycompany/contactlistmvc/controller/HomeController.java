@@ -29,6 +29,14 @@ public class HomeController {
         return "home";
     }
 
+    @RequestMapping(value = {"/mainAjaxPage"}, method = RequestMethod.GET)
+    public String displayMainAjaxPage() {
+// This method does nothing except return the logical name of the
+// view component (/jsp/home.jsp) that should be invoked in response
+// to this request.
+        return "mainAjaxPage";
+    }
+
     @RequestMapping(value = "/contact/{id}", method = RequestMethod.GET)
     @ResponseBody
     public Contact getContact(@PathVariable("id") int id) {
@@ -56,7 +64,7 @@ public class HomeController {
 
     @RequestMapping(value = "/contact/{id}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putContact(@PathVariable("id") int id,@Valid @RequestBody Contact contact) {
+    public void putContact(@PathVariable("id") int id, @Valid @RequestBody Contact contact) {
         contact.setContactId(id);
 // update the contact
         dao.updateContact(contact);
