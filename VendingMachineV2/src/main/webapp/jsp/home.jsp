@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-            <h1>Company Contacts</h1>
+            <h1>Machine that Vends</h1>
             <hr/>
             <div class="navbar">
                 <ul class="nav nav-tabs">
@@ -39,8 +39,13 @@
                 Welcome to the Vending Machine demonstration project. <br>Built by Kevin Gresmer
             </p>
         </div>
+            <c:if test="${not empty pageContext.request.userPrincipal}">
+                <p>worked!</p>
+               <%response.sendRedirect("http://localhost:8080/VendingMachineV2/mainAjaxPage");%>
+            </c:if>
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="${pageContext.request.contextPath}/js/jquery-1.11.1.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+                <script src="${pageContext.request.contextPath}/js/vending.js"></script>
     </body>
 </html>

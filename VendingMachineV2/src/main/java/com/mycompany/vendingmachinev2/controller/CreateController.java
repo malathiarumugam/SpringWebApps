@@ -43,7 +43,7 @@ public class CreateController {
 
     @RequestMapping(value = "/item/{code}", method = RequestMethod.PUT)
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void putItem(@PathVariable("code") String code,@RequestBody Item item) {
+    public void putItem(@PathVariable("code") String code, @RequestBody Item item) {
         item.setCode(code);
         dao.updateItem(item);
     }

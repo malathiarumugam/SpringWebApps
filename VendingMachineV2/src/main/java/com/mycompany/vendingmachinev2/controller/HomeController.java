@@ -24,12 +24,12 @@ public class HomeController {
         this.dao = dao;
     }
 
-    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/home"}, method = RequestMethod.GET)
     public String displayHomePage() {
         return "home";
     }
 
-    @RequestMapping(value={"/mainAjaxPage"}, method=RequestMethod.GET)
+    @RequestMapping(value={"/mainAjaxPage", "/"}, method=RequestMethod.GET)
     public String displayMainAjaxPage() {
         return "mainAjaxPage";
     }
