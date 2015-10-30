@@ -1,11 +1,4 @@
-
-
-
-
-
-
 package com.mycompany.dvdlibraryv4.controller;
-
 
 import com.mycompany.dvdlibraryv4.dao.DvdLibraryDao;
 import com.mycompany.dvdlibraryv4.model.DVD;
@@ -23,21 +16,25 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Controller
 public class HomeController {
-    
+
     private DvdLibraryDao dao;
 
     @Inject
     public HomeController(DvdLibraryDao dao) {
         this.dao = dao;
     }
-    
-    @RequestMapping(value={"/", "/home"}, method = RequestMethod.GET)
+
+    @RequestMapping(value = {"/mainAjaxPage"}, method = RequestMethod.GET)
+    public String displayMainAjaxPage() {
+        return "mainAjaxPage";
+    }
+
+    @RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
     public String displayHomePage() {
         return "home";
     }
-    
-    
-    @RequestMapping(value = "/dvd/{id}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/dvdi/{id}", method = RequestMethod.GET)
     @ResponseBody
     public DVD getDvd(@PathVariable("id") int id) {
         return dao.getDVDById(id);
@@ -55,18 +52,17 @@ public class HomeController {
         dvd.setId(id);
         dao.updateDVD(dvd);
     }
+
     @RequestMapping(value = "/dvds", method = RequestMethod.GET)
     @ResponseBody
     public List<DVD> getAllDVDs() {
         return dao.getAllDVDs();
     }
-    
+
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     @ResponseBody
     public int getNumbers() {
         return dao.getAllDVDs().size();
     }
-    
 
-    
 }

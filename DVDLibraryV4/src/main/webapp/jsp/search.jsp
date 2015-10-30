@@ -32,6 +32,10 @@
                     <li role="presentation" class="active">
                         <a href="${pageContext.request.contextPath}/search">Search</a>
                     </li>
+                    <li role="presentation">
+                        <a href="${pageContext.request.contextPath}/mainAjaxPage">Contact List
+                            (Ajax)</a>
+                    </li>
                 </ul>
             </div>
             <div class="row">  

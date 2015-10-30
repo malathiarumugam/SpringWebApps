@@ -20,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class VendingDaoDbImpl implements VendingDao {
 
     private static final String SQL_INSERT_ITEM = 
+            
             "insert ignore into items (name, cost, code, count) values (?, ?, ?, ?)";
     
     private static final String SQL_DELETE_ITEM = 

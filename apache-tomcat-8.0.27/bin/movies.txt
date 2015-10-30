@@ -1,1 +1,1 @@
-DVD{id=0, title=star, releaseDate=2015, mpaaRating=R, director=dude, studio=bigone, note=232}
+DVD{id=0, title=asdf, releaseDate=a, mpaaRating=a, director=a, studio=a, note=a}

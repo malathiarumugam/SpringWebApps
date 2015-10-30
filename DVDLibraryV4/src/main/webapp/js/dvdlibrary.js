@@ -77,6 +77,7 @@ function loadDVDs() {
         url: "dvds"
     }).success(function (data, status) {
         fillDvdTable(data, status);
+        fillHomeTable(data, status);
     });
 }
 
@@ -114,6 +115,36 @@ function fillDvdTable(data, status) {
                                     .text('Delete')
                                     ) // ends the <a> tag
                             ) // ends the <td> tag for Delete
+                    );
+    });
+}
+
+function fillHomeTable(data, status) {
+        clearDVDTable();
+    var cTable = $('#contentRows2');
+        $.each(data, function (index, dvd) {
+            cTable.append($('<tr>')
+                    .append($('<td>')
+                            .append($('<a>')
+                                    .attr({
+                                        'data-DVD-id': dvd.id,
+                                        'data-toggle': 'modal',
+                                        'data-target': '#detailsModal'
+                                    })
+                                    .text(dvd.title)
+                                    ) // ends the <a> tag
+                            )
+                    .append($('<td>').text(dvd.releaseDate))
+//                    .append($('<td>')
+//                            .append($('<a>')
+//                                    .attr({
+//                                        'data-DVD-id': dvd.id,
+//                                        'data-toggle': 'modal',
+//                                        'data-target': 'editModal'
+//                                    })
+//                                    .text('Edit')
+//                                    ) // ends the <a> tag
+//                            )
                     );
     });
 }
@@ -165,6 +196,7 @@ function deleteDvd(id) {
 
 function clearDVDTable() {
     $('#contentRows').empty();
+    $('#contentRows2').empty();
 }
 
 function clearTotal() {
@@ -188,7 +220,7 @@ $('#detailsModal').on('show.bs.modal', function (event) {
 // upon success, put the returned JSON data into the modal dialog
     $.ajax({
         type: 'GET',
-        url: 'dvd/' + dvdId
+        url: 'dvdi/' + dvdId
     }).success(function (dvd) {
         modal.find('#add-id').text(dvd.id);
         modal.find('#add-title').text(dvd.title);
