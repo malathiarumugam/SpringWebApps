@@ -82,14 +82,14 @@ $('#vend-button').click(function (event) {
             alert('Insufficient funds');
             totalTwoDec += Math.abs(data);
             cTable.append($('<tr>')
-                    .append($('<td>').text("Current Total: $" + totalTwoDec.toFixed(2))
+                    .append($('<td>').text("$" + totalTwoDec.toFixed(2))
                             )
                     )
         } else {
             alert('Purchase Successful');
             totalTwoDec = data;
             cTable.append($('<tr>')
-                    .append($('<td>').text("Current Total: $" + totalTwoDec.toFixed(2))
+                    .append($('<td>').text("$" + totalTwoDec.toFixed(2))
                             )
                     )
         }
@@ -127,8 +127,8 @@ function fillItems(data, status) {
                     .append($('<td>').text(item.code))
                     );
             var opt = document.createElement('option');
-            opt.innerHTML = item.code;
-            opt.value = item.code;
+            opt.innerHTML = item.code + '  ⇓';
+            opt.value = item.code ;
             fragment.appendChild(opt);
             sel.appendChild(fragment);
         }

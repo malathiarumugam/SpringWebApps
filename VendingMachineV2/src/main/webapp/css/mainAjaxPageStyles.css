@@ -1,0 +1,62 @@
+
+body {
+    background-color: black;
+}
+#items {
+    background-color: black;
+    border: 1px solid #FFD700;
+    border-radius: 3%;
+}
+img {
+    width: 100%;
+}
+#inputMoney {
+    padding: 0px 15px 0px 15px;
+}
+#inputCode {
+    padding: 20px 15px 0px 15px;
+}
+#vendButton {
+
+    padding-bottom: 10px;
+}
+.container {
+    /*background-color: #f4f4f4;*/
+    background-color: black;
+}
+.row {
+    background-color: black;
+}
+.vend {
+    background-color: black;
+    border: 1px solid #FFD700;
+    border-radius: 2%;
+    color: white;
+}
+.dataTable, h3 {
+    color: white;
+}
+.change {
+    background-color: black;
+    border: 1px solid #FFD700;
+    border-radius: 2%;
+    text-shadow: 0 0 3px #FF0000;
+    color: red;
+    font-size: 18px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: red;
+    text-shadow: 0 0 0px white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: red;
+    text-shadow: 0 0 0px white;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:  red;
+    text-shadow: 0 0 0px white;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+    text-shadow: 0 0 0px white;
+}

@@ -8,38 +8,17 @@
         <title>Vending Machine</title>
         <!-- Bootstrap core CSS -->
         <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+        <link href="${pageContext.request.contextPath}/css/mainAjaxPageStyles.css" rel="stylesheet">
 
         <!-- Custom styles for this template -->
         <!--<link href="${pageContext.request.contextPath}/css/starter-template.css" rel="stylesheet">-->
 
         <!-- SWC Icon -->
         <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon.png">
-        <style>
-            #items {
-                background-color: #b4b4b4;
-            }
-            img {
-                width: 100%;
-            }
-            #inputMoney {
-                padding: 0px 15px 0px 15px;
-            }
-            #inputCode {
-                padding: 20px 15px 0px 15px;
-            }
-            #vendButton {
-                padding-bottom: 10px;
-            }
-            .container {
-                background-color: #f4f4f4;
-            }
-
-        </style>
+        
     </head>
     <body>
         <div class="container">
-            <!--            <h1>Vending Machine</h1>
-                        <hr/>-->
             <div class="navbar">
                 <ul class="nav nav-tabs">   
                     <li role="presentation">
@@ -63,7 +42,7 @@
                 </div>
                 <div class="col-md-4" id="items">
                     <h3>Item List</h3>
-                    <table id="vending-id" class="table table-hover">
+                    <table id="vending-id" class="table table-hover dataTable">
                         <tr>
                             <th width="50%">Item Name</th>
                             <th width="20%">Quantity</th>
@@ -74,18 +53,13 @@
                     </table>
                     <form class="form-horizontal" role="form">
                         <div class="form-group" id="inputCode">
-                            <select id="vend-code">
-
+                            <select id="vend-code" class="vend">
                             </select>
-                            <!--                            <input type="text"
-                                                               class="form-control"
-                                                               id="vend-code"
-                                                               placeholder="Item Code"/>-->
                         </div>
 
                         <div class="form-group" id="inputMoney">
                             <input type="text"
-                                   class="form-control"
+                                   class="form-control change"
                                    id="vend-money"
                                    placeholder="Enter money amount here"/>
                         </div>
@@ -93,23 +67,23 @@
                             <div class="col-md-8">
                                 <button type="submit"
                                         id="vend-button"
-                                        class="btn btn-default">
+                                        class="btn btn-default vend">
                                     Vend
                                 </button>
                             </div>
                         </div>
                         <table id="money-id" class="table table-hover">
-                            <tbody id="moneyRows"></tbody>
+                            <tbody id="moneyRows" class="change"></tbody>
                         </table>
                     </form>
                     <form>
                         <table id="money-id" class="table table-hover">
-                            <tbody id="changeRows"></tbody>
+                            <tbody id="changeRows" class="change"></tbody>
                         </table>
                         <div class="form-group" id="changeButton">
                             <button type="submit"
                                     id="change-button"
-                                    class="btn btn-default">
+                                    class="btn btn-default vend">
                                 Return Change
                             </button>
                         </div>
